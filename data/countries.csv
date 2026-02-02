@@ -1,0 +1,16 @@
+
+country_id,name_ja,name_en,flag,region,notes
+JPN,日本,Japan,🇯🇵,Asia,
+KOR,韓国,Republic of Korea,🇰🇷,Asia,
+EST,エストニア,Estonia,🇪🇪,Europe,
+FRA,フランス,France,🇫🇷,Europe,
+DEU,ドイツ,Germany,🇩🇪,Europe,
+GBR,イギリス,United Kingdom,🇬🇧,Europe,
+USA,アメリカ,United States,🇺🇸,North America,
+CAN,カナダ,Canada,🇨🇦,North America,
+AUS,オーストラリア,Australia,🇦🇺,Oceania,
+NZL,ニュージーランド,New Zealand,🇳🇿,Oceania,
+SWE,スウェーデン,Sweden,🇸🇪,Europe,
+DNK,デンマーク,Denmark,🇩🇰,Europe,
+SGP,シンガポール,Singapore,🇸🇬,Asia,
+IND,インド,India,🇮🇳,Asia,

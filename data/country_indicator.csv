@@ -1,0 +1,49 @@
+country_id,indicator_id,value,version,change_note,review_status,tags,source_url
+JPN,I01,Local | Basic Resident Register is maintained by municipalities,2026-02,Initial baseline,published,mandatory;residents,https://www.soumu.go.jp/main_sosiki/jichi_gyousei/c-gyousei/zairyu/english/index.html
+JPN,I02,Yes | Basic Resident Register Network (Juki Net) enables nationwide linkage,2026-02,Initial baseline,published,nationwide;residents,https://www.city.inagi.tokyo.jp/en/kurashi/tetsuzuki/1002597/1002598.html
+JPN,I03,Restricted | My Number use is legally limited to stipulated administrative purposes,2026-02,Initial baseline,published,mandatory;tax;health,https://www.digital.go.jp/en/policies/mynumber/explanation
+JPN,I04,Nationwide | Information coordination via Information Provision Network System,2026-02,Initial baseline,published,nationwide;government,https://www.digital.go.jp/en/policies/mynumber/explanation
+JPN,I05,Yes | My Number Card with IC chip and electronic certificates (JPKI),2026-02,Initial baseline,published,nationwide;citizens;residents,https://www.digital.go.jp/en/policies/mynumber/private-business/jpki-introduction
+JPN,I06,Nationwide | Smartphone My Number Card enables legal authentication on smartphones,2026-02,Initial baseline,published,nationwide;smartphone,https://www.digital.go.jp/en/policies/mynumber/smartphone-certification
+JPN,I07,Planned | Driver's license integrated into My Number Card; smartphone mDL not nationwide,2026-02,Initial baseline,published,planned;drivers-license,https://www.digital.go.jp/en/policies/mynumber/drivers-license
+JPN,I08,Multiple | JPKI for citizens and GPKI for government authentication,2026-02,Initial baseline,published,authentication;signature,https://www.digital.go.jp/en/policies/mynumber/private-business/jpki-introduction;https://www.gpki.go.jp/
+JPN,I09,Shared-Platform | Government-wide common cloud environment (Government Cloud),2026-02,Initial baseline,published,shared-platform;migration,https://www.digital.go.jp/en/policies/gov_cloud
+JPN,I10,Adequacy | APPI under PPC and EU GDPR adequacy decision (2019),2026-02,Initial baseline,published,privacy;gdpr,https://eur-lex.europa.eu/eli/dec_impl/2019/419/oj/eng
+JPN,I11,Yes | Key milestones captured in events.csv,2026-02,Initial baseline,published,timeline,https://www.digital.go.jp/en/policies/mynumber/explanation
+
+EST,I01,National | Population Register centrally managed by the state,2026-02,Initial baseline,published,mandatory;residents,https://www.siseministeerium.ee/en/activities/population-procedures/population-register
+EST,I02,Yes | Nationwide interoperability via X-Road (X-tee),2026-02,Initial baseline,published,nationwide;interoperability,https://e-estonia.com/solutions/interoperability-services/x-road/
+EST,I03,Common | Personal identification code used broadly across public/private e-services,2026-02,Initial baseline,published,mandatory;banking;telecom;health,https://www.ria.ee/en/state-information-system/electronic-identity-eid-and-trust-services/electronic-identity-eid
+EST,I04,Nationwide | X-Road enables secure data exchange across government and private sector,2026-02,Initial baseline,published,nationwide;once-only,https://www.ria.ee/en/state-information-system/data-exchange-platforms/data-exchange-layer-x-tee
+EST,I05,Yes | Mandatory ID-card enabling authentication and digital signature,2026-02,Initial baseline,published,nationwide;citizens,https://e-estonia.com/solutions/estonian-e-identity/id-card/
+EST,I06,Nationwide | Mobile-ID and Smart-ID enable authentication/signing on smartphones,2026-02,Initial baseline,published,nationwide;smartphone,https://www.id.ee/en/
+EST,I07,Planned | EU wallet / mDL initiatives; no standalone national ISO mDL rollout,2026-02,Initial baseline,published,planned;drivers-license,https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/929202846/The+Mobile+Driving+License+manual
+EST,I08,Multiple | State eID PKI + Mobile-ID + Smart-ID,2026-02,Initial baseline,published,authentication;signature,https://www.ria.ee/en/state-information-system/electronic-identity-eid-and-trust-services/electronic-identity-eid
+EST,I09,Shared-Platform | Estonian Government Cloud (Riigipilv),2026-02,Initial baseline,published,shared-platform;migration,https://riigipilv.ee/
+EST,I10,Adequacy | EU member state under GDPR,2026-02,Initial baseline,published,gdpr;privacy,https://www.dlapiperdataprotection.com/index.html?t=law&c=EE
+EST,I11,Yes | Key milestones captured in events.csv,2026-02,Initial baseline,published,timeline,https://e-estonia.com/solutions/estonian-e-identity/id-card/
+
+KOR,I01,Local | Resident registration controlled by local authorities under national supervision,2026-02,Initial baseline,published,mandatory;citizens,https://www.mois.go.kr/cmm/fms/FileDown.do?atchFileId=FILE_00071103sZW9zNB&fileSn=0
+KOR,I02,Yes | National digital government promotes interoperability and data sharing,2026-02,Initial baseline,published,nationwide;government,https://www.mois.go.kr/eng/sub/a03/EGovernment/screen.do
+KOR,I03,Restricted | Resident Registration Number use regulated; mobile ID reduces unnecessary exposure,2026-02,Initial baseline,published,restricted;privacy,https://www.mois.go.kr/cmm/fms/FileDown.do?atchFileId=FILE_00071103sZW9zNB&fileSn=0;https://www.mois.go.kr/eng/bbs/type001/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000019&nttId=116395
+KOR,I04,Nationwide | Digital Platform Government aims to connect systems and data across agencies,2026-02,Initial baseline,published,nationwide;data-sharing,https://dpg.go.kr/DPG/main/eng.do
+KOR,I05,Yes | Resident Registration Card (physical) and related identity documents,2026-02,Initial baseline,published,nationwide;citizens,https://www.mois.go.kr/eng/a01/engMain.do
+KOR,I06,Nationwide | Mobile Resident Registration Card available nationwide (mobile ID),2026-02,Initial baseline,published,nationwide;smartphone,https://www.mois.go.kr/eng/bbs/type001/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000019&nttId=116395
+KOR,I07,Nationwide | Mobile driver’s license issuance supported (mobile ID ecosystem),2026-02,Initial baseline,published,nationwide;drivers-license,https://www.koroad.or.kr/eng/content/view/ME05030000.do;https://play.google.com/store/apps/details?id=kr.go.mobileid&hl=en
+KOR,I08,Multiple | Government-issued Mobile ID + sector authentication ecosystem (to refine),2026-02,Initial baseline,published,authentication;signature;needs-detail,https://www.mois.go.kr/eng/sub/a03/EGovernment/screen.do
+KOR,I09,Shared-Platform | Government-wide cloud and digital government modernization,2026-02,Initial baseline,published,shared-platform,https://www.mois.go.kr/eng/sub/a03/EGovernment/screen.do
+KOR,I10,Adequacy | EU GDPR adequacy decision for Republic of Korea (2022/254),2026-02,Initial baseline,published,privacy;gdpr,https://eur-lex.europa.eu/eli/dec_impl/2022/254/oj/eng
+KOR,I11,Yes | Key milestones captured in events.csv,2026-02,Initial baseline,published,timeline,https://www.mois.go.kr/eng/sub/a03/EGovernment/screen.do
+
+FRA,I01,None | No administrative population register; census used for official populations,2026-02,Initial baseline,published,privacy;census,https://unece.org/sites/default/files/2024-01/DOC%2015_2315335E.pdf;https://www.insee.fr/en/metadonnees/source/serie/s1321
+FRA,I02,No | No nationwide resident registry network comparable to population-register linkage,2026-02,Initial baseline,published,none,https://unece.org/sites/default/files/2024-01/DOC%2015_2315335E.pdf
+FRA,I03,Restricted | NIR/RNIPP use is tightly framed (decret cadre NIR),2026-02,Initial baseline,published,restricted;privacy,https://www.cnil.fr/fr/numero-dinscription-des-personnes-dans-le-secteur-social-le-decret-cadre-nir-en-questions;https://www.legifrance.gouv.fr/loda/id/JORFTEXT000038396526
+FRA,I04,Partial | Cross-agency data exchange via state APIs (DLNUF) in specific domains,2026-02,Initial baseline,published,partial;api;dlunf,https://www.numerique.gouv.fr/offre-accompagnement/expertise-api-donnees/;https://particulier.api.gouv.fr/;https://entreprise.api.gouv.fr/
+FRA,I05,Yes | National identity card exists; France Identité relies on new eID card,2026-02,Initial baseline,published,nationwide;citizens,https://www.service-public.fr/particuliers/vosdroits/F21089;https://france-identite.gouv.fr/
+FRA,I06,Nationwide | France Identité app generalized (mobile identity),2026-02,Initial baseline,published,nationwide;smartphone,https://france-identite.gouv.fr/;https://www.interieur.gouv.fr/actualites/communiques-de-presse/generalisation-de-lapplication-france-identite-et-lancement-du
+FRA,I07,Nationwide | Permis de conduire numérique available in France Identité (complementary),2026-02,Initial baseline,published,nationwide;drivers-license,https://france-identite.gouv.fr/usages/le-permis-de-conduire-numerique/;https://www.interieur.gouv.fr/actualites/communiques-de-presse/generalisation-de-lapplication-france-identite-et-lancement-du
+FRA,I08,Yes | FranceConnect is the state SSO / authentication federator,2026-02,Initial baseline,published,authentication,https://www.franceconnect.gouv.fr/?lang=en
+FRA,I09,Procurement | “Cloud au centre” doctrine guides public cloud adoption,2026-02,Initial baseline,published,procurement;cloud-policy,https://www.numerique.gouv.fr/cloud/;https://www.legifrance.gouv.fr/circulaire/id/45205
+FRA,I10,Adequacy | GDPR applies (EU member); CNIL as supervisory authority,2026-02,Initial baseline,published,gdpr;privacy,https://www.cnil.fr/en
+FRA,I11,Yes | Key milestones captured in events.csv,2026-02,Initial baseline,published,timeline,https://france-identite.gouv.fr/
+``
