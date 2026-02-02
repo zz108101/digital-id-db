@@ -3,7 +3,7 @@
  * - index.html: comparison table
  * - country.html: country detail + timeline
  */
-const DATA_DIR = "../data";
+const DATA_DIR = "./data";
 const DEFAULT_COUNTRIES = ["JPN", "EST", "KOR", "FRA"];
 
 // ---------- CSV helpers ----------
@@ -330,4 +330,5 @@ function renderCountryPage() {
       </ul>
     ` : `<div class="detail">年表データがありません。</div>`;
   }
+
 }
