@@ -288,3 +288,39 @@ tbody th{
   align-items: center;
   gap: 6px;
 }
+
+/* === Visibility controls === */
+.tagsLine { display: none; }
+
+/* =========================================================
+   Country page overrides (single source of truth)
+   - Hide header subtitle (version/status)
+   - Place status select to the right of version select
+   - Place timeline card to the right of indicators on wide screens
+   ========================================================= */
+
+/* Country page only (requires <body class="page-country">) */
+.page-country #countrySubtitle{
+  display: none !important;
+}
+
+/* Controls: version (left) / status (right) */
+.page-country .controls{
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  grid-template-areas: "version status" !important;
+  align-items: end !important;
+  gap: 12px;
+}
+.page-country .controls .control:nth-child(1){ grid-area: version !important; }
+.page-country .controls .control:nth-child(2){ grid-area: status  !important; }
+
+/* Main: indicators (left) and timeline (right) on wider screens */
+@media (min-width: 900px){
+  .page-country main{
+    display: grid !important;
+    grid-template-columns: 2fr 3fr !important;
+    align-items: start !important;
+    gap: 16px;
+  }
+}

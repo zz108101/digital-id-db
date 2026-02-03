@@ -18,6 +18,11 @@ const DEFAULT_COUNTRIES = ["JPN", "EST", "DNK", "KOR"];
 
 // ✅ Baseline country (always shown in comparison; not shown in chips)
 const BASELINE_COUNTRY = "JPN";
+// ✅ Event type canonical labels (for timeline; CSV remains SoT)
+const EVENT_TYPE_ORDER = [
+  '制度開始','施行','法制定','法改正','拡張','パイロット','発表','事故','終了'
+];
+
 
 /* =========================================================
  * Helpers: CSV
@@ -303,6 +308,12 @@ function appendCountryLabel(container, countryId, countryRecord, options = {}) {
  * ======================================================= */
 let detailJaMap = new Map();
 
+function translateTextToJa(text) {
+ const key = (text ?? "").trim();
+ if (!key) return "";
+ return detailJaMap.get(key) ?? key;
+}
+
 function translateDetailToJa(detailText) {
   const key = (detailText ?? "").trim();
   if (!key) return "";
@@ -542,7 +553,7 @@ function renderComparison() {
   });
 
   // indicator order: display_order then indicator_id
-  const indicatorOrder = indicators.slice().sort((a, b) => {
+  const indicatorOrder = indicators.slice().filter((i) => (i.indicator_id ?? '').trim() !== 'I11').sort((a, b) => {
     const ao = a.display_order != null && a.display_order !== "" ? Number(a.display_order) : 999;
     const bo = b.display_order != null && b.display_order !== "" ? Number(b.display_order) : 999;
     if (ao !== bo) return ao - bo;
@@ -623,7 +634,8 @@ function renderComparison() {
 
       if (rec.tags) {
         const tagLine = document.createElement("div");
-        tagLine.textContent = `tags: ${rec.tags}`;
+ tagLine.className = "tagsLine";
+ tagLine.textContent = `tags: ${rec.tags}`;
         d2.appendChild(tagLine);
       }
 
@@ -760,7 +772,7 @@ function renderCountryPage() {
 
   const lookup = new Map(rows.map((r) => [normalizeId(r.indicator_id), r]));
 
-  const indicatorOrder = indicators.slice().sort((a, b) => {
+  const indicatorOrder = indicators.slice().filter((i) => (i.indicator_id ?? '').trim() !== 'I11').sort((a, b) => {
     const ao = a.display_order != null && a.display_order !== "" ? Number(a.display_order) : 999;
     const bo = b.display_order != null && b.display_order !== "" ? Number(b.display_order) : 999;
     if (ao !== bo) return ao - bo;
@@ -819,8 +831,8 @@ function renderCountryPage() {
 
       if (rec.tags) {
         const dTags = document.createElement("div");
-        dTags.className = "detail";
-        dTags.textContent = `tags: ${rec.tags}`;
+ dTags.className = "detail tagsLine";
+ dTags.textContent = `tags: ${rec.tags}`;
         article.appendChild(dTags);
       }
 
