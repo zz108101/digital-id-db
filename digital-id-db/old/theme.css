@@ -1,0 +1,79 @@
+:root{
+ --bg0:#F7FAFF; 
+ --bg1:#FFFFFF; 
+ --card:#FFFFFF; 
+ --border: rgba(15,23,42,.12); 
+ --text:#0F172A; /* slate-900 */ 
+ --muted: rgba(15,23,42,.70); 
+ --accent:#2563EB; /* blue-600 */ 
+ --accent2:#0EA5E9; /* sky-500 */ 
+ --shadow: 0 10px 30px rgba(15,23,42,.10); 
+ --radius: 16px; 
+} 
+body{ 
+ background: 
+ radial-gradient(1000px 600px at 15% -10%, rgba(37,99,235,.10), transparent 60%), 
+ radial-gradient(900px 600px at 85% 10%, rgba(14,165,233,.10), transparent 55%), 
+ linear-gradient(180deg, var(--bg0), var(--bg1)); 
+ color: var(--text); 
+} 
+.hero{ 
+ position: relative; 
+ overflow: hidden; 
+ padding: 28px 16px 18px; 
+} 
+.hero-inner{ max-width: 1200px; margin: 0 auto; } 
+.hero-title{ display:flex; gap:16px; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; } 
+.hero h1{ margin:0; font-size: clamp(24px, 3vw, 40px); line-height:1.1; letter-spacing:.2px; color: var(--text); } 
+.hero h1 .en{ display:block; font-size:.46em; font-weight:600; color: var(--muted); margin-top: 6px; } 
+.hero .subtitle{ margin: 8px 0 0; color: var(--muted); } 
+.backlink{ color: var(--accent); text-decoration:none; font-weight:600; } 
+.backlink:hover{ text-decoration:underline; } 
+.card{ background: var(--card); border:1px solid var(--border); box-shadow: var(--shadow); border-radius: var(--radius); } 
+.card-title{ color: var(--text); } 
+.meta, .help, .subtitle{ color: var(--muted); } 
+/* World map block */ 
+.worldmap-card{ margin-top: 18px; padding: 14px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--border); box-shadow: var(--shadow); } 
+.worldmap{ position: relative; width: 100%; aspect-ratio: 940 / 477; border-radius: 14px; overflow: hidden; background: #EEF2FF; } 
+/* Use background-image so we can shift (Japan-centered) */ 
+.worldmap-bg{
+ position:absolute;
+ inset:0;
+ /* SVGが背景で描画できない環境向けにPNGフォールバックを用意 */
+ background-image:
+   url('./assets/BlankMap-World-Equirectangular.svg'),
+   url('./assets/BlankMap-World-Equirectangular.png');
+ background-repeat: no-repeat;
+ background-size: contain;
+ background-position: 50% 50%;
+ /* 視認性を少し上げる（PNGにも効く） */
+ filter: contrast(1.15) brightness(0.98);
+} 
+.worldmap-pins{ position:absolute; inset:0; z-index:2; } 
+.map-pin{ 
+ position:absolute; 
+ transform: translate(-50%, -50%); 
+ display:flex; 
+ align-items:center; 
+ gap:6px; 
+ padding: 6px 8px; 
+ border-radius: 999px; 
+ border: 1px solid rgba(15,23,42,.20); 
+ background: rgba(255,255,255,.92); 
+ box-shadow: 0 8px 20px rgba(15,23,42,.12); 
+ text-decoration:none; 
+} 
+.map-pin:hover{ border-color: rgba(37,99,235,.55); box-shadow: 0 10px 26px rgba(37,99,235,.18); } 
+.map-pin:focus{ outline: 2px solid rgba(37,99,235,.55); outline-offset: 2px; } 
+.map-pin .pin-label{ font-size: 12px; color: var(--text); white-space: nowrap; } 
+@media (max-width: 680px){ .map-pin .pin-label{ display:none; } .map-pin{ padding:6px; } } 
+.worldmap-hint{ margin-top: 10px; color: var(--muted); font-size: 12px; } 
+/* Bulk select buttons */ 
+.chip-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;} 
+button#selectAllCountries, button#clearAllCountries{ 
+ appearance:none; border:1px solid var(--border); background:#fff; color: var(--text); 
+ padding: 7px 10px; border-radius: 10px; cursor:pointer; font-size:12px; 
+} 
+button#selectAllCountries{ background: rgba(37,99,235,.08); border-color: rgba(37,99,235,.25); } 
+button#selectAllCountries:hover{ background: rgba(37,99,235,.12); } 
+button#clearAllCountries:hover{ background: rgba(15,23,42,.04); }

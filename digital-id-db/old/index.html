@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>デジタルID制度 国際比較</title>
+
+  <!-- ✅ CSSは必ず link タグで読み込む -->
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./theme.css" />
+</head>
+
+<body>
+  <header class="header">
+    <h1>デジタルID制度 国際比較</h1>
+    <p class="subtitle">CSV（source of truth）から自動生成</p>
+  </header>
+
+  <!-- World map (Japan-centered) -->
+  <section class="worldmap-card" aria-label="世界地図（日本中心）">
+    <div class="worldmap" id="worldmap">
+      <div class="worldmap-bg" aria-hidden="true"></div>
+      <div class="worldmap-pins" id="worldmapPins" aria-label="国旗ピン"></div>
+    </div>
+
+    <div class="worldmap-hint">
+      ※ 国旗ピンの位置は countries.csv の緯度・経度（＋map_dx / map_dy）のみを根拠に配置
+    </div>
+  </section>
+
+  <section class="controls">
+    <div class="control">
+      <label for="versionSelect">バージョン</label>
+      <select id="versionSelect"></select>
+    </div>
+
+    <div class="control">
+      <label for="statusSelect">表示状態</label>
+      <select id="statusSelect">
+        <option value="published" selected>published</option>
+        <option value="reviewed">reviewed</option>
+        <option value="draft">draft</option>
+      </select>
+    </div>
+
+    <div class="control">
+      <label>比較する国</label>
+      <div class="chips" id="countryChips"></div>
+      <div class="chip-actions">
+        <button id="selectAllCountries" type="button">すべて選択</button>
+        <button id="clearAllCountries" type="button">すべて解除</button>
+      </div>
+      <small class="help">（チェックで表示 / 非表示）</small>
+    </div>
+  </section>
+
+  <main>
+    <section class="card">
+      <h2 class="card-title">横断比較</h2>
+      <div id="meta" class="meta"></div>
+      <div class="table-wrap">
+        <table id="comparisonTable" class="comparison"></table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="card-title">凡例</h2>
+      <div class="legend">
+        <span class="pill nationwide">Nationwide / National / Yes / Adequacy / Common</span>
+        <span class="pill partial">Partial / Local / Restricted / Multiple / Procurement</span>
+        <span class="pill planned">Planned / None / No / Developing / Pilot</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

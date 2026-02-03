@@ -1,0 +1,290 @@
+:root{
+  /* Light theme */
+  --bg:#ffffff;
+  --card:#ffffff;
+  --text:#0f172a; /* slate-900 */
+  --muted:#475569; /* slate-600 */
+  --line:#e2e8f0; /* slate-200 */
+  --ok:#0ea5e9; /* sky-500 (アクセント) */
+  --mid:#2563eb; /* blue-600 */
+  --bad:#64748b; /* slate-500 */
+  --chip:#f1f5f9; /* slate-100 */
+  --shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto,
+  "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height: 1.55;
+}
+
+/* Header */
+.header{
+  padding:20px 16px 12px;
+  border-bottom:1px solid var(--line);
+  /* Premium subtle background */
+  background:
+    radial-gradient(900px 420px at 12% -30%, rgba(37,99,235,0.14), transparent 60%),
+    radial-gradient(760px 420px at 88% 0%, rgba(14,165,233,0.12), transparent 55%),
+    linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+  position: relative;
+  overflow: hidden;
+}
+/* Premium glass highlight */
+.header::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  pointer-events:none;
+  background:
+    linear-gradient(120deg, rgba(255,255,255,0.85), rgba(255,255,255,0.10) 45%, rgba(255,255,255,0.0) 70%);
+  opacity: 0.55;
+  transform: translateY(-8px);
+}
+/* Soft border sheen */
+.header::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-1px;
+  height:1px;
+  background: linear-gradient(90deg, rgba(37,99,235,0.0), rgba(14,165,233,0.35), rgba(37,99,235,0.0));
+  pointer-events:none;
+}
+
+/* Title emphasis (stylish): gradient text + underline accent + subtle glow */
+.header h1{
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+  line-height: 1.12;
+
+  /* Gradient text */
+  background: linear-gradient(90deg, var(--mid) 0%, var(--ok) 55%, var(--mid) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  /* Subtle glow */
+  text-shadow: 0 8px 24px rgba(37, 99, 235, 0.18);
+}
+/* Accent underline (rounded, gradient) */
+.header h1::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(37,99,235,0.15), rgba(14,165,233,0.55), rgba(37,99,235,0.15));
+  box-shadow: 0 6px 18px rgba(14,165,233,0.18);
+}
+/* Fallback (if gradient text is not supported) */
+@supports not ((-webkit-background-clip: text) or (background-clip: text)){
+  .header h1{ color: var(--mid); text-shadow: none; background: none; }
+  .header h1::after{ background: rgba(14,165,233,0.35); }
+}
+
+.subtitle{color:var(--muted); margin:14px 0 0}
+.help{color:var(--muted)}
+.backlink{
+  display:inline-block;
+  margin-bottom:8px;
+  color:var(--muted);
+  text-decoration:none;
+}
+.backlink:hover{color:var(--text)}
+
+/* Controls */
+.controls{
+  display:grid;
+  gap:12px;
+  padding:12px 16px;
+  border-bottom:1px solid var(--line);
+  grid-template-columns: minmax(220px, 320px) 1fr;
+  background: #ffffff;
+}
+/* Controls layout (desktop): version over status, countries on the right */
+@media (min-width: 769px){
+  .controls{
+    grid-template-areas:
+      "version countries"
+      "status  countries";
+    align-items: start;
+  }
+  .controls .control:nth-child(1){ grid-area: version; }
+  .controls .control:nth-child(2){ grid-area: status; }
+  .controls .control:nth-child(3){ grid-area: countries; }
+}
+
+.control label{display:block; color:var(--muted); font-size:12px; margin-bottom:6px}
+select{
+  width:100%;
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid var(--line);
+  background:#ffffff;
+  color:var(--text);
+  box-shadow: 0 1px 0 rgba(15,23,42,0.02);
+}
+select:focus{
+  outline: none;
+  border-color: rgba(14,165,233,0.7);
+  box-shadow: 0 0 0 3px rgba(14,165,233,0.15);
+}
+.chips{display:flex; flex-wrap:wrap; gap:8px}
+.chip{
+  background:var(--chip);
+  border:1px solid var(--line);
+  padding:6px 10px;
+  border-radius:999px;
+  display:flex;
+  gap:8px;
+  align-items:center;
+  cursor:pointer;
+  user-select:none;
+}
+.chip input{accent-color:var(--ok)}
+
+/* Layout */
+main{padding:16px; display:grid; gap:16px}
+
+/* Card */
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:14px;
+  box-shadow: var(--shadow);
+}
+.card-title{margin:0 0 10px; font-size:16px}
+.meta{color:var(--muted); font-size:12px; margin-bottom:10px}
+
+/* Table */
+.table-wrap{
+  overflow:auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background:#ffffff;
+}
+table{
+  border-collapse:collapse;
+  width:100%;
+  min-width:760px; /* デスクトップは比較しやすさ優先。モバイルは横スクロールで閲覧 */
+}
+th, td{
+  border-bottom:1px solid var(--line);
+  padding:10px;
+  text-align:left;
+  vertical-align:top;
+}
+thead th{
+  position:sticky;
+  top:0;
+  background:rgba(255,255,255,0.98);
+  backdrop-filter: blur(6px);
+  z-index:2;
+  border-bottom: 1px solid var(--line);
+}
+tbody th{
+  width:240px;
+  color: var(--text);
+  font-weight: 700;
+}
+.cell{display:flex; flex-direction:column; gap:4px}
+.value{font-weight:800}
+.detail{color:var(--muted); font-size:12px}
+
+/* Pills */
+.pill{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  font-size:12px;
+  margin-right:8px;
+  background: #ffffff;
+}
+.nationwide{background:rgba(14,165,233,0.10); border-color:rgba(14,165,233,0.35)}
+.partial{background:rgba(37,99,235,0.10); border-color:rgba(37,99,235,0.30)}
+.planned{background:rgba(100,116,139,0.10); border-color:rgba(100,116,139,0.25)}
+.countryLink{color:var(--mid); text-decoration:none}
+.countryLink:hover{text-decoration:underline}
+
+/* Country detail */
+.item{
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:12px;
+  margin-bottom:10px;
+  background:#ffffff;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+.item h3{margin:0 0 8px; font-size:14px}
+.timeline{list-style:none; padding:0; margin:0}
+.timeline li{
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:12px;
+  margin-bottom:10px;
+  background:#ffffff;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+.t-date{color:var(--muted); font-size:12px}
+.t-title{font-weight:800; margin-top:4px}
+.t-meta{color:var(--muted); font-size:12px; margin-top:4px}
+.t-desc{margin-top:6px}
+
+/* ===== Mobile adjustments ===== */
+@media (max-width: 768px){
+  body{ font-size: 15px; }
+  .header{ padding:16px 12px 12px; }
+  .controls{
+    padding:10px 12px;
+    grid-template-columns: 1fr; /* スマホは縦積み */
+  }
+  main{ padding:12px; gap:12px; }
+  .card{ padding:12px; border-radius:12px; }
+
+  /* テーブルのタップしやすさ改善 */
+  th, td{ padding:9px 10px; }
+  .detail{ font-size: 12px; }
+
+  /* 左見出し列を少し縮める */
+  tbody th{ width: 180px; }
+
+  /* pill を折返しやすく */
+  .pill{ margin: 4px 6px 0 0; }
+}
+@media (max-width: 420px){
+  body{ font-size: 14px; }
+
+  /* stickyヘッダが窮屈なら少し小さく */
+  thead th{ font-size: 12px; }
+  tbody th{ width: 160px; }
+  .card-title{ font-size: 15px; }
+}
+
+/* === Flag icons (image-based flags) === */
+.flagIcon{
+  width: 20px;
+  height: 15px; /* 4:3 */
+  vertical-align: -2px;
+  margin-right: 6px;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(15,23,42,0.10);
+  background: #fff;
+}
+.flagWrap{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}

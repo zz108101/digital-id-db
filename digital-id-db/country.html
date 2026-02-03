@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>国別ページ｜デジタルID制度</title>
+  <link rel="stylesheet" href="./styles.css" />
+ <link rel="stylesheet" href="./theme.css" />
+</head>
+<body>
+  <header class="header">
+    <a class="backlink" href="./index.html">← 国際比較へ戻る</a>
+    <h1 id="countryTitle">国別ページ</h1>
+    <p class="subtitle" id="countrySubtitle"></p>
+  </header>
+
+  <section class="controls">
+    <div class="control">
+      <label for="versionSelect">バージョン</label>
+      <select id="versionSelect"></select>
+    </div>
+
+    <div class="control">
+      <label for="statusSelect">表示状態</label>
+      <select id="statusSelect">
+        <option value="published" selected>published</option>
+        <option value="reviewed">reviewed</option>
+        <option value="draft">draft</option>
+      </select>
+    </div>
+  </section>
+
+  <main>
+    <section class="card">
+      <h2 class="card-title">制度一覧（11項目）</h2>
+      <div id="countryMeta" class="meta"></div>
+      <div id="countryIndicators"></div>
+    </section>
+
+    <section class="card">
+      <h2 class="card-title">歴史的変遷（年表）</h2>
+      <div id="countryEvents"></div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

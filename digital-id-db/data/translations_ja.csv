@@ -1,0 +1,137 @@
+en,ja
+Aadhaar authentication (OTP/biometric) plus offline e-KYC and DigiLocker document verification provide authentication infrastructure.,Aadhaar認証（OTP/生体）に加え、オフラインeKYCやDigiLockerの文書検証が認証基盤を構成する。
+Aadhaar authentication and India Stack initiatives enable broad digital verification and service delivery nationwide.,Aadhaar認証やIndia Stackの取組により、全国的なデジタル本人確認とサービス提供が可能。
+Aadhaar is a 12-digit unique identity number for residents; use is consent-based in many contexts.,Aadhaarは住民向けの12桁識別番号で、多くの場面で同意に基づき利用される。
+Aadhaar is issued as a physical letter/card and used as an identity credential; not a chip-based national ID card.,Aadhaarは物理の書面/カードとして交付され身分証として使われるが、チップ搭載の国民IDカードではない。
+"Approved e-identification providers include BankID (mobile), Freja+, and AB Svenska Pass under the national eID framework.",国家eID枠組みでBankID（モバイル）、Freja+、AB Svenska Pass等が承認されている。
+Australian Government Digital ID System enables online verification against official records with user consent (no central database).,豪州のデジタルID制度は同意の下で公式記録と照合し、中央集約DBを作らずにオンライン本人確認を可能にする。
+"Authentication ecosystem includes BankID, Freja+ and eID on Tax Agency-issued ID card under the Svensk e-legitimation framework.",Svensk e-legitimation枠組みの下でBankIDやFreja+、税務庁発行IDカードのeID等が併存。
+Authentication uses GCKey plus Sign-In Partner (bank-based) and some provincial sign-in options.,認証はGCKeyに加え銀行連携のSign-In Partner、州のサインイン方式などを併用。
+Authentication via eID function of the ID card plus BundID user account; also supports EU eID means.,IDカードのeID機能とBundID利用者アカウントによる認証が中心で、EUのeID手段にも対応。
+CPR number is essential for access to public services; eID onboarding can use CPR-linked data for verification.,CPR番号は行政サービス利用に不可欠で、eIDの発行・本人確認にもCPR連携データが用いられる。
+CPR number is the primary identifier for interaction with Danish public authorities.,CPR番号がデンマークの行政手続での主要識別子。
+Cloud adoption for government is procurement/policy driven (to refine with Danish government cloud sources).,政府クラウドは調達・方針ベース（デンマークの出典で要精緻化）。
+Cloud adoption is policy/procurement driven across agencies (to refine with AoG cloud references).,クラウド導入は各機関の方針・調達ベース（AoGクラウド参照で要精緻化）。
+Cloud adoption is policy/procurement driven across agencies; no single public “government cloud” platform comparable to GCC/JPN Government Cloud (to be refined).,クラウド導入は各機関の方針・調達ベースで、GCCや日本の政府クラウドのような単一基盤は明確でない（要精緻化）。
+Denmark’s civil registration system (CPR) is the national registration system; municipalities handle updates under the CPR framework.,デンマークの住民登録（CPR）は国家登録制度で、更新は自治体が担う。
+Digital ID (myID) provides authentication and identity proofing for participating government services.,デジタルID（myID）は参加する行政サービスで認証と本人確認を提供。
+Digital Personal Data Protection Act 2023 establishes privacy law; no EU GDPR adequacy decision for India.,Digital Personal Data Protection Act 2023がプライバシー法制を整備するが、インドはEU GDPR十分性認定対象ではない。
+Digital document and credential exchange is supported via DigiLocker and other Digital India platforms.,DigiLocker等のDigital India基盤により、デジタル文書・資格情報の共有/検証が支援される。
+Digital documents (including driving licence) are referenced as future capability within the GOV.UK One Login app ecosystem.,GOV.UK One Loginのアプリ基盤では将来的に運転免許証等のデジタル文書の保存が想定されている。
+"Digital driver licences are state-based (e.g., NSW Digital Driver Licence in Service NSW app).",デジタル運転免許証は州単位（例：NSWはService NSWアプリのDigital Driver Licence）。
+Digital driving licence is not a national ISO mDL rollout; to be tracked (some credentials may be stored in apps).,デジタル運転免許証は国家ISO mDLの全国展開ではなく、今後の追跡が必要（アプリ内資格情報の可能性あり）。
+"Digital government access uses multiple credentials (GCKey, Sign-In Partner) and program-specific enrolment.",行政オンラインアクセスはGCKeyやSign-In Partner等の複数資格情報と、サービスごとの登録で運用。
+"Digital government services use user accounts (BundID) and standards, but interoperability remains federated across federal/state levels.",デジタル行政サービスはBundID等のアカウントと標準を用いるが、連携は連邦・州の分権構造のまま。
+Digital self-services rely on CPR and MitID; cross-service access works via shared identity infrastructure.,デジタル行政サービスはCPRとMitIDに依存し、共通の身分基盤で横断利用が可能。
+EU Digital Identity Wallet / mDL initiatives exist; no nationwide standalone ISO mDL rollout yet.,EUデジタルIDウォレット／mDLの取組はあるが、国家としてのISO mDL全国展開はまだない。
+EU Digital Identity Wallet / mDL initiatives; no nationwide ISO mDL rollout yet.,EUデジタルIDウォレット／mDLの取組はあるが、国家としてのISO mDL全国展開はまだない。
+"EU has adopted adequacy decisions for the United Kingdom under GDPR (renewed, sunset clause applies).",EUは英国についてGDPRに基づく十分性認定（更新・サンセット条項あり）を採択している。
+EU recognises Canada (commercial organisations) as providing adequate protection for personal data transfers.,EUはカナダ（商業組織）を個人データ移転の十分性認定対象としている。
+EU recognises New Zealand as providing adequate protection for personal data transfers.,EUはニュージーランドを個人データ移転の十分性認定対象としている。
+FedRAMP provides a government-wide approach to security assessment/authorization for cloud services used by federal agencies.,FedRAMPは連邦機関が利用するクラウドのセキュリティ評価・認可の標準枠組み。
+Federal cloud initiatives include Bundescloud and the federated German Government Cloud (DVC).,連邦政府のクラウド施策としてBundescloudおよび連邦・州の政府クラウド（DVC）がある。
+"Federated identity and attribute sharing exist (e.g., Login.gov for participating federal agencies), but systems remain fragmented across levels of government.",Login.gov等で連邦機関向けの連携はあるが、政府レベル間で全体は分断されている。
+GDPR applies (EU member state).,EU加盟国としてGDPRが適用。
+GI Cloud “MeghRaj” is the Government of India cloud initiative to accelerate e-service delivery and optimise ICT spending.,GIクラウド「MeghRaj」は、電子サービス提供の加速と政府ICT支出の最適化を目的とする政府クラウド施策。
+GOV.UK One Login provides a central sign-in and identity proofing service for participating government services.,GOV.UK One Loginは参加する行政サービス向けの統一サインインと本人確認を提供。
+GOV.UK One Login stores verified identity attributes for reuse across services requiring identity checks.,GOV.UK One Loginは確認済みの属性情報を保存し、本人確認が必要なサービスで再利用できる。
+GOV.UK One Login uses a smartphone app route for identity proofing (document scan and liveness checks).,GOV.UK One Loginはスマホアプリで書類読取と生体（ライブネス）確認により本人確認を行う。
+German ID card (Personalausweis) includes a chip enabling online identification (eID).,ドイツの身分証（Personalausweis）はチップを搭載し、オンライン本人確認（eID）に対応。
+Government cloud adoption is policy/procurement driven (to refine with Swedish government cloud sources).,政府クラウドは方針・調達ベース（スウェーデンの政府クラウド出典で要精緻化）。
+Government on Commercial Cloud (GCC) provides a standardised approach for agencies to adopt commercial cloud services securely.,GCCは行政機関が商用クラウドを安全に採用するための標準化された基盤を提供。
+"Identity documents (passport, driver licence) are used to create Digital ID; unique identifiers are purpose-bound rather than universal cross-sector IDs.",本人確認書類（パスポート、運転免許証など）を用いてDigital IDを作成する。識別子は官民横断の万能IDではなく、用途ごとに目的限定で用いられる。
+Key milestones captured in events.csv,主要なマイルストーンは events.csv に整理
+Login.gov provides a government-wide account and MFA-based authentication for participating agencies.,Login.govは参加機関向けにMFAを用いた政府共通アカウント認証を提供。
+Many e-services rely on the Population Register and Swedish e-identification; access to population register certificates requires Swedish e-ID.,多くの電子サービスは人口登録と電子IDに依存し、人口登録証明書の取得にはスウェーデンのeIDが必要。
+MitID is the Danish national eID used for public self-service solutions; can be obtained via app and passport scanning.,MitIDは国のeIDで、アプリとパスポート読取等で取得できる。
+MitID is the national eID and key to digital services across Denmark.,MitIDが全国のデジタルサービス利用の鍵となる国のeID。
+Mobile IDs are state-led and not uniform; federal services focus on account-based authentication (Login.gov).,モバイルIDは州主導で統一されておらず、連邦サービスはLogin.gov等のアカウント認証が中心。
+Mobile driver’s licences (mDLs) are state-issued; TSA accepts approved mDLs at participating checkpoints (states vary).,mDLは州が発行し、TSAは参加空港の保安検査で承認mDLを受け入れる（州により異なる）。
+MyInfo enables consent-based retrieval of verified personal data from government sources to pre-fill forms.,MyInfoは政府の検証済み個人データを同意の下で取得し、フォーム自動入力を可能にする。
+"MyInfo provides a national personal data platform enabling secure, consent-based data sharing for digital services.",MyInfoは同意に基づく安全なデータ共有を可能にする国家的な個人データ基盤。
+NRIC is a physical identity document; Singpass complements it as national digital identity.,NRICは物理の身分証で、Singpassが国家デジタルIDとして補完する。
+NRIC numbers are identifiers; guidance discourages using NRIC numbers for authentication to reduce risk of misuse.,NRIC番号は識別子であり、悪用防止のため認証要素としての使用は避けるよう指針が示されている。
+National Insurance number is used for NI contributions and tax records; sharing is discouraged and purpose-bound.,国民保険番号（NI番号）は保険料・税の記録に用いられ、目的外の共有は抑制される。
+National registration system uses NRIC/FIN identifiers; government uses Singpass as trusted digital identity for services.,NRIC/FIN等の登録識別子があり、Singpassが行政・民間サービスの信頼できるデジタルIDとして機能する。
+No EU GDPR adequacy decision for Australia (not listed among adequacy jurisdictions).,豪州はEU GDPRの十分性認定対象（一覧）に含まれない。
+No administrative population register comparable to Nordic-style population registers; identity is proven via documents and departmental records.,北欧型の人口登録に相当する行政人口台帳はなく、身分は書類や省庁ごとの記録で確認される。
+No federal national ID card; commonly used credentials include provincial driver’s licences/ID and passports.,連邦の国民IDカードはなく、州の免許/IDやパスポート等が一般的な身分証。
+No mandatory national ID card; identity is typically proven via passport/driver licence while CPR is an identifier.,携帯義務の国民IDカードはなく、身分はパスポート/免許等で示し、CPRは識別子として用いる（要精緻化）。
+No national ID card scheme; RealMe verified is an electronic verified identity (not a physical card).,国民IDカード制度はなく、RealMe verifiedは物理カードではない電子の確認済み本人情報。
+"No national ID card; government Digital ID relies on existing identity documents (passport, driver licence) as evidence.",国民IDカードはなく、デジタルIDはパスポートや運転免許証等の既存書類を証拠として用いる。
+No national ID card; identity documents are issued by states (DL/ID) and federal agencies (passport) for specific uses.,国民IDカードはなく、身分証は州（免許/ID）や連邦（パスポート）など用途別に発行される。
+No national identity card scheme for citizens; official identity documents are passports and driving licences.,国民向けの国民IDカード制度はなく、公式な身分証はパスポートや運転免許証が中心。
+No national population register comparable to Nordic population registers; core identity relies on passports and departmental records.,北欧型人口登録に相当する全国人口台帳はなく、身分はパスポート等と機関別記録に依存。
+No national population register; core identity and licensing records are managed by provinces/territories.,全国人口登録はなく、主要な身分・免許記録は州・準州が管理する。
+No national population register; identity is verified against issuing agencies’ records without creating a centralised database.,全国人口登録はなく、本人確認は発行機関の公式記録との照合で行われ、中央集約DBは作らない。
+No national population register; resident records are maintained by states and agencies for specific purposes.,全国人口登録はなく、住民記録は州や各機関が目的別に管理する。
+No nationwide mobile driver’s licence (mDL) acceptance; provinces issue physical licences and require carrying a driver’s licence when driving.,全国一律のmDL受入はなく、州は物理免許を発行し運転時の携行を求める。
+No nationwide mobile driver’s licence rollout (to be tracked; NZ primarily relies on physical licences).,全国的なモバイル運転免許証の展開は確認できず（要追跡）。現状は物理免許が中心。
+No nationwide resident registry network comparable to population-register linkage.,人口登録のような全国的住民台帳ネットワークは存在しない。
+No nationwide resident registry network; identity data is not linked through a population register network.,全国一体の住民台帳ネットワークはなく、人口台帳ネットワークでの連結は行われない。
+No single federal comprehensive privacy law; EU adequacy exists only for US organisations participating in the EU-US Data Privacy Framework.,包括的な連邦プライバシー法はなく、EUの十分性はEU-USデータプライバシー枠組み参加企業に限られる。
+No single nationwide resident registry network comparable to population-register linkage.,人口登録のような全国的住民台帳ネットワークは存在しない。
+No universal cross-sector identifier; RealMe provides verified identity for online transactions with consent.,官民横断の万能IDはなく、RealMeが同意に基づくオンライン本人確認を提供する。
+"No universal cross-sector identifier; sector identifiers exist (e.g., tax) and online identity uses the ID card eID function.",官民横断の万能IDはなく、税など分野別IDが存在し、オンライン本人確認はIDカードのeID機能を用いる。
+No universal population register comparable to Nordic systems; Aadhaar provides resident identity for many services but is not a citizenship register.,北欧型人口登録に相当する普遍的人口台帳はなく、Aadhaarは多くのサービスで住民IDを提供するが市民権登録ではない。
+PDPA provides privacy protections; no EU GDPR adequacy decision for Singapore (not listed).,PDPAにより個人情報保護はあるが、シンガポールはEU GDPR十分性認定（一覧）に含まれない。
+Personal identity number (personnummer) is the primary identifier used widely for authorisation and services.,個人番号（personnummer）が認可・各種サービスで広く使われる主要識別子。
+Population registers are kept by registration authorities designated by each Land; registration is handled by municipalities.,人口登録（住民登録）は州（Land）が指定する登録当局が保持し、住所登録は市町村が担う。
+Population registers are maintained locally; data exchange occurs under the Federal Act on Registration rather than a single national resident registry network.,人口登録は地方で管理され、全国一体の住民台帳ネットワークではなく連邦登録法に基づきデータ連携が行われる。
+Public sector cloud adoption is supported via the G-Cloud framework and Digital Marketplace procurement.,公的部門のクラウド調達はG-CloudフレームワークとDigital Marketplaceで進む。
+RealMe is a secure login and verified identity service used across government and many commercial services.,RealMeは政府および多くの民間サービスで使われる安全なログイン／本人確認基盤。
+RealMe provides government-grade login and verified identity services; smartphone support exists but is not a single “mobile ID card”.,RealMeは政府水準のログインと本人確認を提供し、スマホ対応はあるが単一の「モバイルIDカード」ではない。
+RealMe verified uses consent-based attribute sharing; identity data is pulled from source databases in real time (no central data source).,RealMe verifiedは同意に基づき属性を共有し、情報は中央DBではなく元データベースからリアルタイム取得する。
+Singpass app provides biometric/2FA login and digital identity services across thousands of services.,Singpassアプリは生体認証/2FAでログインでき、数千のサービスでデジタルIDを提供。
+Singpass provides authentication (2FA/biometrics) for government and participating business services.,Singpassは行政および参加企業向けに2FA/生体認証による認証を提供。
+Smartphone use typically relies on the ID card eID function via an app/reader; not a standalone mobile-ID credential.,スマホ利用は主にIDカードのeID機能をアプリ/リーダーで使う形で、単独のモバイルID資格情報ではない。
+Social Insurance Number is confidential; use is legally required mainly for income reporting and government benefits.,SINは秘匿性が高く、主に所得報告や政府給付のために法的に求められる。
+Social Security Number is widely used for employment reporting and benefit eligibility and commonly requested in the economy.,社会保障番号（SSN）は雇用の賃金報告や給付資格に広く使われ、経済活動でも頻繁に求められる。
+"Some provinces offer digital ID login apps (e.g., BC Services Card app) for online access to services.",一部州は（例：BC Services Card）オンライン利用のためのデジタルIDログインアプリを提供。
+Sweden Connect / eIDAS infrastructure supports identity binding and attribute delivery; interoperability varies by service domain.,Sweden Connect／eIDAS基盤でID結び付けと属性提供を支援するが、相互運用は分野により異なる。
+Swedish ID card can be applied for after population registration; used as approved identity document.,人口登録後にIDカード申請ができ、国内で承認された本人確認書類として用いられる。
+Swedish Population Register is maintained by the Swedish Tax Agency; extracts can be requested from the register.,スウェーデンの人口登録（Population Register）は税務庁が管理し、登録内容の証明書を請求できる。
+Whole-of-government cloud policy provides a unified framework for cloud adoption across the Australian Public Service.,全政府クラウド方針により、豪州公共部門のクラウド導入の統一枠組みが示される。
+mAadhaar/DigiLocker-style apps provide mobile access to identity and government-issued documents.,mAadhaarやDigiLocker等のアプリで、身分情報や政府発行文書をモバイルで提示できる。
+mParivahan (MoRTH) provides mobile access to transport documents; digital DL/RC are part of national transport digital services.,mParivahan（運輸省）は交通関連文書をモバイルで提供し、DL/RCのデジタル化は全国サービスの一部。
+myID (formerly myGovID) is the Australian Government Digital ID app used to prove identity for online services.,myID（旧myGovID）は政府のデジタルIDアプリで、オンラインサービスの本人確認に用いられる。
+Basic Resident Register is maintained by municipalities,基本住民登録は市区町村が管理している
+Basic Resident Register Network (Juki Net) enables nationwide linkage,住民基本台帳ネットワーク（住基ネット）により全国的な連携が可能
+My Number use is legally limited to stipulated administrative purposes,マイナンバーの利用は法律で定められた行政目的に限定される
+Information coordination via Information Provision Network System,情報提供ネットワークシステムを通じて情報連携（情報照会・提供）を行う
+My Number Card with IC chip and electronic certificates (JPKI),ICチップと電子証明書（JPKI）を搭載したマイナンバーカード
+Smartphone My Number Card enables legal authentication on smartphones,スマホ用のマイナンバーカードによりスマートフォンで法的な本人確認が可能
+Driver's license integrated into My Number Card; smartphone mDL not nationwide,運転免許証のマイナンバーカード一体化が予定されるが、スマホmDLは全国展開ではない
+JPKI for citizens and GPKI for government authentication,住民向けのJPKIと、行政向けのGPKIによる認証
+Government-wide common cloud environment (Government Cloud),政府共通のクラウド環境（ガバメントクラウド）
+APPI under PPC and EU GDPR adequacy decision (2019),個人情報保護法（PPC）とEU GDPRの十分性認定（2019年）
+Population Register centrally managed by the state,人口登録（Population Register）は国家が一元管理
+Nationwide interoperability via X-Road (X-tee),X-Road（X-tee）により全国規模の相互運用を実現
+Personal identification code used broadly across public/private e-services,個人識別コードが官民の電子サービスで広く利用される
+X-Road enables secure data exchange across government and private sector,X-Roadにより官民をまたぐ安全なデータ交換が可能
+Mandatory ID-card enabling authentication and digital signature,認証と電子署名に対応する義務的なIDカード
+Mobile-ID and Smart-ID enable authentication/signing on smartphones,Mobile-IDとSmart-IDによりスマホで認証・署名が可能
+EU wallet / mDL initiatives; no standalone national ISO mDL rollout,EUウォレット／mDLの取り組みはあるが、単独の国家ISO mDLの全国展開はない
+State eID PKI + Mobile-ID + Smart-ID,国家eIDのPKI＋Mobile-ID＋Smart-IDの組み合わせ
+Estonian Government Cloud (Riigipilv),エストニア政府クラウド（Riigipilv）
+EU member state under GDPR,EU加盟国としてGDPRが適用
+Resident registration controlled by local authorities under national supervision,住民登録は地方自治体が所管しつつ、国が監督する枠組み
+National digital government promotes interoperability and data sharing,デジタル政府の推進により相互運用・データ共有を促進
+Resident Registration Number use regulated; mobile ID reduces unnecessary exposure,住民登録番号の利用は規制され、モバイルIDで不要な露出を抑制
+Digital Platform Government aims to connect systems and data across agencies,デジタル・プラットフォーム政府により省庁横断のシステム・データ連携を目指す
+Resident Registration Card (physical) and related identity documents,住民登録証（物理カード）および関連する本人確認書類
+Mobile Resident Registration Card available nationwide (mobile ID),モバイル住民登録証（モバイルID）が全国で利用可能
+Mobile driver’s license issuance supported (mobile ID ecosystem),モバイル運転免許証の発行に対応（モバイルIDエコシステム）
+Government-issued Mobile ID + sector authentication ecosystem (to refine),政府発行のモバイルID＋分野別の認証エコシステム（要精緻化）
+Government-wide cloud and digital government modernization,政府全体のクラウド活用とデジタル政府の近代化
+EU GDPR adequacy decision for Republic of Korea (2022/254),韓国に対するEU GDPRの十分性認定（2022/254）
+No administrative population register; census used for official populations,行政上の人口登録はなく、国勢調査等が公式人口の根拠となる
+No nationwide resident registry network comparable to population-register linkage,人口登録のような全国的住民台帳ネットワークは存在しない。
+NIR/RNIPP use is tightly framed (decret cadre NIR),NIR/RNIPPの利用は厳格に枠付け（NIR枠組み政令）
+Cross-agency data exchange via state APIs (DLNUF) in specific domains,特定分野で国家API（DLNUF等）により省庁間データ連携を実施
+National identity card exists; France Identit? relies on new eID card,国民IDカードは存在し、France Identit?は新しいeIDカードに依拠
+France Identit? app generalized (mobile identity),France Identit?アプリが一般化（モバイルID）
+Permis de conduire num?rique available in France Identit? (complementary),デジタル運転免許証がFrance Identit?で利用可能（補完的）
+FranceConnect is the state SSO / authentication federator,FranceConnectが政府のSSO／認証連携基盤
+“Cloud au centre” doctrine guides public cloud adoption,「Cloud au centre（クラウド中心）」方針が官のクラウド調達・利用をガイド
+GDPR applies (EU member); CNIL as supervisory authority,EU加盟国としてGDPRが適用され、CNILが監督当局
