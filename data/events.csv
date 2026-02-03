@@ -1,16 +1,16 @@
-event_id,country_id,event_date,event_type,severity,title,description,source_url
-JPN-E01,JPN,2002-08-05,制度開始,High,Juki Net started,Basic Resident Register Network began operation,https://www.city.inagi.tokyo.jp/en/kurashi/tetsuzuki/1002597/1002598.html
-JPN-E02,JPN,2016-01-01,制度開始,High,My Number in use,My Number used for stipulated administrative procedures and information coordination,https://www.digital.go.jp/en/policies/mynumber/explanation
-JPN-E03,JPN,2025-03-24,施行,High,Myna driver's license starts,Driver’s license info can be recorded on My Number Card,https://www.digital.go.jp/en/policies/mynumber/drivers-license
-JPN-E04,JPN,2026-01-23,制度開始,Medium,Smartphone My Number Card expanded,My Number Card functions available on smartphones,https://www.digital.go.jp/en/policies/mynumber/smartphone-certification
-
-EST-E01,EST,2001-01-01,制度開始,High,X-Road launched,Secure data exchange layer began nationwide use,https://e-estonia.com/solutions/interoperability-services/x-road/
-EST-E02,EST,2002-01-28,制度開始,High,National ID-card introduced,ID-card enabled authentication and digital signatures,https://e-estonia.com/solutions/estonian-e-identity/id-card/
-EST-E03,EST,2014-12-01,制度開始,Medium,e-Residency launched,e-Residency program started,https://e-estonia.com/solutions/estonian-e-identity/id-card/
-
-KOR-E01,KOR,2025-03-28,制度開始,High,Mobile Resident Registration Card nationwide,Mobile resident registration card available nationwide,https://www.mois.go.kr/eng/bbs/type001/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000019&nttId=116395
-KOR-E02,KOR,2024-12-17,制度開始,High,EU adequacy decision,EU adequacy decision for Republic of Korea under PIPA,https://eur-lex.europa.eu/eli/dec_impl/2022/254/oj/eng
-KOR-E03,KOR,2020-06-24,制度開始,Medium,Mobile driver license verification,PASS app enabled driver license verification via smartphone,https://www.korea.net/NewsFocus/Sci-Tech/view?articleId=186990
-
-FRA-E01,FRA,2024-02-13,制度開始,High,France Identité generalized,France Identité opened to all and introduced digital driving license,https://www.interieur.gouv.fr/actualites/communiques-de-presse/generalisation-de-lapplication-france-identite-et-lancement-du
-FRA-E02,FRA,2019-04-19,法改正,High,Decret cadre NIR,Framework decree governing NIR usage,https://www.legifrance.gouv.fr/loda/id/JORFTEXT000038396526
+﻿event_id,country_id,event_date,event_type,severity,title,description,source_url
+JPN-E01,JPN,2002/8/5,制度開始,High,Juki Net started,Basic Resident Register Network began operation,https://www.city.inagi.tokyo.jp/en/kurashi/tetsuzuki/1002597/1002598.html
+JPN-E02,JPN,2016/1/1,制度開始,High,My Number in use,My Number used for stipulated administrative procedures and information coordination,https://www.digital.go.jp/en/policies/mynumber/explanation
+JPN-E03,JPN,2025/3/24,施行,High,Myna driver's license starts,Driver’s license info can be recorded on My Number Card,https://www.digital.go.jp/en/policies/mynumber/drivers-license
+JPN-E04,JPN,2026/1/23,制度開始,Medium,Smartphone My Number Card expanded,My Number Card functions available on smartphones,https://www.digital.go.jp/en/policies/mynumber/smartphone-certification
+,,,,,,,
+EST-E01,EST,2001/1/1,制度開始,High,X-Road launched,Secure data exchange layer began nationwide use,https://e-estonia.com/solutions/interoperability-services/x-road/
+EST-E02,EST,2002/1/28,制度開始,High,National ID-card introduced,ID-card enabled authentication and digital signatures,https://e-estonia.com/solutions/estonian-e-identity/id-card/
+EST-E03,EST,2014/12/1,制度開始,Medium,e-Residency launched,e-Residency program started,https://e-estonia.com/solutions/estonian-e-identity/id-card/
+,,,,,,,
+KOR-E01,KOR,2025/3/28,制度開始,High,Mobile Resident Registration Card nationwide,Mobile resident registration card available nationwide,https://www.mois.go.kr/eng/bbs/type001/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000019&nttId=116395
+KOR-E02,KOR,2024/12/17,制度開始,High,EU adequacy decision,EU adequacy decision for Republic of Korea under PIPA,https://eur-lex.europa.eu/eli/dec_impl/2022/254/oj/eng
+KOR-E03,KOR,2020/6/24,制度開始,Medium,Mobile driver license verification,PASS app enabled driver license verification via smartphone,https://www.korea.net/NewsFocus/Sci-Tech/view?articleId=186990
+,,,,,,,
+FRA-E01,FRA,2024/2/13,制度開始,High,France Identit? generalized,France Identit? opened to all and introduced digital driving license,https://www.interieur.gouv.fr/actualites/communiques-de-presse/generalisation-de-lapplication-france-identite-et-lancement-du
+FRA-E02,FRA,2019/4/19,法改正,High,Decret cadre NIR,Framework decree governing NIR usage,https://www.legifrance.gouv.fr/loda/id/JORFTEXT000038396526

@@ -4,20 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>デジタルID制度 国際比較</title>
+  <!-- ✅ CSSは必ず link タグで読み込む -->
   <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./theme.css" />
 </head>
 <body>
   <header class="header">
     <h1>デジタルID制度 国際比較</h1>
-    <p class="subtitle">CSV（source of truth）から自動生成</p>
+    <p class="subtitle">
+      本サイトは、日本を基準に主要国のデジタルID制度の「設計思想・制度構造の違い」を比較するためのデータ駆動型・完全静的な可視化データベース &amp; Webサイトです。
+    </p>
   </header>
+
+  <!-- World map (Japan-centered) -->
+  <section class="worldmap-card" aria-label="世界地図（日本中心）">
+    <div class="worldmap" id="worldmap">
+      <div class="worldmap-bg" aria-hidden="true"></div>
+      <div class="worldmap-pins" id="worldmapPins" aria-label="国旗ピン"></div>
+    </div>
+    <!-- 注釈は削除 -->
+  </section>
 
   <section class="controls">
     <div class="control">
       <label for="versionSelect">バージョン</label>
       <select id="versionSelect"></select>
     </div>
-
     <div class="control">
       <label for="statusSelect">表示状態</label>
       <select id="statusSelect">
@@ -26,11 +38,14 @@
         <option value="draft">draft</option>
       </select>
     </div>
-
     <div class="control">
       <label>比較する国</label>
       <div class="chips" id="countryChips"></div>
-      <small class="help">（チェックで表示/非表示）</small>
+      <div class="chip-actions">
+        <button id="selectAllCountries" type="button">すべて選択</button>
+        <button id="clearAllCountries" type="button">すべて解除</button>
+      </div>
+      <small class="help">（チェックで表示 / 非表示）</small>
     </div>
   </section>
 

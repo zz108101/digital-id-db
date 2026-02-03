@@ -1,49 +1,309 @@
-country_id,indicator_id,value,version,change_note,review_status,tags,source_url
-JPN,I01,Local | Basic Resident Register is maintained by municipalities,2026-02,Initial baseline,published,mandatory;residents,https://www.soumu.go.jp/main_sosiki/jichi_gyousei/c-gyousei/zairyu/english/index.html
-JPN,I02,Yes | Basic Resident Register Network (Juki Net) enables nationwide linkage,2026-02,Initial baseline,published,nationwide;residents,https://www.city.inagi.tokyo.jp/en/kurashi/tetsuzuki/1002597/1002598.html
-JPN,I03,Restricted | My Number use is legally limited to stipulated administrative purposes,2026-02,Initial baseline,published,mandatory;tax;health,https://www.digital.go.jp/en/policies/mynumber/explanation
-JPN,I04,Nationwide | Information coordination via Information Provision Network System,2026-02,Initial baseline,published,nationwide;government,https://www.digital.go.jp/en/policies/mynumber/explanation
-JPN,I05,Yes | My Number Card with IC chip and electronic certificates (JPKI),2026-02,Initial baseline,published,nationwide;citizens;residents,https://www.digital.go.jp/en/policies/mynumber/private-business/jpki-introduction
-JPN,I06,Nationwide | Smartphone My Number Card enables legal authentication on smartphones,2026-02,Initial baseline,published,nationwide;smartphone,https://www.digital.go.jp/en/policies/mynumber/smartphone-certification
-JPN,I07,Planned | Driver's license integrated into My Number Card; smartphone mDL not nationwide,2026-02,Initial baseline,published,planned;drivers-license,https://www.digital.go.jp/en/policies/mynumber/drivers-license
-JPN,I08,Multiple | JPKI for citizens and GPKI for government authentication,2026-02,Initial baseline,published,authentication;signature,https://www.digital.go.jp/en/policies/mynumber/private-business/jpki-introduction;https://www.gpki.go.jp/
-JPN,I09,Shared-Platform | Government-wide common cloud environment (Government Cloud),2026-02,Initial baseline,published,shared-platform;migration,https://www.digital.go.jp/en/policies/gov_cloud
-JPN,I10,Adequacy | APPI under PPC and EU GDPR adequacy decision (2019),2026-02,Initial baseline,published,privacy;gdpr,https://eur-lex.europa.eu/eli/dec_impl/2019/419/oj/eng
-JPN,I11,Yes | Key milestones captured in events.csv,2026-02,Initial baseline,published,timeline,https://www.digital.go.jp/en/policies/mynumber/explanation
-
-EST,I01,National | Population Register centrally managed by the state,2026-02,Initial baseline,published,mandatory;residents,https://www.siseministeerium.ee/en/activities/population-procedures/population-register
-EST,I02,Yes | Nationwide interoperability via X-Road (X-tee),2026-02,Initial baseline,published,nationwide;interoperability,https://e-estonia.com/solutions/interoperability-services/x-road/
-EST,I03,Common | Personal identification code used broadly across public/private e-services,2026-02,Initial baseline,published,mandatory;banking;telecom;health,https://www.ria.ee/en/state-information-system/electronic-identity-eid-and-trust-services/electronic-identity-eid
-EST,I04,Nationwide | X-Road enables secure data exchange across government and private sector,2026-02,Initial baseline,published,nationwide;once-only,https://www.ria.ee/en/state-information-system/data-exchange-platforms/data-exchange-layer-x-tee
-EST,I05,Yes | Mandatory ID-card enabling authentication and digital signature,2026-02,Initial baseline,published,nationwide;citizens,https://e-estonia.com/solutions/estonian-e-identity/id-card/
-EST,I06,Nationwide | Mobile-ID and Smart-ID enable authentication/signing on smartphones,2026-02,Initial baseline,published,nationwide;smartphone,https://www.id.ee/en/
-EST,I07,Planned | EU wallet / mDL initiatives; no standalone national ISO mDL rollout,2026-02,Initial baseline,published,planned;drivers-license,https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/929202846/The+Mobile+Driving+License+manual
-EST,I08,Multiple | State eID PKI + Mobile-ID + Smart-ID,2026-02,Initial baseline,published,authentication;signature,https://www.ria.ee/en/state-information-system/electronic-identity-eid-and-trust-services/electronic-identity-eid
-EST,I09,Shared-Platform | Estonian Government Cloud (Riigipilv),2026-02,Initial baseline,published,shared-platform;migration,https://riigipilv.ee/
-EST,I10,Adequacy | EU member state under GDPR,2026-02,Initial baseline,published,gdpr;privacy,https://www.dlapiperdataprotection.com/index.html?t=law&c=EE
-EST,I11,Yes | Key milestones captured in events.csv,2026-02,Initial baseline,published,timeline,https://e-estonia.com/solutions/estonian-e-identity/id-card/
-
-KOR,I01,Local | Resident registration controlled by local authorities under national supervision,2026-02,Initial baseline,published,mandatory;citizens,https://www.mois.go.kr/cmm/fms/FileDown.do?atchFileId=FILE_00071103sZW9zNB&fileSn=0
-KOR,I02,Yes | National digital government promotes interoperability and data sharing,2026-02,Initial baseline,published,nationwide;government,https://www.mois.go.kr/eng/sub/a03/EGovernment/screen.do
-KOR,I03,Restricted | Resident Registration Number use regulated; mobile ID reduces unnecessary exposure,2026-02,Initial baseline,published,restricted;privacy,https://www.mois.go.kr/cmm/fms/FileDown.do?atchFileId=FILE_00071103sZW9zNB&fileSn=0;https://www.mois.go.kr/eng/bbs/type001/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000019&nttId=116395
-KOR,I04,Nationwide | Digital Platform Government aims to connect systems and data across agencies,2026-02,Initial baseline,published,nationwide;data-sharing,https://dpg.go.kr/DPG/main/eng.do
-KOR,I05,Yes | Resident Registration Card (physical) and related identity documents,2026-02,Initial baseline,published,nationwide;citizens,https://www.mois.go.kr/eng/a01/engMain.do
-KOR,I06,Nationwide | Mobile Resident Registration Card available nationwide (mobile ID),2026-02,Initial baseline,published,nationwide;smartphone,https://www.mois.go.kr/eng/bbs/type001/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000019&nttId=116395
-KOR,I07,Nationwide | Mobile driver’s license issuance supported (mobile ID ecosystem),2026-02,Initial baseline,published,nationwide;drivers-license,https://www.koroad.or.kr/eng/content/view/ME05030000.do;https://play.google.com/store/apps/details?id=kr.go.mobileid&hl=en
-KOR,I08,Multiple | Government-issued Mobile ID + sector authentication ecosystem (to refine),2026-02,Initial baseline,published,authentication;signature;needs-detail,https://www.mois.go.kr/eng/sub/a03/EGovernment/screen.do
-KOR,I09,Shared-Platform | Government-wide cloud and digital government modernization,2026-02,Initial baseline,published,shared-platform,https://www.mois.go.kr/eng/sub/a03/EGovernment/screen.do
-KOR,I10,Adequacy | EU GDPR adequacy decision for Republic of Korea (2022/254),2026-02,Initial baseline,published,privacy;gdpr,https://eur-lex.europa.eu/eli/dec_impl/2022/254/oj/eng
-KOR,I11,Yes | Key milestones captured in events.csv,2026-02,Initial baseline,published,timeline,https://www.mois.go.kr/eng/sub/a03/EGovernment/screen.do
-
-FRA,I01,None | No administrative population register; census used for official populations,2026-02,Initial baseline,published,privacy;census,https://unece.org/sites/default/files/2024-01/DOC%2015_2315335E.pdf;https://www.insee.fr/en/metadonnees/source/serie/s1321
-FRA,I02,No | No nationwide resident registry network comparable to population-register linkage,2026-02,Initial baseline,published,none,https://unece.org/sites/default/files/2024-01/DOC%2015_2315335E.pdf
-FRA,I03,Restricted | NIR/RNIPP use is tightly framed (decret cadre NIR),2026-02,Initial baseline,published,restricted;privacy,https://www.cnil.fr/fr/numero-dinscription-des-personnes-dans-le-secteur-social-le-decret-cadre-nir-en-questions;https://www.legifrance.gouv.fr/loda/id/JORFTEXT000038396526
-FRA,I04,Partial | Cross-agency data exchange via state APIs (DLNUF) in specific domains,2026-02,Initial baseline,published,partial;api;dlunf,https://www.numerique.gouv.fr/offre-accompagnement/expertise-api-donnees/;https://particulier.api.gouv.fr/;https://entreprise.api.gouv.fr/
-FRA,I05,Yes | National identity card exists; France Identité relies on new eID card,2026-02,Initial baseline,published,nationwide;citizens,https://www.service-public.fr/particuliers/vosdroits/F21089;https://france-identite.gouv.fr/
-FRA,I06,Nationwide | France Identité app generalized (mobile identity),2026-02,Initial baseline,published,nationwide;smartphone,https://france-identite.gouv.fr/;https://www.interieur.gouv.fr/actualites/communiques-de-presse/generalisation-de-lapplication-france-identite-et-lancement-du
-FRA,I07,Nationwide | Permis de conduire numérique available in France Identité (complementary),2026-02,Initial baseline,published,nationwide;drivers-license,https://france-identite.gouv.fr/usages/le-permis-de-conduire-numerique/;https://www.interieur.gouv.fr/actualites/communiques-de-presse/generalisation-de-lapplication-france-identite-et-lancement-du
-FRA,I08,Yes | FranceConnect is the state SSO / authentication federator,2026-02,Initial baseline,published,authentication,https://www.franceconnect.gouv.fr/?lang=en
-FRA,I09,Procurement | “Cloud au centre” doctrine guides public cloud adoption,2026-02,Initial baseline,published,procurement;cloud-policy,https://www.numerique.gouv.fr/cloud/;https://www.legifrance.gouv.fr/circulaire/id/45205
-FRA,I10,Adequacy | GDPR applies (EU member); CNIL as supervisory authority,2026-02,Initial baseline,published,gdpr;privacy,https://www.cnil.fr/en
-FRA,I11,Yes | Key milestones captured in events.csv,2026-02,Initial baseline,published,timeline,https://france-identite.gouv.fr/
-``
+﻿country_id,indicator_id,value,version,change_note,review_status,tags,source_url
+AUS,I01,"None
+No national population register; identity is verified against issuing agencies’ records without creating a centralised database.",2026/2/1,Initial baseline,published,none;federalism,"[""https://www.finance.gov.au/government/australias-digital-id-system""]"
+AUS,I02,"No
+No nationwide resident registry network comparable to population-register linkage.",2026/2/1,Initial baseline,published,none,"[""https://www.finance.gov.au/government/australias-digital-id-system""]"
+AUS,I03,"Restricted
+Identity documents (passport, driver licence) are used to create Digital ID; unique identifiers are purpose-bound rather than universal cross-sector IDs.",2026/2/1,Initial baseline,published,restricted;identity,"[""https://my.gov.au/en/about/help/digital-id""]"
+AUS,I04,"Partial
+Australian Government Digital ID System enables online verification against official records with user consent (no central database).",2026/2/1,Initial baseline,published,interoperability;consent,"[""https://www.finance.gov.au/government/australias-digital-id-system"", ""https://www.digitalidsystem.gov.au/the-australian-government-digital-id-system-agdis""]"
+AUS,I05,"No
+No national ID card; government Digital ID relies on existing identity documents (passport, driver licence) as evidence.",2026/2/1,Initial baseline,published,no-id-card,"[""https://my.gov.au/en/about/help/digital-id""]"
+AUS,I06,"Nationwide
+myID (formerly myGovID) is the Australian Government Digital ID app used to prove identity for online services.",2026/2/1,Initial baseline,published,nationwide;smartphone;digital-id,"[""https://my.gov.au/en/about/help/digital-id""]"
+AUS,I07,"Partial
+Digital driver licences are state-based (e.g., NSW Digital Driver Licence in Service NSW app).",2026/2/1,Initial baseline,published,partial;drivers-license;state,"[""https://www.service.nsw.gov.au/campaign/nsw-digital-driver-licence""]"
+AUS,I08,"Yes
+Digital ID (myID) provides authentication and identity proofing for participating government services.",2026/2/1,Initial baseline,published,authentication;digital-id,"[""https://my.gov.au/en/about/help/digital-id"", ""https://www.digitalidsystem.gov.au/the-australian-government-digital-id-system-agdis""]"
+AUS,I09,"Procurement
+Whole-of-government cloud policy provides a unified framework for cloud adoption across the Australian Public Service.",2026/2/1,Initial baseline,published,procurement;cloud-policy,"[""https://www.digital.gov.au/cloud-policy""]"
+AUS,I10,"No
+No EU GDPR adequacy decision for Australia (not listed among adequacy jurisdictions).",2026/2/1,Initial baseline,published,privacy;no-adequacy,"[""https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en""]"
+AUS,I11,"Yes
+Key milestones captured in events.csv",2026/2/1,Initial baseline,published,timeline,"[""https://my.gov.au/en/about/help/digital-id"", ""https://www.digitalidsystem.gov.au/the-australian-government-digital-id-system-agdis""]"
+CAN,I01,"None
+No national population register; core identity and licensing records are managed by provinces/territories.",2026/2/1,Initial baseline,published,none;federalism,"[""https://www.canada.ca/en/immigration-refugees-citizenship/services/settle-canada/driving.html""]"
+CAN,I02,"No
+No single nationwide resident registry network comparable to population-register linkage.",2026/2/1,Initial baseline,published,none,"[""https://www.canada.ca/en/immigration-refugees-citizenship/services/settle-canada/driving.html""]"
+CAN,I03,"Restricted
+Social Insurance Number is confidential; use is legally required mainly for income reporting and government benefits.",2026/2/1,Initial baseline,published,restricted;sin;tax,"[""https://www.canada.ca/en/employment-social-development/services/sin.html"", ""https://www.canada.ca/en/employment-social-development/services/sin/protection.html""]"
+CAN,I04,"Partial
+Digital government access uses multiple credentials (GCKey, Sign-In Partner) and program-specific enrolment.",2026/2/1,Initial baseline,published,federal;sign-in,"[""https://www.canada.ca/en/employment-social-development/services/my-account.html"", ""https://www.canada.ca/en/immigration-refugees-citizenship/corporate/partners-service-providers/partner-portal.html""]"
+CAN,I05,"No
+No federal national ID card; commonly used credentials include provincial driver’s licences/ID and passports.",2026/2/1,Initial baseline,published,no-id-card,"[""https://www.canada.ca/en/immigration-refugees-citizenship/services/settle-canada/driving.html""]"
+CAN,I06,"Partial
+Some provinces offer digital ID login apps (e.g., BC Services Card app) for online access to services.",2026/2/1,Initial baseline,published,smartphone;province,"[""https://www2.gov.bc.ca/gov/content/governments/government-id/bcservicescardapp""]"
+CAN,I07,"None
+No nationwide mobile driver’s licence (mDL) acceptance; provinces issue physical licences and require carrying a driver’s licence when driving.",2026/2/1,Initial baseline,published,none;drivers-license,"[""https://www.canada.ca/en/immigration-refugees-citizenship/services/settle-canada/driving.html""]"
+CAN,I08,"Multiple
+Authentication uses GCKey plus Sign-In Partner (bank-based) and some provincial sign-in options.",2026/2/1,Initial baseline,published,authentication;multiple,"[""https://www.canada.ca/en/employment-social-development/services/my-account.html"", ""https://www.canada.ca/en/immigration-refugees-citizenship/corporate/partners-service-providers/partner-portal.html""]"
+CAN,I09,"Procurement
+Cloud adoption is policy/procurement driven across agencies; no single public “government cloud” platform comparable to GCC/JPN Government Cloud (to be refined).",2026/2/1,Initial baseline,published,procurement;needs-review,"[""https://www.canada.ca/en/government/sign-in-online-account.html""]"
+CAN,I10,"Adequacy
+EU recognises Canada (commercial organisations) as providing adequate protection for personal data transfers.",2026/2/1,Initial baseline,published,privacy;gdpr;adequacy,"[""https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en""]"
+CAN,I11,"Yes
+Key milestones captured in events.csv",2026/2/1,Initial baseline,published,timeline,"[""https://www.canada.ca/en/employment-social-development/services/my-account.html"", ""https://www.canada.ca/en/immigration-refugees-citizenship/corporate/partners-service-providers/partner-portal.html""]"
+DEU,I01,"Local
+Population registers are kept by registration authorities designated by each Land; registration is handled by municipalities.",2026/2/1,Initial baseline,published,mandatory;residents;municipal,"[""https://www.bmi.bund.de/EN/topics/administrative-reform/registration/registration-node.html"", ""https://www.gesetze-im-internet.de/englisch_bmg/englisch_bmg.html""]"
+DEU,I02,"Partial
+Population registers are maintained locally; data exchange occurs under the Federal Act on Registration rather than a single national resident registry network.",2026/2/1,Initial baseline,published,federal;municipal;population-register,"[""https://www.bmi.bund.de/EN/topics/administrative-reform/registration/registration-node.html"", ""https://www.gesetze-im-internet.de/englisch_bmg/englisch_bmg.html""]"
+DEU,I03,"Restricted
+No universal cross-sector identifier; sector identifiers exist (e.g., tax) and online identity uses the ID card eID function.",2026/2/1,Initial baseline,published,restricted;tax;identity,"[""https://www.bmi.bund.de/DE/themen/moderne-verwaltung/ausweise-und-paesse/online-ausweisfunktion/online-ausweisfunktion-node.html"", ""https://www.personalausweisportal.de/Webs/PA/EN/home/home-node.html""]"
+DEU,I04,"Partial
+Digital government services use user accounts (BundID) and standards, but interoperability remains federated across federal/state levels.",2026/2/1,Initial baseline,published,ozg;federal;interoperability,"[""https://www.personalausweisportal.de/Webs/PA/EN/citizens/bund-id/bund_id-node.html""]"
+DEU,I05,"Yes
+German ID card (Personalausweis) includes a chip enabling online identification (eID).",2026/2/1,Initial baseline,published,nationwide;citizens;eid,"[""https://www.bmi.bund.de/DE/themen/moderne-verwaltung/ausweise-und-paesse/online-ausweisfunktion/online-ausweisfunktion-node.html"", ""https://www.personalausweisportal.de/Webs/PA/EN/home/home-node.html""]"
+DEU,I06,"Partial
+Smartphone use typically relies on the ID card eID function via an app/reader; not a standalone mobile-ID credential.",2026/2/1,Initial baseline,published,smartphone;eid,"[""https://www.bmi.bund.de/DE/themen/moderne-verwaltung/ausweise-und-paesse/online-ausweisfunktion/online-ausweisfunktion-node.html"", ""https://www.personalausweisportal.de/Webs/PA/EN/home/home-node.html""]"
+DEU,I07,"Planned
+EU Digital Identity Wallet / mDL initiatives exist; no nationwide standalone ISO mDL rollout yet.",2026/2/1,Initial baseline,published,planned;eu-wallet;mdl,"[""https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/929202846/The+Mobile+Driving+License+manual""]"
+DEU,I08,"Multiple
+Authentication via eID function of the ID card plus BundID user account; also supports EU eID means.",2026/2/1,Initial baseline,published,authentication;eid;bundid,"[""https://www.personalausweisportal.de/Webs/PA/EN/citizens/bund-id/bund_id-node.html"", ""https://www.bmi.bund.de/DE/themen/moderne-verwaltung/ausweise-und-paesse/online-ausweisfunktion/online-ausweisfunktion-node.html"", ""https://www.personalausweisportal.de/Webs/PA/EN/home/home-node.html""]"
+DEU,I09,"Shared-Platform
+Federal cloud initiatives include Bundescloud and the federated German Government Cloud (DVC).",2026/2/1,Initial baseline,published,government-cloud;bundescloud;dvc,"[""https://www.itzbund.de/DE/itloesungen/egovernment/bundescloud/bundescloud.html"", ""https://www.bmi.bund.de/SharedDocs/pressemitteilungen/EN/2025/03/dvc.html""]"
+DEU,I10,"Adequacy
+GDPR applies (EU member state).",2026/2/1,Initial baseline,published,gdpr;privacy,"[""https://eur-lex.europa.eu/eli/reg/2016/679/oj""]"
+DEU,I11,"Yes
+Key milestones captured in events.csv",2026/2/1,Initial baseline,published,timeline,"[""https://www.bmi.bund.de/DE/themen/moderne-verwaltung/ausweise-und-paesse/online-ausweisfunktion/online-ausweisfunktion-node.html""]"
+DNK,I01,"National
+Denmark’s civil registration system (CPR) is the national registration system; municipalities handle updates under the CPR framework.",2026/2/1,Initial baseline,published,national;cpr,"[""https://www.cpr.dk/english""]"
+DNK,I02,"Yes
+CPR number is essential for access to public services; eID onboarding can use CPR-linked data for verification.",2026/2/1,Initial baseline,published,nationwide;cpr,"[""https://www.mitid.dk/en-gb/help/help-universe/non-citizens/"", ""https://lifeindenmark.borger.dk/apps-and-digital-services/non-danish-eid"", ""https://www.cpr.dk/english""]"
+DNK,I03,"Common
+CPR number is the primary identifier for interaction with Danish public authorities.",2026/2/1,Initial baseline,published,common;cpr,"[""https://www.cpr.dk/english""]"
+DNK,I04,"Nationwide
+Digital self-services rely on CPR and MitID; cross-service access works via shared identity infrastructure.",2026/2/1,Initial baseline,published,nationwide;digital-services,"[""https://www.mitid.dk/en-gb/help/help-universe/non-citizens/"", ""https://lifeindenmark.borger.dk/apps-and-digital-services/non-danish-eid""]"
+DNK,I05,"No
+No mandatory national ID card; identity is typically proven via passport/driver licence while CPR is an identifier.",2026/2/1,Initial baseline,published,no-id-card;needs-review,"[""https://www.cpr.dk/english""]"
+DNK,I06,"Nationwide
+MitID is the Danish national eID used for public self-service solutions; can be obtained via app and passport scanning.",2026/2/1,Initial baseline,published,nationwide;mitid;smartphone,"[""https://www.mitid.dk/en-gb/help/help-universe/non-citizens/"", ""https://lifeindenmark.borger.dk/apps-and-digital-services/non-danish-eid""]"
+DNK,I07,"Planned
+EU Digital Identity Wallet / mDL initiatives; no nationwide ISO mDL rollout yet.",2026/2/1,Initial baseline,published,planned;eu-wallet;mdl,"[""https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/929202846/The+Mobile+Driving+License+manual""]"
+DNK,I08,"Yes
+MitID is the national eID and key to digital services across Denmark.",2026/2/1,Initial baseline,published,authentication;mitid,"[""https://www.mitid.dk/en-gb/help/help-universe/non-citizens/"", ""https://lifeindenmark.borger.dk/apps-and-digital-services/non-danish-eid""]"
+DNK,I09,"Procurement
+Cloud adoption for government is procurement/policy driven (to refine with Danish government cloud sources).",2026/2/1,Initial baseline,published,procurement;needs-review,"[""https://eur-lex.europa.eu/eli/reg/2016/679/oj""]"
+DNK,I10,"Adequacy
+GDPR applies (EU member state).",2026/2/1,Initial baseline,published,gdpr;privacy,"[""https://eur-lex.europa.eu/eli/reg/2016/679/oj""]"
+DNK,I11,"Yes
+Key milestones captured in events.csv",2026/2/1,Initial baseline,published,timeline,"[""https://www.mitid.dk/en-gb/help/help-universe/non-citizens/"", ""https://lifeindenmark.borger.dk/apps-and-digital-services/non-danish-eid""]"
+EST,I01,"National
+Population Register centrally managed by the state",2026/2/1,Initial baseline,published,mandatory;residents,"[""https://www.siseministeerium.ee/en/activities/population-procedures/population-register""]"
+EST,I02,"Yes
+Nationwide interoperability via X-Road (X-tee)",2026/2/1,Initial baseline,published,nationwide;interoperability,"[""https://e-estonia.com/solutions/interoperability-services/x-road/""]"
+EST,I03,"Common
+Personal identification code used broadly across public/private e-services",2026/2/1,Initial baseline,published,mandatory;banking;telecom;health,"[""https://www.ria.ee/en/state-information-system/electronic-identity-eid-and-trust-services/electronic-identity-eid""]"
+EST,I04,"Nationwide
+X-Road enables secure data exchange across government and private sector",2026/2/1,Initial baseline,published,nationwide;once-only,"[""https://www.ria.ee/en/state-information-system/data-exchange-platforms/data-exchange-layer-x-tee""]"
+EST,I05,"Yes
+Mandatory ID-card enabling authentication and digital signature",2026/2/1,Initial baseline,published,nationwide;citizens,"[""https://e-estonia.com/solutions/estonian-e-identity/id-card/""]"
+EST,I06,"Nationwide
+Mobile-ID and Smart-ID enable authentication/signing on smartphones",2026/2/1,Initial baseline,published,nationwide;smartphone,"[""https://www.id.ee/en/""]"
+EST,I07,"Planned
+EU wallet / mDL initiatives; no standalone national ISO mDL rollout",2026/2/1,Initial baseline,published,planned;drivers-license,"[""https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/929202846/The+Mobile+Driving+License+manual""]"
+EST,I08,"Multiple
+State eID PKI + Mobile-ID + Smart-ID",2026/2/1,Initial baseline,published,authentication;signature,"[""https://www.ria.ee/en/state-information-system/electronic-identity-eid-and-trust-services/electronic-identity-eid""]"
+EST,I09,"Shared-Platform
+Estonian Government Cloud (Riigipilv)",2026/2/1,Initial baseline,published,shared-platform;migration,"[""https://riigipilv.ee/""]"
+EST,I10,"Adequacy
+EU member state under GDPR",2026/2/1,Initial baseline,published,gdpr;privacy,"[""https://www.dlapiperdataprotection.com/index.html?t=law&c=EE""]"
+EST,I11,"Yes
+Key milestones captured in events.csv",2026/2/1,Initial baseline,published,timeline,"[""https://e-estonia.com/solutions/estonian-e-identity/id-card/""]"
+FRA,I01,"None
+No administrative population register; census used for official populations",2026/2/1,Initial baseline,published,privacy;census,"[""https://unece.org/sites/default/files/2024-01/DOC%2015_2315335E.pdf"", ""https://www.insee.fr/en/metadonnees/source/serie/s1321""]"
+FRA,I02,"No
+No nationwide resident registry network comparable to population-register linkage",2026/2/1,Initial baseline,published,none,"[""https://unece.org/sites/default/files/2024-01/DOC%2015_2315335E.pdf""]"
+FRA,I03,"Restricted
+NIR/RNIPP use is tightly framed (decret cadre NIR)",2026/2/1,Initial baseline,published,restricted;privacy,"[""https://www.cnil.fr/fr/numero-dinscription-des-personnes-dans-le-secteur-social-le-decret-cadre-nir-en-questions"", ""https://www.legifrance.gouv.fr/loda/id/JORFTEXT000038396526""]"
+FRA,I04,"Partial
+Cross-agency data exchange via state APIs (DLNUF) in specific domains",2026/2/1,Initial baseline,published,partial;api;dlunf,"[""https://www.numerique.gouv.fr/offre-accompagnement/expertise-api-donnees/"", ""https://particulier.api.gouv.fr/"", ""https://entreprise.api.gouv.fr/""]"
+FRA,I05,"Yes
+National identity card exists; France Identit? relies on new eID card",2026/2/1,Initial baseline,published,nationwide;citizens,"[""https://www.service-public.fr/particuliers/vosdroits/F21089"", ""https://france-identite.gouv.fr/""]"
+FRA,I06,"Nationwide
+France Identit? app generalized (mobile identity)",2026/2/1,Initial baseline,published,nationwide;smartphone,"[""https://france-identite.gouv.fr/"", ""https://www.interieur.gouv.fr/actualites/communiques-de-presse/generalisation-de-lapplication-france-identite-et-lancement-du""]"
+FRA,I07,"Nationwide
+Permis de conduire num?rique available in France Identit? (complementary)",2026/2/1,Initial baseline,published,nationwide;drivers-license,"[""https://france-identite.gouv.fr/usages/le-permis-de-conduire-numerique/"", ""https://www.interieur.gouv.fr/actualites/communiques-de-presse/generalisation-de-lapplication-france-identite-et-lancement-du""]"
+FRA,I08,"Yes
+FranceConnect is the state SSO / authentication federator",2026/2/1,Initial baseline,published,authentication,"[""https://www.franceconnect.gouv.fr/?lang=en""]"
+FRA,I09,"Procurement
+“Cloud au centre” doctrine guides public cloud adoption",2026/2/1,Initial baseline,published,procurement;cloud-policy,"[""https://www.numerique.gouv.fr/cloud/"", ""https://www.legifrance.gouv.fr/circulaire/id/45205""]"
+FRA,I10,"Adequacy
+GDPR applies (EU member); CNIL as supervisory authority",2026/2/1,Initial baseline,published,gdpr;privacy,"[""https://www.cnil.fr/en""]"
+FRA,I11,"Yes
+Key milestones captured in events.csv",2026/2/1,Initial baseline,published,timeline,"[""https://france-identite.gouv.fr/""]"
+GBR,I01,"None
+No administrative population register comparable to Nordic-style population registers; identity is proven via documents and departmental records.",2026/2/1,Initial baseline,published,none;no-register,"[""https://petition.parliament.uk/petitions/730194""]"
+GBR,I02,"No
+No nationwide resident registry network; identity data is not linked through a population register network.",2026/2/1,Initial baseline,published,none,"[""https://petition.parliament.uk/petitions/730194""]"
+GBR,I03,"Restricted
+National Insurance number is used for NI contributions and tax records; sharing is discouraged and purpose-bound.",2026/2/1,Initial baseline,published,restricted;tax;benefits,"[""https://www.gov.uk/national-insurance/your-national-insurance-number""]"
+GBR,I04,"Partial
+GOV.UK One Login stores verified identity attributes for reuse across services requiring identity checks.",2026/2/1,Initial baseline,published,government;identity;reuse,"[""https://www.gov.uk/using-your-gov-uk-one-login/proving-your-identity"", ""https://www.gov.uk/guidance/proving-your-identity-with-the-govuk-one-login-app""]"
+GBR,I05,"No
+No national identity card scheme for citizens; official identity documents are passports and driving licences.",2026/2/1,Initial baseline,published,no-id-card,"[""https://petition.parliament.uk/petitions/730194""]"
+GBR,I06,"Partial
+GOV.UK One Login uses a smartphone app route for identity proofing (document scan and liveness checks).",2026/2/1,Initial baseline,published,smartphone;identity-proofing,"[""https://www.gov.uk/using-your-gov-uk-one-login/proving-your-identity"", ""https://www.gov.uk/guidance/proving-your-identity-with-the-govuk-one-login-app""]"
+GBR,I07,"Pilot
+Digital documents (including driving licence) are referenced as future capability within the GOV.UK One Login app ecosystem.",2026/2/1,Initial baseline,published,pilot;drivers-license,"[""https://apps.apple.com/gb/app/gov-uk-one-login/id6737119425""]"
+GBR,I08,"Yes
+GOV.UK One Login provides a central sign-in and identity proofing service for participating government services.",2026/2/1,Initial baseline,published,authentication;sso,"[""https://www.gov.uk/using-your-gov-uk-one-login/proving-your-identity"", ""https://www.gov.uk/guidance/proving-your-identity-with-the-govuk-one-login-app""]"
+GBR,I09,"Procurement
+Public sector cloud adoption is supported via the G-Cloud framework and Digital Marketplace procurement.",2026/2/1,Initial baseline,published,procurement;g-cloud,"[""https://www.gov.uk/guidance/g-cloud-buyers-guide"", ""https://www.crowncommercial.gov.uk/agreements/RM1557.15""]"
+GBR,I10,"Adequacy
+EU has adopted adequacy decisions for the United Kingdom under GDPR (renewed, sunset clause applies).",2026/2/1,Initial baseline,published,privacy;gdpr;adequacy,"[""https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en""]"
+GBR,I11,"Yes
+Key milestones captured in events.csv",2026/2/1,Initial baseline,published,timeline,"[""https://www.gov.uk/government/news/new-digital-id-scheme-to-be-rolled-out-across-uk""]"
+IND,I01,"Developing
+No universal population register comparable to Nordic systems; Aadhaar provides resident identity for many services but is not a citizenship register.",2026/2/1,Initial baseline,published,developing;aadhaar,"[""https://services.india.gov.in/service/detail/unique-identification-authority-of-india-uidai"", ""https://uidai.gov.in/en/ecosystem/authentication-devices-documents/about-aadhaar-paperless-offline-e-kyc.html""]"
+IND,I02,"Yes
+Aadhaar authentication and India Stack initiatives enable broad digital verification and service delivery nationwide.",2026/2/1,Initial baseline,published,nationwide;aadhaar;authentication,"[""https://services.india.gov.in/service/detail/unique-identification-authority-of-india-uidai"", ""https://uidai.gov.in/en/ecosystem/authentication-devices-documents/about-aadhaar-paperless-offline-e-kyc.html""]"
+IND,I03,"Restricted
+Aadhaar is a 12-digit unique identity number for residents; use is consent-based in many contexts.",2026/2/1,Initial baseline,published,aadhaar;restricted,"[""https://services.india.gov.in/service/detail/unique-identification-authority-of-india-uidai"", ""https://uidai.gov.in/en/ecosystem/authentication-devices-documents/about-aadhaar-paperless-offline-e-kyc.html""]"
+IND,I04,"Nationwide
+Digital document and credential exchange is supported via DigiLocker and other Digital India platforms.",2026/2/1,Initial baseline,published,nationwide;digilocker,"[""https://www.digilocker.gov.in/""]"
+IND,I05,"Equivalent
+Aadhaar is issued as a physical letter/card and used as an identity credential; not a chip-based national ID card.",2026/2/1,Initial baseline,published,equivalent;aadhaar,"[""https://services.india.gov.in/service/detail/unique-identification-authority-of-india-uidai"", ""https://uidai.gov.in/en/ecosystem/authentication-devices-documents/about-aadhaar-paperless-offline-e-kyc.html""]"
+IND,I06,"Nationwide
+mAadhaar/DigiLocker-style apps provide mobile access to identity and government-issued documents.",2026/2/1,Initial baseline,published,nationwide;smartphone,"[""https://www.digilocker.gov.in/"", ""https://services.india.gov.in/service/detail/unique-identification-authority-of-india-uidai"", ""https://uidai.gov.in/en/ecosystem/authentication-devices-documents/about-aadhaar-paperless-offline-e-kyc.html""]"
+IND,I07,"Nationwide
+mParivahan (MoRTH) provides mobile access to transport documents; digital DL/RC are part of national transport digital services.",2026/2/1,Initial baseline,published,nationwide;mdl;transport,"[""https://parivahan.gov.in/parivahan/""]"
+IND,I08,"Multiple
+Aadhaar authentication (OTP/biometric) plus offline e-KYC and DigiLocker document verification provide authentication infrastructure.",2026/2/1,Initial baseline,published,authentication;ekyc;esign,"[""https://services.india.gov.in/service/detail/unique-identification-authority-of-india-uidai"", ""https://uidai.gov.in/en/ecosystem/authentication-devices-documents/about-aadhaar-paperless-offline-e-kyc.html"", ""https://www.digilocker.gov.in/""]"
+IND,I09,"Shared-Platform
+GI Cloud “MeghRaj” is the Government of India cloud initiative to accelerate e-service delivery and optimise ICT spending.",2026/2/1,Initial baseline,published,government-cloud;meghraj,"[""https://cloud.gov.in/user/about.php"", ""https://www.meity.gov.in/content/gi-cloud-meghraj""]"
+IND,I10,"No
+Digital Personal Data Protection Act 2023 establishes privacy law; no EU GDPR adequacy decision for India.",2026/2/1,Initial baseline,published,privacy;dpdp;no-adequacy,"[""https://www.indiacode.nic.in/bitstream/123456789/22037/1/a2023-22.pdf"", ""https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en""]"
+IND,I11,"Yes
+Key milestones captured in events.csv",2026/2/1,Initial baseline,published,timeline,"[""https://www.indiacode.nic.in/bitstream/123456789/22037/1/a2023-22.pdf""]"
+JPN,I01,"Local
+Basic Resident Register is maintained by municipalities",2026/2/1,Initial baseline,published,mandatory;residents,"[""https://www.soumu.go.jp/main_sosiki/jichi_gyousei/c-gyousei/zairyu/english/index.html""]"
+JPN,I02,"Yes
+Basic Resident Register Network (Juki Net) enables nationwide linkage",2026/2/1,Initial baseline,published,nationwide;residents,"[""https://www.city.inagi.tokyo.jp/en/kurashi/tetsuzuki/1002597/1002598.html""]"
+JPN,I03,"Restricted
+My Number use is legally limited to stipulated administrative purposes",2026/2/1,Initial baseline,published,mandatory;tax;health,"[""https://www.digital.go.jp/en/policies/mynumber/explanation""]"
+JPN,I04,"Nationwide
+Information coordination via Information Provision Network System",2026/2/1,Initial baseline,published,nationwide;government,"[""https://www.digital.go.jp/en/policies/mynumber/explanation""]"
+JPN,I05,"Yes
+My Number Card with IC chip and electronic certificates (JPKI)",2026/2/1,Initial baseline,published,nationwide;citizens;residents,"[""https://www.digital.go.jp/en/policies/mynumber/private-business/jpki-introduction""]"
+JPN,I06,"Nationwide
+Smartphone My Number Card enables legal authentication on smartphones",2026/2/1,Initial baseline,published,nationwide;smartphone,"[""https://www.digital.go.jp/en/policies/mynumber/smartphone-certification""]"
+JPN,I07,"Planned
+Driver's license integrated into My Number Card; smartphone mDL not nationwide",2026/2/1,Initial baseline,published,planned;drivers-license,"[""https://www.digital.go.jp/en/policies/mynumber/drivers-license""]"
+JPN,I08,"Multiple
+JPKI for citizens and GPKI for government authentication",2026/2/1,Initial baseline,published,authentication;signature,"[""https://www.digital.go.jp/en/policies/mynumber/private-business/jpki-introduction"", ""https://www.gpki.go.jp/""]"
+JPN,I09,"Shared-Platform
+Government-wide common cloud environment (Government Cloud)",2026/2/1,Initial baseline,published,shared-platform;migration,"[""https://www.digital.go.jp/en/policies/gov_cloud""]"
+JPN,I10,"Adequacy
+APPI under PPC and EU GDPR adequacy decision (2019)",2026/2/1,Initial baseline,published,privacy;gdpr,"[""https://eur-lex.europa.eu/eli/dec_impl/2019/419/oj/eng""]"
+JPN,I11,"Yes
+Key milestones captured in events.csv",2026/2/1,Initial baseline,published,timeline,"[""https://www.digital.go.jp/en/policies/mynumber/explanation""]"
+KOR,I01,"Local
+Resident registration controlled by local authorities under national supervision",2026/2/1,Initial baseline,published,mandatory;citizens,"[""https://www.mois.go.kr/cmm/fms/FileDown.do?atchFileId=FILE_00071103sZW9zNB&fileSn=0""]"
+KOR,I02,"Yes
+National digital government promotes interoperability and data sharing",2026/2/1,Initial baseline,published,nationwide;government,"[""https://www.mois.go.kr/eng/sub/a03/EGovernment/screen.do""]"
+KOR,I03,"Restricted
+Resident Registration Number use regulated; mobile ID reduces unnecessary exposure",2026/2/1,Initial baseline,published,restricted;privacy,"[""https://www.mois.go.kr/cmm/fms/FileDown.do?atchFileId=FILE_00071103sZW9zNB&fileSn=0"", ""https://www.mois.go.kr/eng/bbs/type001/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000019&nttId=116395""]"
+KOR,I04,"Nationwide
+Digital Platform Government aims to connect systems and data across agencies",2026/2/1,Initial baseline,published,nationwide;data-sharing,"[""https://dpg.go.kr/DPG/main/eng.do""]"
+KOR,I05,"Yes
+Resident Registration Card (physical) and related identity documents",2026/2/1,Initial baseline,published,nationwide;citizens,"[""https://www.mois.go.kr/eng/a01/engMain.do""]"
+KOR,I06,"Nationwide
+Mobile Resident Registration Card available nationwide (mobile ID)",2026/2/1,Initial baseline,published,nationwide;smartphone,"[""https://www.mois.go.kr/eng/bbs/type001/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000019&nttId=116395""]"
+KOR,I07,"Nationwide
+Mobile driver’s license issuance supported (mobile ID ecosystem)",2026/2/1,Initial baseline,published,nationwide;drivers-license,"[""https://www.koroad.or.kr/eng/content/view/ME05030000.do"", ""https://play.google.com/store/apps/details?id=kr.go.mobileid&hl=en""]"
+KOR,I08,"Multiple
+Government-issued Mobile ID + sector authentication ecosystem (to refine)",2026/2/1,Initial baseline,published,authentication;signature;needs-detail,"[""https://www.mois.go.kr/eng/sub/a03/EGovernment/screen.do""]"
+KOR,I09,"Shared-Platform
+Government-wide cloud and digital government modernization",2026/2/1,Initial baseline,published,shared-platform,"[""https://www.mois.go.kr/eng/sub/a03/EGovernment/screen.do""]"
+KOR,I10,"Adequacy
+EU GDPR adequacy decision for Republic of Korea (2022/254)",2026/2/1,Initial baseline,published,privacy;gdpr,"[""https://eur-lex.europa.eu/eli/dec_impl/2022/254/oj/eng""]"
+KOR,I11,"Yes
+Key milestones captured in events.csv",2026/2/1,Initial baseline,published,timeline,"[""https://www.mois.go.kr/eng/sub/a03/EGovernment/screen.do""]"
+NZL,I01,"None
+No national population register comparable to Nordic population registers; core identity relies on passports and departmental records.",2026/2/1,Initial baseline,published,none,"[""https://www.govt.nz/organisations/realme/"", ""https://www.digitalidentity.dia.govt.nz/services/realme-verified""]"
+NZL,I02,"No
+No nationwide resident registry network comparable to population-register linkage.",2026/2/1,Initial baseline,published,none,"[""https://www.govt.nz/organisations/realme/"", ""https://www.digitalidentity.dia.govt.nz/services/realme-verified""]"
+NZL,I03,"Restricted
+No universal cross-sector identifier; RealMe provides verified identity for online transactions with consent.",2026/2/1,Initial baseline,published,restricted;identity,"[""https://www.govt.nz/organisations/realme/"", ""https://www.digitalidentity.dia.govt.nz/services/realme-verified""]"
+NZL,I04,"Partial
+RealMe verified uses consent-based attribute sharing; identity data is pulled from source databases in real time (no central data source).",2026/2/1,Initial baseline,published,consent;interoperability,"[""https://www.govt.nz/organisations/realme/"", ""https://www.digitalidentity.dia.govt.nz/services/realme-verified""]"
+NZL,I05,"No
+No national ID card scheme; RealMe verified is an electronic verified identity (not a physical card).",2026/2/1,Initial baseline,published,no-id-card,"[""https://www.govt.nz/organisations/realme/"", ""https://www.digitalidentity.dia.govt.nz/services/realme-verified""]"
+NZL,I06,"Partial
+RealMe provides government-grade login and verified identity services; smartphone support exists but is not a single “mobile ID card”.",2026/2/1,Initial baseline,published,smartphone;identity,"[""https://www.govt.nz/organisations/realme/"", ""https://www.digitalidentity.dia.govt.nz/services/realme-verified""]"
+NZL,I07,"Planned
+No nationwide mobile driver’s licence rollout (to be tracked; NZ primarily relies on physical licences).",2026/2/1,Initial baseline,published,planned;drivers-license;needs-review,"[""https://www.govt.nz/organisations/realme/"", ""https://www.digitalidentity.dia.govt.nz/services/realme-verified""]"
+NZL,I08,"Yes
+RealMe is a secure login and verified identity service used across government and many commercial services.",2026/2/1,Initial baseline,published,authentication;verified-identity,"[""https://www.govt.nz/organisations/realme/"", ""https://www.digitalidentity.dia.govt.nz/services/realme-verified""]"
+NZL,I09,"Procurement
+Cloud adoption is policy/procurement driven across agencies (to refine with AoG cloud references).",2026/2/1,Initial baseline,published,procurement;needs-review,"[""https://www.digitalidentity.dia.govt.nz/services/realme-verified""]"
+NZL,I10,"Adequacy
+EU recognises New Zealand as providing adequate protection for personal data transfers.",2026/2/1,Initial baseline,published,privacy;gdpr;adequacy,"[""https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en"", ""https://www.legislation.govt.nz/act/public/2020/0031/latest/LMS23223.html""]"
+NZL,I11,"Yes
+Key milestones captured in events.csv",2026/2/1,Initial baseline,published,timeline,"[""https://www.govt.nz/organisations/realme/"", ""https://www.digitalidentity.dia.govt.nz/services/realme-verified""]"
+SGP,I01,"National
+National registration system uses NRIC/FIN identifiers; government uses Singpass as trusted digital identity for services.",2026/2/1,Initial baseline,published,national;nric,"[""https://www.pdpc.gov.sg/news-and-events/press-room/2026/01/organisations-to-cease-the-use-of-nric-numbers-for-authentication-by-31--december-2026"", ""https://www.tech.gov.sg/products-and-services/for-citizens/digital-services/singpass/""]"
+SGP,I02,"Yes
+MyInfo enables consent-based retrieval of verified personal data from government sources to pre-fill forms.",2026/2/1,Initial baseline,published,nationwide;myinfo,"[""https://www.developer.tech.gov.sg/products/categories/digital-identity/myinfo/overview""]"
+SGP,I03,"Restricted
+NRIC numbers are identifiers; guidance discourages using NRIC numbers for authentication to reduce risk of misuse.",2026/2/1,Initial baseline,published,restricted;nric;privacy,"[""https://www.pdpc.gov.sg/news-and-events/press-room/2026/01/organisations-to-cease-the-use-of-nric-numbers-for-authentication-by-31--december-2026""]"
+SGP,I04,"Nationwide
+MyInfo provides a national personal data platform enabling secure, consent-based data sharing for digital services.",2026/2/1,Initial baseline,published,nationwide;data-sharing,"[""https://www.developer.tech.gov.sg/products/categories/digital-identity/myinfo/overview""]"
+SGP,I05,"Yes
+NRIC is a physical identity document; Singpass complements it as national digital identity.",2026/2/1,Initial baseline,published,id-card;nric,"[""https://www.pdpc.gov.sg/news-and-events/press-room/2026/01/organisations-to-cease-the-use-of-nric-numbers-for-authentication-by-31--december-2026"", ""https://www.tech.gov.sg/products-and-services/for-citizens/digital-services/singpass/""]"
+SGP,I06,"Nationwide
+Singpass app provides biometric/2FA login and digital identity services across thousands of services.",2026/2/1,Initial baseline,published,nationwide;singpass;smartphone,"[""https://www.tech.gov.sg/products-and-services/for-citizens/digital-services/singpass/""]"
+SGP,I07,"Planned
+Digital driving licence is not a national ISO mDL rollout; to be tracked (some credentials may be stored in apps).",2026/2/1,Initial baseline,published,planned;drivers-license;needs-review,"[""https://www.tech.gov.sg/products-and-services/for-citizens/digital-services/singpass/""]"
+SGP,I08,"Yes
+Singpass provides authentication (2FA/biometrics) for government and participating business services.",2026/2/1,Initial baseline,published,authentication;singpass,"[""https://www.tech.gov.sg/products-and-services/for-citizens/digital-services/singpass/""]"
+SGP,I09,"Shared-Platform
+Government on Commercial Cloud (GCC) provides a standardised approach for agencies to adopt commercial cloud services securely.",2026/2/1,Initial baseline,published,government-cloud;gcc,"[""https://www.tech.gov.sg/products-and-services/for-government-agencies/software-development/government-on-commercial-cloud/""]"
+SGP,I10,"No
+PDPA provides privacy protections; no EU GDPR adequacy decision for Singapore (not listed).",2026/2/1,Initial baseline,published,privacy;pdpa;no-adequacy,"[""https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en""]"
+SGP,I11,"Yes
+Key milestones captured in events.csv",2026/2/1,Initial baseline,published,timeline,"[""https://www.tech.gov.sg/products-and-services/for-citizens/digital-services/singpass/""]"
+SWE,I01,"National
+Swedish Population Register is maintained by the Swedish Tax Agency; extracts can be requested from the register.",2026/2/1,Initial baseline,published,national;population-register,"[""https://www.skatteverket.se/servicelankar/otherlanguages/englishengelska/individualsandemployees/livinginsweden/populationregistrationcertificates.4.361dc8c15312eff6fd117b6.html"", ""https://www.government.se/government-of-sweden/ministry-for-foreign-affairs/diplomatic-portal/diplomatic-guide/7.-international-organisations/7.2-the-national-population-register""]"
+SWE,I02,"Yes
+Many e-services rely on the Population Register and Swedish e-identification; access to population register certificates requires Swedish e-ID.",2026/2/1,Initial baseline,published,nationwide;population-register;eid,"[""https://www.skatteverket.se/servicelankar/otherlanguages/englishengelska/individualsandemployees/livinginsweden/populationregistrationcertificates.4.361dc8c15312eff6fd117b6.html"", ""https://www.government.se/government-of-sweden/ministry-for-foreign-affairs/diplomatic-portal/diplomatic-guide/7.-international-organisations/7.2-the-national-population-register""]"
+SWE,I03,"Common
+Personal identity number (personnummer) is the primary identifier used widely for authorisation and services.",2026/2/1,Initial baseline,published,common;personnummer,"[""https://docs.swedenconnect.se/technical-framework/Identity_Binding.html""]"
+SWE,I04,"Partial
+Sweden Connect / eIDAS infrastructure supports identity binding and attribute delivery; interoperability varies by service domain.",2026/2/1,Initial baseline,published,interoperability;swedenconnect,"[""https://docs.swedenconnect.se/technical-framework/Identity_Binding.html""]"
+SWE,I05,"Yes
+Swedish ID card can be applied for after population registration; used as approved identity document.",2026/2/1,Initial baseline,published,id-card,"[""https://www.informationsverige.se/en/jag-har-fatt-uppehallstillstand/att-gora-den-forsta-tiden/nar-du-har-fatt-ditt-personnummer.html""]"
+SWE,I06,"Nationwide
+Approved e-identification providers include BankID (mobile), Freja+, and AB Svenska Pass under the national eID framework.",2026/2/1,Initial baseline,published,eid;mobile;bankid,"[""https://www.elegitimation.se/en/obtaining-e-identification""]"
+SWE,I07,"Planned
+EU Digital Identity Wallet / mDL initiatives; no nationwide ISO mDL rollout yet.",2026/2/1,Initial baseline,published,planned;eu-wallet;mdl,"[""https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/929202846/The+Mobile+Driving+License+manual""]"
+SWE,I08,"Multiple
+Authentication ecosystem includes BankID, Freja+ and eID on Tax Agency-issued ID card under the Svensk e-legitimation framework.",2026/2/1,Initial baseline,published,authentication;multiple,"[""https://www.elegitimation.se/en/obtaining-e-identification""]"
+SWE,I09,"Procurement
+Government cloud adoption is policy/procurement driven (to refine with Swedish government cloud sources).",2026/2/1,Initial baseline,published,procurement;needs-review,"[""https://eur-lex.europa.eu/eli/reg/2016/679/oj""]"
+SWE,I10,"Adequacy
+GDPR applies (EU member state).",2026/2/1,Initial baseline,published,gdpr;privacy,"[""https://eur-lex.europa.eu/eli/reg/2016/679/oj""]"
+SWE,I11,"Yes
+Key milestones captured in events.csv",2026/2/1,Initial baseline,published,timeline,"[""https://www.skatteverket.se/servicelankar/otherlanguages/englishengelska/individualsandemployees/livinginsweden/populationregistrationcertificates.4.361dc8c15312eff6fd117b6.html"", ""https://www.government.se/government-of-sweden/ministry-for-foreign-affairs/diplomatic-portal/diplomatic-guide/7.-international-organisations/7.2-the-national-population-register""]"
+USA,I01,"None
+No national population register; resident records are maintained by states and agencies for specific purposes.",2026/2/1,Initial baseline,published,none;federalism,"[""https://www.usa.gov/what-is-social-security""]"
+USA,I02,"No
+No nationwide resident registry network comparable to population-register linkage.",2026/2/1,Initial baseline,published,none,"[""https://www.usa.gov/what-is-social-security""]"
+USA,I03,"Common
+Social Security Number is widely used for employment reporting and benefit eligibility and commonly requested in the economy.",2026/2/1,Initial baseline,published,ssn;employment;benefits,"[""https://www.ssa.gov/pubs/EN-05-10096.pdf""]"
+USA,I04,"Partial
+Federated identity and attribute sharing exist (e.g., Login.gov for participating federal agencies), but systems remain fragmented across levels of government.",2026/2/1,Initial baseline,published,federal;authentication,"[""https://www.login.gov/"", ""https://developers.login.gov/overview/""]"
+USA,I05,"No
+No national ID card; identity documents are issued by states (DL/ID) and federal agencies (passport) for specific uses.",2026/2/1,Initial baseline,published,no-national-id,"[""https://www.usa.gov/what-is-social-security""]"
+USA,I06,"Partial
+Mobile IDs are state-led and not uniform; federal services focus on account-based authentication (Login.gov).",2026/2/1,Initial baseline,published,smartphone;state,"[""https://www.login.gov/"", ""https://developers.login.gov/overview/""]"
+USA,I07,"Pilot
+Mobile driver’s licences (mDLs) are state-issued; TSA accepts approved mDLs at participating checkpoints (states vary).",2026/2/1,Initial baseline,published,pilot;mdl;tsa,"[""https://www.tsa.gov/realid/realid-mobile-drivers-license-mdls"", ""https://www.nccoe.nist.gov/projects/digital-identities-mdl""]"
+USA,I08,"Yes
+Login.gov provides a government-wide account and MFA-based authentication for participating agencies.",2026/2/1,Initial baseline,published,authentication;mfa,"[""https://www.login.gov/"", ""https://developers.login.gov/overview/""]"
+USA,I09,"Procurement
+FedRAMP provides a government-wide approach to security assessment/authorization for cloud services used by federal agencies.",2026/2/1,Initial baseline,published,procurement;fedramp,"[""https://www.fedramp.gov/"", ""https://www.gsa.gov/technology/government-it-initiatives/fedramp""]"
+USA,I10,"Partial
+No single federal comprehensive privacy law; EU adequacy exists only for US organisations participating in the EU-US Data Privacy Framework.",2026/2/1,Initial baseline,published,privacy;no-adequacy,"[""https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en""]"
+USA,I11,"Yes
+Key milestones captured in events.csv",2026/2/1,Initial baseline,published,timeline,"[""https://www.login.gov/"", ""https://developers.login.gov/overview/""]"

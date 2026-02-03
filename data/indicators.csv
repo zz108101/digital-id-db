@@ -1,4 +1,4 @@
-indicator_id,name_ja,name_en,short_label,display_order
+﻿indicator_id,name_ja,name_en,short_label,display_order
 I01,基礎住民登録,Foundational population registration,住民登録,1
 I02,住民情報ネットワーク,Resident information network,住民ネット,2
 I03,個人識別子（用途・民間利用可否）,Personal identifier (use & private sector),個人ID,3
@@ -10,4 +10,3 @@ I08,認証基盤（PKIに限定しない）,Authentication infrastructure,認証
 I09,ガバメントクラウド,Government cloud,政府クラウド,9
 I10,個人情報保護法制＋GDPR十分性認定,Privacy law + GDPR adequacy,個情/GDPR,10
 I11,特徴的な歴史的出来事,Key historical milestones,年表,11
-``
