@@ -91,16 +91,17 @@ IND-E12,IND,2018/9/26,発表,High,Supreme Court Aadhaar judgment delivered,Supre
 IND-E13,IND,2023/8/11,法制定,High,Digital Personal Data Protection Act assented,"DPDP Act, 2023 received presidential assent on 11 Aug 2023.",https://www.indiacode.nic.in/bitstream/123456789/22037/1/a2023-22.pdf
 IND-E14,IND,2025/1/3,発表,Medium,Draft DPDP Rules 2025 published for consultation,"MeitY invited comments on draft Digital Personal Data Protection Rules, 2025 from 3 Jan 2025.",https://innovateindia.mygov.in/dpdp-rules-2025/
 IND-E15,IND,2025/11/13,施行,Medium,DPDP Act provisions commence (phase 1),Certain provisions of DPDP Act commenced on 13 Nov 2025 per commencement notifications.,"https://en.wikipedia.org/wiki/Digital_Personal_Data_Protection_Act,_2023"
-JPN-E01,JPN,2002/8/5,制度開始,High,Juki Net started,Basic Resident Register Network began operation,https://www.city.inagi.tokyo.jp/en/kurashi/tetsuzuki/1002597/1002598.html
-JPN-E05,JPN,2013/5/31,法制定,High,My Number Act promulgated,"Act No. 27 of May 31, 2013 established Individual Number system and card provisions",https://www.japaneselawtranslation.go.jp/en/laws/view/2755
-JPN-E06,JPN,2015/10/5,制度開始,High,My Number system launched,"My Number was assigned to residents listed as of Oct 5, 2015 and notified by municipalities",https://www.digital.go.jp/en/policies/mynumber_faq_02
-JPN-E02,JPN,2016/1/1,制度開始,High,My Number in use,My Number used for stipulated administrative procedures and information coordination,https://www.digital.go.jp/en/policies/mynumber/explanation
-JPN-E07,JPN,2017/11/1,制度開始,Medium,Mynaportal launched,Mynaportal online service launched in November 2017 to enable procedures linked with My Number system,https://www.digital.go.jp/en/resources/user-centered-approach-guidebook/case-study/mynaportal
-JPN-E08,JPN,2020/5/25,終了,Medium,Notification Card discontinued,"Notification Card ended and Notification of Individual Number replaced it from May 25, 2020",https://www.city.shinjuku.lg.jp/content/000343374.pdf
-JPN-E10,JPN,2021/3/1,制度開始,High,My Number Card usable as health insurance card,My Number Card became able to incorporate health insurance information from March 2021.,https://www.nippon.com/en/japan-data/h02627/
-JPN-E09,JPN,2021/10/1,拡張,Medium,More health data via Mynaportal,"Roadmap notes expansion of accessible health/medical information via Mynaportal (e.g., from Oct 2021)",https://www.mhlw.go.jp/english/policy/health-medical/data-based-health/dl/211124-01.pdf
-JPN-E03,JPN,2025/3/24,施行,High,Myna driver's license starts,Driver’s license info can be recorded on My Number Card,https://www.digital.go.jp/en/policies/mynumber/drivers-license
-JPN-E04,JPN,2026/1/23,制度開始,Medium,Smartphone My Number Card expanded,My Number Card functions available on smartphones,https://www.digital.go.jp/en/policies/mynumber/smartphone-certification
+JPN-E01,JPN,2002/8/5,制度開始,High,住基ネット（住民基本台帳ネットワーク）の一次稼働開始,2002年8月5日、住民票コードの通知開始等を含む住基ネットの一次稼働が開始。,https://www.soumu.go.jp/main_sosiki/jichi_gyousei/c-gyousei/daityo/old/juki_yotei.html
+JPN-E11,JPN,2008/3/6,発表,High,住基ネット最高裁判決（合憲判断）,2008年3月6日、住基ネットによる本人確認情報の管理・利用等が憲法13条の保障するプライバシー権を侵害しない旨の最高裁判断が示された。,https://www.soumu.go.jp/main_sosiki/jichi_gyousei/c-gyousei/daityo/05_judgment.html
+JPN-E05,JPN,2013/5/31,法制定,High,マイナンバー法（番号法）の公布,「行政手続における特定の個人を識別するための番号の利用等に関する法律（平成25年法律第27号）」が公布。,https://elaws.jp/view/425AC0000000027
+JPN-E06,JPN,2015/10/5,制度開始,High,マイナンバーの付番・通知開始,2015年10月5日時点で住民票に記載されている住民にマイナンバーが指定され、市区町村から通知カードで郵送通知が開始。,https://www.digital.go.jp/policies/mynumber_faq_02
+JPN-E02,JPN,2016/1/1,制度開始,High,マイナンバー制度の導入（利用開始）,2016年1月1日からマイナンバー制度が導入され、税・社会保障等の手続で利用が開始。,https://www.nta.go.jp/taxes/tetsuzuki/mynumberinfo/gaiyo.htm
+JPN-E07,JPN,2017/11/1,制度開始,Medium,マイナポータルの提供開始（本格運用）,マイナンバー制度に連動する個人向けポータルサイト「マイナポータル」が2017年11月から提供開始（情報連携の本格運用等と併せて開始）。,https://www.soumu.go.jp/menu_news/s-news/01kanbo07_02000001.html
+JPN-E08,JPN,2020/5/25,終了,Medium,通知カードの廃止,マイナンバーを通知する「通知カード」は2020年5月25日に廃止され、新規発行・再交付・記載事項変更ができなくなった。,https://www.soumu.go.jp/main_content/000687760.pdf
+JPN-E10,JPN,2021/3/1,制度開始,High,マイナンバーカードの健康保険証利用（マイナ保険証）,マイナンバーカードを健康保険証として利用する仕組み（マイナ保険証）。利用可能な医療機関・薬局は対応状況により異なる。,https://www.mhlw.go.jp/stf/newpage_08277.html
+JPN-E09,JPN,2021/10/1,拡張,Medium,マイナポータルで薬剤情報・特定健診情報等の閲覧機能を追加,マイナポータルで薬剤情報、特定健診情報、後期高齢者健診情報等を確認・取得できる機能が追加（令和3年10月リリース）。,https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/494e7749-cb53-4bdd-aeeb-49c26d5edbf5/20211126_myna_portal_02.pdf
+JPN-E03,JPN,2025/3/24,施行,High,マイナ免許証の運用開始,マイナンバーカードのICチップに運転免許情報を記録し、マイナンバーカードを運転免許証として利用できる「マイナ免許証」の運用が開始。,https://www.digital.go.jp/policies/mynumber/drivers-license
+JPN-E04,JPN,2026/1/23,制度開始,Medium,スマートフォンのマイナンバーカード（機能の拡充）,マイナンバーカードの機能をスマートフォン（iPhone、Android端末）に追加して利用できる「スマートフォンのマイナンバーカード」を案内（使える場所やサービスは順次拡大）。,https://www.digital.go.jp/policies/mynumber/smartphone-certification
 KOR-E03,KOR,2020/6/24,制度開始,Medium,Mobile driver license verification,PASS app enabled driver license verification via smartphone,https://www.korea.net/NewsFocus/Sci-Tech/view?articleId=186990
 KOR-E04,KOR,2020/6/24,制度開始,Medium,Mobile driver’s license verification via PASS,Korean National Police Agency and carriers launched PASS verification for driver’s license (smartphone ID),https://www.korea.net/NewsFocus/Sci-Tech/view?articleId=186990
 KOR-E07,KOR,2022/1/27,パイロット,Medium,Mobile driver’s license pilot launched,"MOIS and National Police launched six-month pilot issuance of mobile driver’s licenses on Jan 27, 2022.",https://www.korea.net/NewsFocus/policies/view?articleId=210038

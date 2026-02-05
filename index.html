@@ -4,16 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>デジタルID制度 国際比較</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml" />
+
   <!-- ✅ CSSは必ず link タグで読み込む -->
   <link rel="stylesheet" href="./theme.css" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
+
 <body>
-  <header class="header">
-    <h1>デジタルID制度 国際比較</h1>
-    <p class="subtitle">
-      本サイトは、日本を基準に主要国のデジタルID制度の「設計思想・制度構造の違い」を比較するためのデータ駆動型・完全静的な可視化データベース &amp; Webサイトです。
-    </p>
+  <header class="header header--with-profile">
+    <div class="header-inner">
+      <div class="header-left">
+        <h1>デジタルID制度 国際比較</h1>
+        <p class="subtitle">
+          本サイトは、日本を基準に主要国のデジタルID制度の「設計思想・制度構造の違い」を比較するためのデータ駆動型・完全静的な可視化データベース & Webサイトです。
+        </p>
+      </div>
+
+      <!-- Profile (small, top-right in header) -->
+      <aside class="header-profile" aria-label="プロフィール">
+        <span class="profile-chip" tabindex="0" aria-label="Profile（K.H.）">
+          <img class="profile-icon" src="./assets/icon.svg" alt="Profile icon" width="28" height="28" />
+          <span class="profile-text">Profile（K.H.）</span>
+
+          <!-- Popover (hover / focus) -->
+          <span class="profile-popover" role="note">
+            公務員として、行政のデジタル化や認証基盤に関心を持っています。<br>
+            このサイトでは、各国のデジタルID制度を整理し、比較できる形でまとめています。
+          </span>
+        </span>
+      </aside>
+    </div>
   </header>
 
   <!-- World map (Japan-centered) -->
@@ -25,12 +48,14 @@
     <!-- 注釈は削除 -->
   </section>
 
-  <section class="controls">
-    <div class="control">
+  <!-- Controls: countries-only (version/status are hidden but kept in DOM for JS) -->
+  <section class="controls controls--countries-only">
+    <div class="control control-hidden">
       <label for="versionSelect">バージョン</label>
       <select id="versionSelect"></select>
     </div>
-    <div class="control">
+
+    <div class="control control-hidden">
       <label for="statusSelect">表示状態</label>
       <select id="statusSelect">
         <option value="published" selected>published</option>
@@ -38,6 +63,7 @@
         <option value="draft">draft</option>
       </select>
     </div>
+
     <div class="control">
       <label>比較する国</label>
       <div class="chips" id="countryChips"></div>
@@ -53,6 +79,7 @@
     <section class="card">
       <h2 class="card-title">横断比較</h2>
       <div id="meta" class="meta"></div>
+      <div id="basicSummary" class="basic-summary"></div>
       <div class="table-wrap">
         <table id="comparisonTable" class="comparison"></table>
       </div>

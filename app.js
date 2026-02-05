@@ -326,6 +326,7 @@ function translateDetailToJa(detailText) {
 let countries = [];
 let indicators = [];
 let countryIndicator = [];
+let countryBasic = [];
 let events = [];
 let selectedCountries = new Set(DEFAULT_COUNTRIES);
 
@@ -357,6 +358,7 @@ function setMetaNote(text) {
     fetchCSV(`${DATA_DIR}/countries.csv`),
     fetchCSV(`${DATA_DIR}/indicators.csv`),
     fetchCSV(`${DATA_DIR}/country_indicator.csv`),
+ fetchCSVOptional(`${DATA_DIR}/country_basic.csv`),
     fetchCSVOptional(`${DATA_DIR}/translations_ja.csv`),
   ];
   if (hasCountry) loaders.push(fetchCSVOptional(`${DATA_DIR}/events.csv`));
@@ -366,9 +368,10 @@ function setMetaNote(text) {
   countries = loaded[0];
   indicators = loaded[1];
   countryIndicator = loaded[2];
+ countryBasic = loaded[3] ?? [];
 
   // Load translations_ja.csv (if exists) as the ONLY detail translation dictionary
-  const translations = loaded[3] || [];
+  const translations = loaded[4] ?? [];
   detailJaMap = new Map();
   translations
     .filter((r) => (r.en ?? "").trim())
@@ -390,10 +393,25 @@ function setMetaNote(text) {
     /* ignore */
   }
 
-  events = hasCountry ? (loaded[4] || []) : [];
+  events = hasCountry ? (loaded[5] ?? []) : [];  // versions from country_indicator (show COMPLETE versions only)
+  const allVersions = unique(countryIndicator.map((r) => r.version).filter(Boolean)).sort().reverse();
 
-  // versions from country_indicator
-  const versions = unique(countryIndicator.map((r) => r.version).filter(Boolean)).sort().reverse();
+  // A "complete" version has rows for all countries × all indicators
+  const expectedRows = (countries?.length || 0) * (indicators?.length || 0);
+  const versionCount = new Map();
+  countryIndicator.forEach((r) => {
+    const v = r.version;
+    if (!v) return;
+    versionCount.set(v, (versionCount.get(v) || 0) + 1);
+  });
+
+  const completeVersions = allVersions.filter((v) => (versionCount.get(v) || 0) === expectedRows);
+  let versions = completeVersions.length ? completeVersions : allVersions; // fallback
+ // Fallback #2: if country_indicator has no version info, derive from country_basic
+ if (!versions.length && countryBasic && countryBasic.length) {
+   const basicVersions = unique(countryBasic.map(r => r.version).filter(Boolean)).sort().reverse();
+   if (basicVersions.length) versions = basicVersions;
+ }
 
   if (versionSelect) {
     versionSelect.innerHTML = "";
@@ -542,6 +560,13 @@ function renderComparison() {
   const others = present.filter((id) => id !== BASELINE_COUNTRY).sort();
   const countryIds = [BASELINE_COUNTRY, ...others];
 
+  // Basic info summary (above comparison table)
+  try { renderBasicSummary(countryIds, version, status); } catch (e) { console.warn('renderBasicSummary failed', e); }
+
+  // Set number of country columns for responsive equal-width layout
+  table.style.setProperty("--country-cols", String(countryIds.length));
+
+
   const byId = getCountriesByIdMap();
 
   // Lookup: `${CID}__${IID}` -> record
@@ -551,7 +576,6 @@ function renderComparison() {
     const iid = normalizeId(r.indicator_id);
     lookup.set(`${cid}__${iid}`, r);
   });
-
   // indicator order: display_order then indicator_id
   const indicatorOrder = indicators.slice().filter((i) => (i.indicator_id ?? '').trim() !== 'I11').sort((a, b) => {
     const ao = a.display_order != null && a.display_order !== "" ? Number(a.display_order) : 999;
@@ -744,6 +768,94 @@ function renderWorldMap() {
 /* =========================================================
  * country.html rendering
  * ======================================================= */
+
+
+/* =========================================================
+ * country_basic.csv rendering (country page only)
+ * ======================================================= */
+const BASIC_ORDER = [
+ 'A01','A02','A03','A04','A05','A06',
+ 'B01','B02','B03',
+ 'C01','C02','C03'
+];
+const BASIC_LABELS = {
+ A01: '人口',
+ A02: '都市化率',
+ A03: 'インターネット普及率',
+ A04: 'スマホ普及率（代理指標）',
+ A05: '1人あたりGDP',
+ A06: '主要言語数',
+};
+function renderCountryBasics(countryId, version, status){
+ const wrap = document.getElementById('countryBasics');
+ if (!wrap) return;
+ wrap.innerHTML = '';
+ if (!countryBasic || !countryBasic.length){
+  const none = document.createElement('div');
+  none.className = 'detail';
+  none.textContent = '基本情報データ（country_basic.csv）がありません。';
+  wrap.appendChild(none);
+  return;
+ }
+ const rows = countryBasic.filter(r => normalizeCountryId(r.country_id) === countryId && r.version === version && r.review_status === status);
+ const byId = new Map(rows.map(r => [normalizeId(r.basic_id), r]));
+ BASIC_ORDER.forEach(bid => {
+  const rec = byId.get(bid);
+  const item = document.createElement('article');
+  item.className = 'basic-item';
+
+  const head = document.createElement('div');
+  head.className = 'basic-head';
+
+  const label = document.createElement('div');
+  label.className = 'basic-label';
+  label.textContent = BASIC_LABELS[bid] ?? bid;
+
+  const year = document.createElement('div');
+  year.className = 'basic-year';
+  const y = rec?.year ?? 'N/A';
+  year.textContent = (String(y).trim() && String(y).trim() !== 'N/A') ? `年：${y}` : '年：N/A';
+
+  head.appendChild(label);
+  head.appendChild(year);
+  item.appendChild(head);
+
+  const { main, detail } = splitValue(rec?.value ?? 'N/A');
+  const v = document.createElement('div');
+  v.className = 'basic-value';
+  v.textContent = main || 'N/A';
+  item.appendChild(v);
+
+  if (detail){
+    const d = document.createElement('div');
+    d.className = 'basic-detail';
+    d.textContent = detail;
+    item.appendChild(d);
+  }
+
+  const srcs = parseSourceUrls(rec?.source_url ?? '');
+  const srcWrap = document.createElement('div');
+  srcWrap.className = 'basic-sources';
+  if (srcs.length){
+    srcs.forEach((u,i)=>{
+      const a = document.createElement('a');
+      a.href = u;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.textContent = `出典${i+1}`;
+      srcWrap.appendChild(a);
+      if (i < srcs.length-1) srcWrap.appendChild(document.createTextNode(' / '));
+    });
+  } else {
+    srcWrap.textContent = '出典なし';
+  }
+  item.appendChild(srcWrap);
+
+  wrap.appendChild(item);
+ });
+}
+
+
 function renderCountryPage() {
   const q = parseQuery();
   const countryId = normalizeCountryId(q.id || "JPN");
@@ -765,6 +877,7 @@ function renderCountryPage() {
     appendCountryLabel(title, countryId, c, { size: "20x15", showCode: true, linkToCountryPage: false });
   }
   if (subtitle) subtitle.textContent = `version=${version} / status=${status}`;
+ renderCountryBasics(countryId, version, status);
 
   const rows = countryIndicator.filter((r) => {
     return normalizeCountryId(r.country_id) === countryId && r.version === version && r.review_status === status;
@@ -918,4 +1031,166 @@ function renderCountryPage() {
 
     timeline.appendChild(ul);
   }
+}
+
+
+/* =========================================================
+ * Basic info summary (index page)
+ * - Shown above comparison table
+ * - Uses country_basic.csv (SoT), filtered by version/status
+ * ======================================================= */
+const BASIC_SUMMARY_IDS = ['A01','A02','A03','A04','A05','A06'];
+function renderBasicSummary(countryIds, version, status){
+ const mount = document.getElementById('basicSummary');
+ if (!mount) return;
+ mount.innerHTML = '';
+ const title = document.createElement('div');
+ title.className = 'basic-summary-title';
+ title.textContent = '基本情報（抜粋）';
+ mount.appendChild(title);
+
+ if (!countryBasic || !countryBasic.length){
+  const none = document.createElement('div');
+  none.className = 'detail';
+  none.textContent = '基本情報データ（country_basic.csv）がありません。';
+  mount.appendChild(none);
+  return;
+ }
+
+ const lookup = new Map();
+ countryBasic
+  .filter(r => r.version === version && r.review_status === status)
+  .forEach(r => {
+    const cid = normalizeCountryId(r.country_id);
+    const bid = normalizeId(r.basic_id);
+    lookup.set(`${cid}__${bid}`, r);
+  });
+
+ 
+
+ // Parse numeric values for ranking (commas, %, spaces allowed)
+ function parseBasicNumber(val){
+  const { main } = splitValue(val ?? '');
+  const s = String(main ?? '').trim();
+  if (!s || s.toUpperCase() === 'N/A' || s === '—') return null;
+  const num = Number(String(s).replace(/,/g,'').replace(/%/g,'').replace(/\s+/g,''));
+  return Number.isFinite(num) ? num : null;
+ }
+
+ // Assign 3-way classes by rank within selected countries for a given basic_id
+ function buildRankClassMap(basicId){
+  const vals = [];
+  countryIds.forEach(cid => {
+    const rec = lookup.get(`${cid}__${basicId}`);
+    const num = parseBasicNumber(rec?.value);
+    if (num == null) return;
+    vals.push({ cid, num });
+  });
+  vals.sort((a,b)=> (a.num - b.num) || a.cid.localeCompare(b.cid));
+  const n = vals.length;
+  const map = new Map();
+  if (!n) return map;
+  // Small-N handling (avoid odd results when selected countries are few)
+  if (n === 1){
+    map.set(vals[0].cid, 'partial');
+    return map;
+  }
+  if (n === 2){
+    map.set(vals[0].cid, 'planned');
+    map.set(vals[1].cid, 'nationwide');
+    return map;
+  }
+  vals.forEach((x, idx)=>{
+    const bucket = Math.floor(idx * 3 / n); // 0..2
+    const cls = bucket === 0 ? 'planned' : (bucket === 1 ? 'partial' : 'nationwide');
+    map.set(x.cid, cls);
+  });
+  return map;
+ }
+
+const byCountry = getCountriesByIdMap();
+ const wrap = document.createElement('div');
+ wrap.className = 'table-wrap';
+ const table = document.createElement('table');
+ table.id = 'basicSummaryTable';
+ table.style.setProperty('--country-cols', String(countryIds.length));
+
+ const thead = document.createElement('thead');
+ const trh = document.createElement('tr');
+ const th0 = document.createElement('th');
+ th0.textContent = '項目';
+ trh.appendChild(th0);
+ countryIds.forEach(id => {
+   const th = document.createElement('th');
+   const c = byCountry.get(id) ?? {};
+   appendCountryLabel(th, id, c, { size:'20x15', showCode:false, linkToCountryPage:true });
+   trh.appendChild(th);
+ });
+ thead.appendChild(trh);
+ table.appendChild(thead);
+
+ const tbody = document.createElement('tbody');
+ BASIC_SUMMARY_IDS.forEach(bid => {
+   const rankClassMap = buildRankClassMap(bid);
+   const tr = document.createElement('tr');
+   const th = document.createElement('th');
+   th.textContent = BASIC_LABELS[bid] ?? bid;
+   tr.appendChild(th);
+
+   countryIds.forEach(cid => {
+     const td = document.createElement('td');
+     td.className = rankClassMap.get(cid) ?? 'planned';
+     td.className = rankClassMap.get(cid) ?? 'planned';
+     const rec = lookup.get(`${cid}__${bid}`);
+     const cell = document.createElement('div');
+     cell.className = 'basic-cell';
+
+     const { main, detail } = splitValue(rec?.value ?? 'N/A');
+     const mainDiv = document.createElement('div');
+     mainDiv.className = 'basic-main';
+     mainDiv.textContent = main || 'N/A';
+     cell.appendChild(mainDiv);
+
+     if (detail){
+       const detailDiv = document.createElement('div');
+       detailDiv.className = 'basic-sub basic-detail-inline';
+       detailDiv.textContent = detail;
+       cell.appendChild(detailDiv);
+     }
+
+     const yearDiv = document.createElement('div');
+     yearDiv.className = 'basic-sub';
+     const y = rec?.year ?? 'N/A';
+     yearDiv.textContent = (String(y).trim() && String(y).trim() !== 'N/A') ? `年：${y}` : '年：N/A';
+     cell.appendChild(yearDiv);
+
+     // Sources (same style as comparison table)
+     const srcDiv = document.createElement('div');
+     srcDiv.className = 'basic-sub basic-src';
+     const srcs = parseSourceUrls(rec?.source_url ?? '');
+     if (srcs.length){
+       srcs.forEach((u,i)=>{
+         const a = document.createElement('a');
+         a.href = u;
+         a.target = '_blank';
+         a.rel = 'noopener';
+         a.textContent = `出典${i+1}`;
+         srcDiv.appendChild(a);
+         if (i < srcs.length-1) srcDiv.appendChild(document.createTextNode(' / '));
+       });
+     } else {
+       srcDiv.textContent = '出典なし';
+     }
+     cell.appendChild(srcDiv);
+
+     td.appendChild(cell);
+     tr.appendChild(td);
+   });
+
+   tbody.appendChild(tr);
+ });
+
+ table.appendChild(tbody);
+ wrap.appendChild(table);
+ mount.appendChild(wrap);
 }

@@ -1,0 +1,267 @@
+country_id,basic_id,value,year,version,change_note,review_status,source_url
+AUS,A01,"27,196,812
+World Bank (WDI) SP.POP.TOTL",2024,2026/2/4,A01 population updated,published,"[""https://data.worldbank.org/country/Australia""]"
+AUS,A02,"88
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=AU""]"
+AUS,A03,"97.0631
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2023,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=AU""]"
+AUS,A04,"112.513
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=AU""]"
+AUS,A05,"71,410
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=AU""]"
+AUS,A06,"1
+Official languages (incl. de facto where stated): English (de facto)",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+AUS,B01,,,2026/2/4,Initial baseline (basic info template),published,[]
+AUS,B02,,,2026/2/4,Initial baseline (basic info template),published,[]
+AUS,B03,,,2026/2/4,Initial baseline (basic info template),published,[]
+AUS,C01,,,2026/2/4,Initial baseline (basic info template),published,[]
+AUS,C02,,,2026/2/4,Initial baseline (basic info template),published,[]
+AUS,C03,,,2026/2/4,Initial baseline (basic info template),published,[]
+CAN,A01,"41,288,599
+World Bank (WDI) SP.POP.TOTL",2024,2026/2/4,A01 population updated,published,"[""https://data.worldbank.org/indicator/SP.POP.TOTL?locations=CA""]"
+CAN,A02,"83
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=CA""]"
+CAN,A03,"93.9564
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2023,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=CA""]"
+CAN,A04,"94.1497
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=CA""]"
+CAN,A05,"65,463
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=CA""]"
+CAN,A06,"2
+Official languages (incl. de facto where stated): English (Federal); French (Federal)",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+CAN,B01,,,2026/2/4,Initial baseline (basic info template),published,[]
+CAN,B02,,,2026/2/4,Initial baseline (basic info template),published,[]
+CAN,B03,,,2026/2/4,Initial baseline (basic info template),published,[]
+CAN,C01,,,2026/2/4,Initial baseline (basic info template),published,[]
+CAN,C02,,,2026/2/4,Initial baseline (basic info template),published,[]
+CAN,C03,,,2026/2/4,Initial baseline (basic info template),published,[]
+DEU,A01,"83,516,593
+World Bank (WDI) SP.POP.TOTL",2024,2026/2/4,A01 population updated,published,"[""https://data.worldbank.org/indicator/SP.POP.TOTL?locations=DE""]"
+DEU,A02,"82
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=DE""]"
+DEU,A03,"93.5
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2024,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=DE""]"
+DEU,A04,"124.663
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=DE""]"
+DEU,A05,"72,295
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=DE""]"
+DEU,A06,"1
+Official languages (incl. de facto where stated): German",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+DEU,B01,,,2026/2/4,Initial baseline (basic info template),published,[]
+DEU,B02,,,2026/2/4,Initial baseline (basic info template),published,[]
+DEU,B03,,,2026/2/4,Initial baseline (basic info template),published,[]
+DEU,C01,,,2026/2/4,Initial baseline (basic info template),published,[]
+DEU,C02,,,2026/2/4,Initial baseline (basic info template),published,[]
+DEU,C03,,,2026/2/4,Initial baseline (basic info template),published,[]
+DNK,A01,"5,976,992
+World Bank (WDI) SP.POP.TOTL（FRED経由）",2024,2026/2/4,A01 population updated,published,"[""https://fred.stlouisfed.org/series/POPTOTDKA647NWDB""]"
+DNK,A02,"89
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=DK""]"
+DNK,A03,"99.7692
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2024,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=DK""]"
+DNK,A04,"126.919
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=DK""]"
+DNK,A05,"79,514
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=DK""]"
+DNK,A06,"1
+Official languages (incl. de facto where stated): Danish",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+DNK,B01,,,2026/2/4,Initial baseline (basic info template),published,[]
+DNK,B02,,,2026/2/4,Initial baseline (basic info template),published,[]
+DNK,B03,,,2026/2/4,Initial baseline (basic info template),published,[]
+DNK,C01,,,2026/2/4,Initial baseline (basic info template),published,[]
+DNK,C02,,,2026/2/4,Initial baseline (basic info template),published,[]
+DNK,C03,,,2026/2/4,Initial baseline (basic info template),published,[]
+EST,A01,"1,371,986
+World Bank (WDI) SP.POP.TOTL",2024,2026/2/4,A01 population updated,published,"[""https://data.worldbank.org/indicator/SP.POP.TOTL?locations=EE""]"
+EST,A02,"71
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=EE""]"
+EST,A03,"92.238
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2024,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=EE""]"
+EST,A04,"150.196
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=EE""]"
+EST,A05,"49,321
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=EE""]"
+EST,A06,"1
+Official languages (incl. de facto where stated): Estonian",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+EST,B01,,,2026/2/4,Initial baseline (basic info template),published,[]
+EST,B02,,,2026/2/4,Initial baseline (basic info template),published,[]
+EST,B03,,,2026/2/4,Initial baseline (basic info template),published,[]
+EST,C01,,,2026/2/4,Initial baseline (basic info template),published,[]
+EST,C02,,,2026/2/4,Initial baseline (basic info template),published,[]
+EST,C03,,,2026/2/4,Initial baseline (basic info template),published,[]
+FRA,A01,"68,551,653
+World Bank (WDI) SP.POP.TOTL",2024,2026/2/4,A01 population updated,published,"[""https://data.worldbank.org/indicator/SP.POP.TOTL?locations=FR""]"
+FRA,A02,"79
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=FR""]"
+FRA,A03,"88.6538
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2024,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=FR""]"
+FRA,A04,"116.688
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=FR""]"
+FRA,A05,"61,290
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=FR""]"
+FRA,A06,"1
+Official languages (incl. de facto where stated): French",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+FRA,B01,,,2026/2/4,Initial baseline (basic info template),published,[]
+FRA,B02,,,2026/2/4,Initial baseline (basic info template),published,[]
+FRA,B03,,,2026/2/4,Initial baseline (basic info template),published,[]
+FRA,C01,,,2026/2/4,Initial baseline (basic info template),published,[]
+FRA,C02,,,2026/2/4,Initial baseline (basic info template),published,[]
+FRA,C03,,,2026/2/4,Initial baseline (basic info template),published,[]
+GBR,A01,"69,226,000
+World Bank (WDI) SP.POP.TOTL",2024,2026/2/4,A01 population updated,published,"[""https://data.worldbank.org/indicator/SP.POP.TOTL?locations=GB""]"
+GBR,A02,"83
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=GB""]"
+GBR,A03,"96.2988
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2023,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=GB""]"
+GBR,A04,"122.796
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=GB""]"
+GBR,A05,"60,620
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=GB""]"
+GBR,A06,"1
+Official languages (incl. de facto where stated): English (de facto)",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+GBR,B01,,,2026/2/4,Initial baseline (basic info template),published,[]
+GBR,B02,,,2026/2/4,Initial baseline (basic info template),published,[]
+GBR,B03,,,2026/2/4,Initial baseline (basic info template),published,[]
+GBR,C01,,,2026/2/4,Initial baseline (basic info template),published,[]
+GBR,C02,,,2026/2/4,Initial baseline (basic info template),published,[]
+GBR,C03,,,2026/2/4,Initial baseline (basic info template),published,[]
+IND,A01,"1,450,935,790
+World Bank (WDI) SP.POP.TOTL",2024,2026/2/4,A01 population updated,published,"[""https://data.worldbank.org/indicator/SP.POP.TOTL?locations=IN""]"
+IND,A02,"35
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=IN""]"
+IND,A03,"55.9
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2022,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=IN""]"
+IND,A04,"80.5632
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=IN""]"
+IND,A05,"11,160
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=IN""]"
+IND,A06,"2
+Official languages (incl. de facto where stated): Hindi; English",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+IND,B01,,,2026/2/4,Initial baseline (basic info template),published,[]
+IND,B02,,,2026/2/4,Initial baseline (basic info template),published,[]
+IND,B03,,,2026/2/4,Initial baseline (basic info template),published,[]
+IND,C01,,,2026/2/4,Initial baseline (basic info template),published,[]
+IND,C02,,,2026/2/4,Initial baseline (basic info template),published,[]
+IND,C03,,,2026/2/4,Initial baseline (basic info template),published,[]
+JPN,A01,"123,975,371
+World Bank (WDI) SP.POP.TOTL",2024,2026/2/4,A01 population updated,published,"[""https://data.worldbank.org/indicator/SP.POP.TOTL?locations=JP""]"
+JPN,A02,"92
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=JP""]"
+JPN,A03,"86.9815
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2023,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=JP""]"
+JPN,A04,"178.432
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=JP""]"
+JPN,A05,"51,685
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=JP""]"
+JPN,A06,"1
+Official languages (incl. de facto where stated): Japanese (de facto)",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+JPN,B01,,,2026/2/4,Initial baseline (basic info template),published,[]
+JPN,B02,,,2026/2/4,Initial baseline (basic info template),published,[]
+JPN,B03,,,2026/2/4,Initial baseline (basic info template),published,[]
+JPN,C01,,,2026/2/4,Initial baseline (basic info template),published,[]
+JPN,C02,,,2026/2/4,Initial baseline (basic info template),published,[]
+JPN,C03,,,2026/2/4,Initial baseline (basic info template),published,[]
+KOR,A01,"51,751,065
+World Bank (WDI) SP.POP.TOTL",2024,2026/2/4,A01 population updated,published,"[""https://data.worldbank.org/indicator/SP.POP.TOTL?locations=KR""]"
+KOR,A02,"81
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=KR""]"
+KOR,A03,"97.8956
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2024,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=KR""]"
+KOR,A04,"162.114
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=KR""]"
+KOR,A05,"58,895
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=KR""]"
+KOR,A06,"2
+Official languages (incl. de facto where stated): Korean; Korean Sign Language",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+KOR,B01,,,2026/2/4,Initial baseline (basic info template),published,[]
+KOR,B02,,,2026/2/4,Initial baseline (basic info template),published,[]
+KOR,B03,,,2026/2/4,Initial baseline (basic info template),published,[]
+KOR,C01,,,2026/2/4,Initial baseline (basic info template),published,[]
+KOR,C02,,,2026/2/4,Initial baseline (basic info template),published,[]
+KOR,C03,,,2026/2/4,Initial baseline (basic info template),published,[]
+NZL,A01,"5,338,500
+World Bank (WDI) SP.POP.TOTL",2024,2026/2/4,A01 population updated,published,"[""https://data.worldbank.org/indicator/SP.POP.TOTL?locations=NZ""]"
+NZL,A02,"84
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=NZ""]"
+NZL,A03,"96.1638
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2023,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=NZ""]"
+NZL,A04,"126.855
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=NZ""]"
+NZL,A05,"55,625
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=NZ""]"
+NZL,A06,"3
+Official languages (incl. de facto where stated): Māori language; New Zealand Sign Language; English (de facto)",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+NZL,B01,,,2026/2/4,Initial baseline (basic info template),published,[]
+NZL,B02,,,2026/2/4,Initial baseline (basic info template),published,[]
+NZL,B03,,,2026/2/4,Initial baseline (basic info template),published,[]
+NZL,C01,,,2026/2/4,Initial baseline (basic info template),published,[]
+NZL,C02,,,2026/2/4,Initial baseline (basic info template),published,[]
+NZL,C03,,,2026/2/4,Initial baseline (basic info template),published,[]
+SGP,A01,"6,036,860
+World Bank (WDI) SP.POP.TOTL",2024,2026/2/4,A01 population updated,published,"[""https://data.worldbank.org/indicator/SP.POP.TOTL?locations=SG""]"
+SGP,A02,"100
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=SG""]"
+SGP,A03,"94.3776
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2024,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=SG""]"
+SGP,A04,"173.2
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=SG""]"
+SGP,A05,"150,689
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=SG""]"
+SGP,A06,"4
+Official languages (incl. de facto where stated): English; Malay; Mandarin Chinese; Tamil",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+SGP,B01,,,2026/2/4,Initial baseline (basic info template),published,[]
+SGP,B02,,,2026/2/4,Initial baseline (basic info template),published,[]
+SGP,B03,,,2026/2/4,Initial baseline (basic info template),published,[]
+SGP,C01,,,2026/2/4,Initial baseline (basic info template),published,[]
+SGP,C02,,,2026/2/4,Initial baseline (basic info template),published,[]
+SGP,C03,,,2026/2/4,Initial baseline (basic info template),published,[]
+SWE,A01,"10,569,709
+World Bank (WDI) SP.POP.TOTL",2024,2026/2/4,A01 population updated,published,"[""https://data.worldbank.org/country/sweden""]"
+SWE,A02,"89
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=SE""]"
+SWE,A03,"95.5293
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2024,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=SE""]"
+SWE,A04,"140.266
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=SE""]"
+SWE,A05,"71,030
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=SE""]"
+SWE,A06,"1
+Official languages (incl. de facto where stated): Swedish",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+SWE,B01,,,2026/2/4,Initial baseline (basic info template),published,[]
+SWE,B02,,,2026/2/4,Initial baseline (basic info template),published,[]
+SWE,B03,,,2026/2/4,Initial baseline (basic info template),published,[]
+SWE,C01,,,2026/2/4,Initial baseline (basic info template),published,[]
+SWE,C02,,,2026/2/4,Initial baseline (basic info template),published,[]
+SWE,C03,,,2026/2/4,Initial baseline (basic info template),published,[]
+USA,A01,"340,110,988
+World Bank (WDI) SP.POP.TOTL",2024,2026/2/4,A01 population updated,published,"[""https://data.worldbank.org/indicator/SP.POP.TOTL?locations=US""]"
+USA,A02,"80
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=US""]"
+USA,A03,"93.1444
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2023,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=US""]"
+USA,A04,"112.411
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=US""]"
+USA,A05,"85,810
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=US""]"
+USA,A06,"1
+Official languages (incl. de facto where stated): English (de facto)",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+USA,B01,,,2026/2/4,Initial baseline (basic info template),published,[]
+USA,B02,,,2026/2/4,Initial baseline (basic info template),published,[]
+USA,B03,,,2026/2/4,Initial baseline (basic info template),published,[]
+USA,C01,,,2026/2/4,Initial baseline (basic info template),published,[]
+USA,C02,,,2026/2/4,Initial baseline (basic info template),published,[]
+USA,C03,,,2026/2/4,Initial baseline (basic info template),published,[]

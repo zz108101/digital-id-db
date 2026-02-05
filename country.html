@@ -4,9 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>国別ページ｜デジタルID制度</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml" />
+
   <!-- CSS -->
-  <link rel="stylesheet" href="./theme.css">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./theme.css" />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body class="page-country">
@@ -17,11 +21,14 @@
   </header>
 
   <section class="controls">
-    <div class="control">
+    <!-- keep in DOM, but hide -->
+    <div class="control control-hidden">
       <label for="versionSelect">バージョン</label>
       <select id="versionSelect"></select>
     </div>
-    <div class="control">
+
+    <!-- keep in DOM, but hide -->
+    <div class="control control-hidden">
       <label for="statusSelect">表示状態</label>
       <select id="statusSelect">
         <option value="published" selected>published</option>
@@ -32,6 +39,11 @@
   </section>
 
   <main>
+    <section class="card" id="basicCard">
+      <h2 class="card-title">基本情報</h2>
+      <div id="countryBasics" class="basic-list"></div>
+    </section>
+
     <section class="card">
       <h2 class="card-title">制度一覧</h2>
       <div id="countryMeta" class="meta"></div>
