@@ -1,0 +1,15 @@
+country_id,iso2,name_ja,name_en,flag,region,notes,map_lat,map_lon,map_dx,map_dy
+JPN,jp,日本,Japan,🇯🇵,Asia,,50.6,49.16,0,0
+KOR,kr,韓国,Republic of Korea,🇰🇷,Asia,,45.24,43.0,0,0
+EST,ee,エストニア,Estonia,🇪🇪,Europe,,34.8,23.78,3,0
+FRA,fr,フランス,France,🇫🇷,Europe,,44.93,15.11,0,1
+DEU,de,ドイツ,Germany,🇩🇪,Europe,,40.2,17.37,0,0
+GBR,gb,イギリス,United Kingdom,🇬🇧,Europe,,31.67,13.06,-2,4
+USA,us,アメリカ,United States,🇺🇸,North America,,44.44,73.39,0,0
+CAN,ca,カナダ,Canada,🇨🇦,North America,,35.0,72.56,0,0
+AUS,au,オーストラリア,Australia,🇦🇺,Oceania,,75.56,46.17,0,0
+NZL,nz,ニュージーランド,New Zealand,🇳🇿,Oceania,,76.67,55.89,0,0
+SWE,se,スウェーデン,Sweden,🇸🇪,Europe,,27.44,20.0,0,-2
+DNK,dk,デンマーク,Denmark,🇩🇰,Europe,,35.27,18.01,0,-2
+SGP,sg,シンガポール,Singapore,🇸🇬,Asia,,62.31,37.94,0,0
+IND,in,インド,India,🇮🇳,Asia,,55.56,33.67,0,0
