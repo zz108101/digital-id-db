@@ -1,0 +1,37 @@
+country_id,benchmark_id,value,year,version,review_status,change_note,source_url
+DNK,DG01,"EGDI 0.984700
+Rank 1/193",2024,2026/2/4,published,UN E-Government Survey 2024（UNeGovKB country page）よりEGDIと順位を転記,"[""https://publicadministration.un.org/egovkb/en-us/Data/Country-Information/id/48-Denmark""]"
+DNK,DG02,"Composite 0.811000
+Rank 2/33",2023,2026/2/4,published,OECD DGI 2023 Annex A Table A.1（DGI.pdf）よりComposite Scoreと順位を転記,"[""https://www.oecd.org/en/publications/2023-oecd-digital-government-index_1a89ed5e-en.html""]"
+DNK,DG03,"Score 93.344400
+Rank 3/66",2024,2026/2/4,published,Waseda World Digital Government Ranking 2024（発表資料 Table 1）よりスコアと順位を転記,"[""https://www.waseda.jp/inst/research/news/79179"", ""https://idg-waseda.jp/pdf/2024_Digital_Government_Ranking_Report.pdf""]"
+DNK,DG04,Rank 5/69,2025,2026/2/4,published,IMD World Digital Competitiveness Ranking 2025（overall rankings）より順位を転記,"[""https://www.imd.org/centers/wcc/world-competitiveness-center/rankings/world-digital-competitiveness-ranking/"", ""https://www.ceda.com.au/getmedia/48d5064b-d813-4956-9029-5f92b4f787b1/2025-IMD-digital-competitiveness_overall-rankings.pdf""]"
+DNK,DG05,"GTMI score (2022) 0.870000
+GTMI group (2022) 1.0",2022,2026/2/4,published,World Bank GovTech Dataset（GTMI 2022）よりGTMIスコアとグループ値を転記,"[""https://data360files.worldbank.org/data360-data/data/WB_GTMI/WB_GTMI_GTMI.csv"", ""https://data360files.worldbank.org/data360-data/data/WB_GTMI/WB_GTMI_GRP.csv"", ""https://www.worldbank.org/en/programs/govtech/2022-gtmi""]"
+EST,DG01,"EGDI 0.972700
+Rank 2/193",2024,2026/2/4,published,UN E-Government Survey 2024（UNeGovKB country page）よりEGDIと順位を転記,"[""https://publicadministration.un.org/egovkb/en-us/Data/Country-Information/id/57-Estonia""]"
+EST,DG02,"Composite 0.742000
+Rank 6/33",2023,2026/2/4,published,OECD DGI 2023 Annex A Table A.1（DGI.pdf）よりComposite Scoreと順位を転記,"[""https://www.oecd.org/en/publications/2023-oecd-digital-government-index_1a89ed5e-en.html""]"
+EST,DG03,"Score 88.783900
+Rank 7/66",2024,2026/2/4,published,Waseda World Digital Government Ranking 2024（発表資料 Table 1）よりスコアと順位を転記,"[""https://www.waseda.jp/inst/research/news/79179"", ""https://idg-waseda.jp/pdf/2024_Digital_Government_Ranking_Report.pdf""]"
+EST,DG04,Rank 26/69,2025,2026/2/4,published,IMD World Digital Competitiveness Ranking 2025（overall rankings）より順位を転記,"[""https://www.imd.org/centers/wcc/world-competitiveness-center/rankings/world-digital-competitiveness-ranking/"", ""https://www.ceda.com.au/getmedia/48d5064b-d813-4956-9029-5f92b4f787b1/2025-IMD-digital-competitiveness_overall-rankings.pdf""]"
+EST,DG05,"GTMI score (2022) 0.960000
+GTMI group (2022) 1.0",2022,2026/2/4,published,World Bank GovTech Dataset（GTMI 2022）よりGTMIスコアとグループ値を転記,"[""https://data360files.worldbank.org/data360-data/data/WB_GTMI/WB_GTMI_GTMI.csv"", ""https://data360files.worldbank.org/data360-data/data/WB_GTMI/WB_GTMI_GRP.csv"", ""https://www.worldbank.org/en/programs/govtech/2022-gtmi""]"
+JPN,DG01,"EGDI 0.935100
+Rank 13/193",2024,2026/2/4,published,UN E-Government Survey 2024 (EGOVKB country page),"[""https://publicadministration.un.org/egovkb/en-us/Data/Country-Information/id/85-Japan""]"
+JPN,DG02,"Composite 0.483000
+Rank 31/33",2023,2026/2/4,published,OECD DGI 2023 Annex A Table A.1（DGI.pdf）よりJPNのComposite Scoreと順位を転記,"[""https://www.oecd.org/en/publications/2023-oecd-digital-government-index_1a89ed5e-en.html""]"
+JPN,DG03,"Score 84.545300
+Rank 11/66",2024,2026/2/4,published,Waseda World Digital Government Ranking 2024 (press release table),"[""https://www.waseda.jp/inst/research/news/79179?lng=en"", ""https://idg-waseda.jp/pdf/2024_Digital_Government_Ranking_Report.pdf""]"
+JPN,DG04,Rank 30/69,2025,2026/2/4,published,IMD World Digital Competitiveness Ranking 2025 (Japan rank via JETRO),"[""https://www.jetro.go.jp/biznews/2025/11/00822b95d0b1cbf3.html"", ""https://www.imd.org/centers/wcc/world-competitiveness-center/rankings/world-digital-competitiveness-ranking/""]"
+JPN,DG05,"GTMI score (2022) 0.770000
+GTMI group (2022) 1.0",2022,2026/2/4,published,World Bank GovTech Dataset（GTMI 2022）よりJPNのGTMIスコアとグループ値を転記,"[""https://data360files.worldbank.org/data360-data/data/WB_GTMI/WB_GTMI_GTMI.csv"", ""https://data360files.worldbank.org/data360-data/data/WB_GTMI/WB_GTMI_GRP.csv"", ""https://www.worldbank.org/en/programs/govtech/2022-gtmi""]"
+KOR,DG01,"EGDI 0.967900
+Rank 4/193",2024,2026/2/4,published,UN E-Government Survey 2024（UNeGovKB country page）よりEGDIと順位を転記,"[""https://publicadministration.un.org/egovkb/en-us/Data/Country-Information/id/138-Republic-of-Korea""]"
+KOR,DG02,"Composite 0.935000
+Rank 1/33",2023,2026/2/4,published,OECD DGI 2023 Annex A Table A.1（DGI.pdf）よりComposite Scoreと順位を転記,"[""https://www.oecd.org/en/publications/2023-oecd-digital-government-index_1a89ed5e-en.html""]"
+KOR,DG03,"Score 92.092300
+Rank 5/66",2024,2026/2/4,published,Waseda World Digital Government Ranking 2024（発表資料 Table 1）よりスコアと順位を転記,"[""https://www.waseda.jp/inst/research/news/79179"", ""https://idg-waseda.jp/pdf/2024_Digital_Government_Ranking_Report.pdf""]"
+KOR,DG04,Rank 15/69,2025,2026/2/4,published,IMD World Digital Competitiveness Ranking 2025（overall rankings）より順位を転記,"[""https://www.imd.org/centers/wcc/world-competitiveness-center/rankings/world-digital-competitiveness-ranking/"", ""https://www.ceda.com.au/getmedia/48d5064b-d813-4956-9029-5f92b4f787b1/2025-IMD-digital-competitiveness_overall-rankings.pdf""]"
+KOR,DG05,"GTMI score (2022) 0.990000
+GTMI group (2022) 1.0",2022,2026/2/4,published,World Bank GovTech Dataset（GTMI 2022）よりGTMIスコアとグループ値を転記,"[""https://data360files.worldbank.org/data360-data/data/WB_GTMI/WB_GTMI_GTMI.csv"", ""https://data360files.worldbank.org/data360-data/data/WB_GTMI/WB_GTMI_GRP.csv"", ""https://www.worldbank.org/en/programs/govtech/2022-gtmi""]"

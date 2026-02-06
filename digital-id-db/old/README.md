@@ -130,10 +130,7 @@ AIは、このサイトを
 ### 3.2.5 version / status の整合（重要）
 - トップページの version セレクタは基本的に `country_indicator.csv` の version を基準に作られる。
 - そのため、`country_basic.csv` 側も **同じ `version`** を持たないと表示がズレやすい。
-- 本チャットでは `country_basic.csv` の各行を **version=2026/2/4** に揃え、`review_status=published` で表示する運用にした。
-- 注意：`country_basic.csv` だけを新しい version（例：`2026/2/5`）にすると、UIの version セレクタ（主に `country_indicator.csv` 由来）と一致せず **国別ページで基本情報が表示されない**ことがある。
-  - 対策：基本情報も **既存の version（例：`2026/2/4`）に揃える**か、version候補を `country_basic.csv` と `country_indicator.csv` の **和集合**にする（JS修正）。
-
+- 本チャットでは `country_basic.csv` の A01/A02 を **version=2026/2/4** に揃え、`review_status=published` で表示する運用にした。
 
 ### 3.2.6 表示場所（UI）
 - 国別ページ（country.html）
@@ -155,92 +152,6 @@ AIは、このサイトを
 - 基本情報と制度表の横幅が合わない
   - 原因：`styles.css` に basic summary のCSSが重複／列幅ロジックが不一致
   - 対処：`#basicSummaryTable` に `#comparisonTable` と同じ列幅計算（`--col-indicator` と `--country-cols`）を適用し、CSSブロックを1つに統一する
-
-### 3.2.9 C03（GTMI：GovTech成熟度）の定義（本チャットで確定）
-- C03 は『デジタル政策の優先度』ではなく、World Bank の **GovTech Maturity Index (GTMI) の overall score（0〜1）** を格納する。
-- 取得元：`WBG_GovTech_Dataset_Dec2025.xlsx`（GovTech Dataset Dec 2025）の `GTMI_Data` シートから **Year=2025, Code=ISO3 の `GTMI` 列**を取得する。
-- `value` の1行目：GTMI（小数 **6桁** 固定）
-- `value` の2行目以降：根拠文（例：『World Bank GovTech Dataset… Year:2025』）
-- `source_url`：World Bank Data Catalog の Excel 直リンク + World Bank GovTech Data ページを **JSON配列文字列**で保存する。
-
-### 3.2.10 数値フォーマット（本チャットで確定）
-- 本プロジェクトでは、連続値（割合・指数など）の数値は **小数6桁** に統一する（例：`0.905044`）。
-- UIは数値を計算しないため、CSV側でフォーマットを確定させる。
-
-### 3.2.11 country.html の基本情報カード：色塗り禁止（本チャットで反映）
-- country.html の『基本情報』では、B01/B03 等のカテゴリ色（nationwide/partial/planned）を付与しない。
-- 実装：`app.js` の `renderCountryBasics()` で `basicCellClass()` による class 付与を無効化（フラグ `COLORIZE_COUNTRY_BASICS=false`）。
-
-### 3.2.12 C02（プライバシー意識）の定義（本チャットで確定）
-- C02 は OECD Going Digital の指標「Share of adults who avoid using certain websites, apps, or social media due to privacy concerns（indicator 84）」を格納する。citeturn4search1turn3search55
-- 取得は Going Digital の indicator/84 ページの **Download data**（CSV）から行い、`Breakdown = All individuals aged 18 or older` の値を採用する。citeturn4search1turn3search55
-- `value` の1行目：割合（%）を 0〜1 に正規化し **小数6桁**で固定（例：`0.361800`）。citeturn4search1
-- 注意：この指標は調査（Truth Quest Survey）ベースで **国カバレッジが限定**されるため、`countries.csv` の全対象国に値が揃わないことがある。欠損を推測で埋めない（SoT原則）。citeturn4search1turn3search3turn1search2turn1search1
-
-
-
-### 3.2.13 A06（主要言語数）の色塗りルール（追加）
-- index.html の「基本情報（basicSummaryTable）」では、原則として *表示中の国* の値を相対比較して 3段階（planned/partial/nationwide）で色分けする。
-- ただし **A06（主要言語数）** は値が 1/2/3… の *離散的な小さい整数* で同値（タイ）が多く、相対順位（3分位）方式だと **同じ値でも色が分かれる** ため、A06のみ **固定色** とする。
-  - **A06 = 1** → `planned`（灰）
-  - **A06 = 2** → `partial`（青）
-  - **A06 ≥ 3** → `nationwide`（緑）
-- この例外は *見た目の都合ではなく、同値＝同色（同順位）を保証するため* の運用ルールである。
-
-
-
-## 3.3 国際ベンチマーク（digital_gov_benchmarks.csv）（追加）
-制度項目（I01〜I11）や基本情報（A01〜C03）とは別枠で、各国のデジタル政府に関する国際ベンチマーク（DG01〜DG05）を表示する仕組みを追加した。
-
-### 3.3.1 データのSoT
-- SoT（唯一の正）は `data/digital_gov_benchmarks.csv`
-- ベンチマークのラベルや表示順は `data/digital_gov_benchmark_defs.csv`（任意だが推奨）
-
-### 3.3.2 CSVスキーマ（必須列）
-`data/digital_gov_benchmarks.csv` の列（想定・運用）:
-- `country_id` : 国ID（ISO3：JPN等）
-- `benchmark_id` : ベンチマークID（DG01〜DG05）
-- `value` : 表示値（1行目=主要値、2行目以降=補足）
-- `year` : 対象年（例：2024）
-- `version` : データセット版（`country_indicator.csv` と整合させる）
-- `review_status` : `draft` / `reviewed` / `published`
-- `change_note` : 変更メモ
-- `source_url` : 出典URL（JSON配列文字列推奨。UIが解釈して「出典1/2…」を表示）
-
-`data/digital_gov_benchmark_defs.csv` の列（推奨）:
-- `benchmark_id` : DG01〜DG05
-- `label` : 表示名
-- `display_order` : 表示順
-
-### 3.3.3 value の書式（UIがそのまま表示する前提）
-- `value` は改行区切りで扱う。
-  - 1行目：主要値（スコアや順位など）
-  - 2行目以降：補足（例：Rank 12/193、カバレッジ注意、スコア定義）
-- 欠損は推測で埋めない。対象外（未掲載）の場合は `N/A` を用いてよい。
-
-### 3.3.4 DG01〜DG05 の定義（固定）
-- **DG01 = UN EGDI**（E-Government Development Index）
-  - 0〜1のスコア（EGDI）および必要に応じて順位を記録する。
-- **DG02 = OECD DGI**（Digital Government Index）
-  - 0〜1のCompositeスコア（DGI）および必要に応じて順位を記録する。
-- **DG03 = Waseda World Digital Government Ranking**
-  - 100点満点系のスコア（Score）および順位を記録する。
-- **DG04 = IMD World Digital Competitiveness Ranking**
-  - 1/69等の順位（Rank）を記録する（スコアが入手できない場合も多い）。
-- **DG05 = World Bank GTMI**（GovTech Maturity Index）
-  - GTMIのoverall score（0〜1）および必要に応じて分類（Group等）を記録する。
-
-### 3.3.5 source_url の運用ルール（重要）
-- 出典は必ず `source_url` に保存する。
-- 推奨：JSON配列文字列（例：`["https://...","https://..."]`）
-- 1つのDGについて、少なくとも以下のどちらか（または両方）を含めること：
-  - 公式のデータ/データセンター（ダウンロード元）
-  - 公式レポート（方法論・表の根拠）
-- URLの順序は UI の「出典1 / 出典2 …」の表示順になる。
-
-### 3.3.6 version / status の整合（重要）
-- トップページの version セレクタは基本的に `country_indicator.csv` の version を基準に作られる。
-- そのため `digital_gov_benchmarks.csv` 側も **同じ version** を持たないと表示がズレやすい。
 
 ## 4. 世界地図と国旗ピンのルール（重要）
 
@@ -293,11 +204,6 @@ AIは、このサイトを
 
 ※ 本章は UI の挙動を固定するための運用ルールであり、CSVの内容を変更・推測するものではない。
 
-
-
-### 5.4 国際ベンチマークのトグル（自動スクロール禁止）
-- 「国際ベンチマークを表示」ボタンは、開閉によってページが自動スクロールしない（基本情報トグルと同じ挙動）。
-- 目的：比較中に視点（スクロール位置）が突然移動して読みにくくなることを防ぐ。
 ### （追加）version の運用ルール（重要）
 - `country_indicator.csv` の `version` は「データセットのリリース版」を表す。
 - 原則として、ある version は「全ての国 × 全ての指標（I01〜I11）」が揃った完全版であること。
@@ -347,9 +253,6 @@ digital-id-db/
 │  ├─ countries.csv
 │  ├─ indicators.csv
 │  ├─ country_indicator.csv
-│  ├─ country_basic.csv
-│  ├─ digital_gov_benchmark_defs.csv
-│  ├─ digital_gov_benchmarks.csv
 │  ├─ translations_ja.csv
 │  └─ events.csv
 │
@@ -360,7 +263,6 @@ digital-id-db/
 ├─ theme.css
 └─ README.md
 ```
-
 
 ---
 
@@ -434,20 +336,3 @@ AIは、このREADMEを「このプロジェクトに参加する前に必ず読
 - `#basicSummaryTable` に `#comparisonTable` と同じ列幅計算が入っているか確認：
   - 左列：`var(--col-indicator)`
   - 国列：`calc((100% - var(--col-indicator)) / var(--country-cols, 1))`
-
-
-### （追加）トラブルシュート：C03などが枠からはみ出る（多国表示時）
-- 現象：index.html の基本情報サマリ（`#basicSummaryTable`）で、14か国など列数が多いと **C03等の文字がセル枠からはみ出す**。citeturn8search182
-- 原因：列幅が狭い状況で、`flex` の子要素が縮まない（`min-width` 問題）＋長い英数字が折返しされない。citeturn8search182
-- 対策：**CSSのみで修正**する（JS/HTMLは触らない）。`styles.css` に以下を追加する：
-  - `#basicSummaryTable .basic-cell { min-width: 0; }`
-  - `#basicSummaryTable td, th { overflow: hidden; }`
-  - `.basic-main` は `text-overflow: ellipsis`（1行固定）
-  - `.basic-sub` は `overflow-wrap: anywhere`（折返し）
-  - 必要に応じて `#comparisonTable` 側にも同様の保険を入れる。citeturn8file183turn8search182
-
-
-### （追加）トラブルシュート：国際ベンチマーク（benchmarksTable）が表示されない
-- `index.html` に `#benchmarksTable` が存在するか確認する。
-- `data/digital_gov_benchmarks.csv` が存在するか確認する（存在しない場合は『データなし』表示になる）。
-- `digital_gov_benchmarks.csv` の `version` / `review_status` が、表示中のセレクタ値と一致しているか確認する。

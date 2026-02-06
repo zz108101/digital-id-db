@@ -5,15 +5,38 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>デジタルID制度 国際比較</title>
 
+  <!-- Favicon -->
+  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml" />
+
   <!-- ✅ CSSは必ず link タグで読み込む -->
-  <link rel="stylesheet" href="./styles.css" />
   <link rel="stylesheet" href="./theme.css" />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
-  <header class="header">
-    <h1>デジタルID制度 国際比較</h1>
-    <p class="subtitle">CSV（source of truth）から自動生成</p>
+  <header class="header header--with-profile">
+    <div class="header-inner">
+      <div class="header-left">
+        <h1>デジタルID制度 国際比較</h1>
+        <p class="subtitle">
+          本サイトは、日本を基準に主要国のデジタルID制度の「設計思想・制度構造の違い」を比較するためのデータ駆動型・完全静的な可視化データベース & Webサイトです。
+        </p>
+      </div>
+
+      <!-- Profile (small, top-right in header) -->
+      <aside class="header-profile" aria-label="プロフィール">
+        <span class="profile-chip" tabindex="0" aria-label="Profile（K.H.）">
+          <img class="profile-icon" src="./assets/icon.svg" alt="Profile icon" width="28" height="28" />
+          <span class="profile-text">Profile（K.H.）</span>
+
+          <!-- Popover (hover / focus) -->
+          <span class="profile-popover" role="note">
+            公務員として、行政のデジタル化や認証基盤に関心を持っています。<br>
+            各国のデジタルID制度を整理し、比較できる形でまとめています。
+          </span>
+        </span>
+      </aside>
+    </div>
   </header>
 
   <!-- World map (Japan-centered) -->
@@ -22,19 +45,17 @@
       <div class="worldmap-bg" aria-hidden="true"></div>
       <div class="worldmap-pins" id="worldmapPins" aria-label="国旗ピン"></div>
     </div>
-
-    <div class="worldmap-hint">
-      ※ 国旗ピンの位置は countries.csv の緯度・経度（＋map_dx / map_dy）のみを根拠に配置
-    </div>
+    <!-- 注釈は削除 -->
   </section>
 
-  <section class="controls">
-    <div class="control">
+  <!-- Controls: countries-only (version/status are hidden but kept in DOM for JS) -->
+  <section class="controls controls--countries-only">
+    <div class="control control-hidden">
       <label for="versionSelect">バージョン</label>
       <select id="versionSelect"></select>
     </div>
 
-    <div class="control">
+    <div class="control control-hidden">
       <label for="statusSelect">表示状態</label>
       <select id="statusSelect">
         <option value="published" selected>published</option>
@@ -56,14 +77,26 @@
 
   <main>
     <section class="card">
-      <h2 class="card-title">横断比較</h2>
-      <div id="meta" class="meta"></div>
-      <div class="table-wrap">
-        <table id="comparisonTable" class="comparison"></table>
-      </div>
-    </section>
-
-    <section class="card">
+ <h2 class="card-title">横断比較</h2>
+ <div id="meta" class="meta"></div>
+ <div class="toggle-row">
+  <button id="toggleBasicSummary" type="button" class="btn-toggle" aria-controls="basicSummaryWrap" aria-expanded="false">基本情報を表示</button>
+  <button id="toggleBenchmarks" type="button" class="btn-toggle" aria-controls="benchmarksWrap" aria-expanded="false">国際ベンチマークを表示</button>
+ </div>
+ <div id="basicSummaryWrap" hidden>
+  <div id="basicSummary" class="basic-summary"></div>
+ </div>
+ <div id="benchmarksWrap" hidden>
+  <div class="meta">※ CSVの値をそのまま表示（欠損は「データなし」）。version / review_status は他データと同様にフィルタ。</div>
+  <div class="table-wrap">
+   <table id="benchmarksTable" class="comparison"></table>
+  </div>
+ </div>
+ <div class="table-wrap">
+  <table id="comparisonTable" class="comparison"></table>
+ </div>
+</section>
+<section class="card">
       <h2 class="card-title">凡例</h2>
       <div class="legend">
         <span class="pill nationwide">Nationwide / National / Yes / Adequacy / Common</span>
@@ -71,8 +104,8 @@
         <span class="pill planned">Planned / None / No / Developing / Pilot</span>
       </div>
     </section>
-  </main>
+</main>
 
-  <script src="./app.js"></script>
+  <script src="./app.js?v=20260205"></script>
 </body>
 </html>

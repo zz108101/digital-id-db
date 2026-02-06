@@ -1,4 +1,4 @@
-indicator_id,name_ja,name_en,short_label,display_order
+﻿indicator_id,name_ja,name_en,short_label,display_order
 I01,基礎住民登録,Foundational population registration,住民登録,1
 I02,住民情報ネットワーク,Resident information network,住民ネット,2
 I03,個人識別子（用途・民間利用可否）,Personal identifier (use & private sector),個人ID,3

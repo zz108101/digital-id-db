@@ -35,14 +35,12 @@ body{
 /* World map block */ 
 .worldmap-card{ margin-top: 18px; padding: 14px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--border); box-shadow: var(--shadow); } 
 .worldmap{ position: relative; width: 100%; aspect-ratio: 940 / 477; border-radius: 14px; overflow: hidden; background: #EEF2FF; } 
-/* Use background-image so we can shift (Japan-centered) */ 
+/* World map background (rendered as CSS background-image) */ 
 .worldmap-bg{
  position:absolute;
  inset:0;
- /* SVGが背景で描画できない環境向けにPNGフォールバックを用意 */
- background-image:
-   url('./assets/BlankMap-World-Equirectangular.svg'),
-   url('./assets/BlankMap-World-Equirectangular.png');
+  background-image:
+ url('./assets/BlankMap-World-Equirectangular.png');
  background-repeat: no-repeat;
  background-size: contain;
  background-position: 50% 50%;

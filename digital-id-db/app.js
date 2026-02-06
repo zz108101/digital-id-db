@@ -18,6 +18,11 @@ const DEFAULT_COUNTRIES = ["JPN", "EST", "DNK", "KOR"];
 
 // ✅ Baseline country (always shown in comparison; not shown in chips)
 const BASELINE_COUNTRY = "JPN";
+// ✅ Event type canonical labels (for timeline; CSV remains SoT)
+const EVENT_TYPE_ORDER = [
+  '制度開始','施行','法制定','法改正','拡張','パイロット','発表','事故','終了'
+];
+
 
 /* =========================================================
  * Helpers: CSV
@@ -159,6 +164,40 @@ function parseSourceUrls(sourceUrlField) {
     .split(/[;\n\r]+/)
     .map((s) => s.trim())
     .filter(Boolean);
+}
+
+
+// =========================================================
+// Basic helpers (display-only)
+// =========================================================
+// Format integer-like strings with thousand separators (e.g., 256000 -> 256,000).
+function formatThousandsIfInt(str){
+  const s = String(str ?? '').trim();
+  if(!s) return s;
+  const raw = s.replace(/,/g,'');
+  if(!/^[-]?\d+$/.test(raw)) return s;
+  const n = Number(raw);
+  if(!Number.isFinite(n)) return s;
+  return n.toLocaleString('en-US');
+}
+
+// Basic cell color mapping for categorical basics (B01/B03).
+function basicCellClass(basicId, main){
+  const m = String(main ?? '').trim();
+  if(basicId==='B01'){
+    // Unitary -> nationwide (blue), Federal -> partial (gray)
+    if(m.startsWith('単一国家')) return 'nationwide';
+    if(m.startsWith('連邦国家')) return 'partial';
+    return 'partial';
+  }
+  if(basicId==='B03'){
+    const v = m.toLowerCase();
+    if(v==='strong') return 'nationwide';
+    if(v==='medium') return 'partial';
+    if(v==='weak') return 'planned';
+    return 'partial';
+  }
+  return null;
 }
 
 /* =========================================================
@@ -303,6 +342,12 @@ function appendCountryLabel(container, countryId, countryRecord, options = {}) {
  * ======================================================= */
 let detailJaMap = new Map();
 
+function translateTextToJa(text) {
+ const key = (text ?? "").trim();
+ if (!key) return "";
+ return detailJaMap.get(key) ?? key;
+}
+
 function translateDetailToJa(detailText) {
   const key = (detailText ?? "").trim();
   if (!key) return "";
@@ -315,7 +360,10 @@ function translateDetailToJa(detailText) {
 let countries = [];
 let indicators = [];
 let countryIndicator = [];
+let countryBasic = [];
 let events = [];
+let benchmarkDefs = [];
+let digitalGovBenchmarks = [];
 let selectedCountries = new Set(DEFAULT_COUNTRIES);
 
 /* =========================================================
@@ -330,6 +378,28 @@ const hasCountry = !!document.getElementById("countryIndicators");
  * ======================================================= */
 const versionSelect = document.getElementById("versionSelect");
 const statusSelect = document.getElementById("statusSelect");
+
+// Toggle: basic summary visibility on index page (default hidden)
+function setupBasicSummaryToggle() {
+  const btn = document.getElementById('toggleBasicSummary');
+  const wrap = document.getElementById('basicSummaryWrap');
+  if (!btn || !wrap) return;
+
+  // Ensure default state
+  wrap.setAttribute('hidden', '');
+  btn.setAttribute('aria-expanded', 'false');
+  btn.textContent = '基本情報を表示';
+
+  btn.addEventListener('click', () => {
+    const willShow = wrap.hasAttribute('hidden');
+    if (willShow) wrap.removeAttribute('hidden');
+    else wrap.setAttribute('hidden', '');
+
+    btn.setAttribute('aria-expanded', String(willShow));
+    btn.textContent = willShow ? '基本情報を非表示' : '基本情報を表示';
+  });
+}
+
 
 function setMetaNote(text) {
   const meta = document.getElementById("meta") || document.getElementById("countryMeta");
@@ -346,8 +416,11 @@ function setMetaNote(text) {
     fetchCSV(`${DATA_DIR}/countries.csv`),
     fetchCSV(`${DATA_DIR}/indicators.csv`),
     fetchCSV(`${DATA_DIR}/country_indicator.csv`),
+ fetchCSVOptional(`${DATA_DIR}/country_basic.csv`),
     fetchCSVOptional(`${DATA_DIR}/translations_ja.csv`),
-  ];
+ fetchCSVOptional(`${DATA_DIR}/digital_gov_benchmark_defs.csv`),
+ fetchCSVOptional(`${DATA_DIR}/digital_gov_benchmarks.csv`),
+ ];
   if (hasCountry) loaders.push(fetchCSVOptional(`${DATA_DIR}/events.csv`));
 
   const loaded = await Promise.all(loaders);
@@ -355,9 +428,10 @@ function setMetaNote(text) {
   countries = loaded[0];
   indicators = loaded[1];
   countryIndicator = loaded[2];
+ countryBasic = loaded[3] ?? [];
 
   // Load translations_ja.csv (if exists) as the ONLY detail translation dictionary
-  const translations = loaded[3] || [];
+  const translations = loaded[4] ?? [];
   detailJaMap = new Map();
   translations
     .filter((r) => (r.en ?? "").trim())
@@ -379,10 +453,27 @@ function setMetaNote(text) {
     /* ignore */
   }
 
-  events = hasCountry ? (loaded[4] || []) : [];
+  benchmarkDefs = loaded[5] ?? [];
+ digitalGovBenchmarks = loaded[6] ?? [];
+ events = hasCountry ? (loaded[7] ?? []) : [];  // versions from country_indicator (show COMPLETE versions only)
+  const allVersions = unique(countryIndicator.map((r) => r.version).filter(Boolean)).sort().reverse();
 
-  // versions from country_indicator
-  const versions = unique(countryIndicator.map((r) => r.version).filter(Boolean)).sort().reverse();
+  // A "complete" version has rows for all countries × all indicators
+  const expectedRows = (countries?.length || 0) * (indicators?.length || 0);
+  const versionCount = new Map();
+  countryIndicator.forEach((r) => {
+    const v = r.version;
+    if (!v) return;
+    versionCount.set(v, (versionCount.get(v) || 0) + 1);
+  });
+
+  const completeVersions = allVersions.filter((v) => (versionCount.get(v) || 0) === expectedRows);
+  let versions = completeVersions.length ? completeVersions : allVersions; // fallback
+ // Fallback #2: if country_indicator has no version info, derive from country_basic
+ if (!versions.length && countryBasic && countryBasic.length) {
+   const basicVersions = unique(countryBasic.map(r => r.version).filter(Boolean)).sort().reverse();
+   if (basicVersions.length) versions = basicVersions;
+ }
 
   if (versionSelect) {
     versionSelect.innerHTML = "";
@@ -399,9 +490,11 @@ function setMetaNote(text) {
   if (statusSelect) statusSelect.addEventListener("change", renderAll);
 
   if (hasComparison) {
-    renderCountryChips();
-    wireCountryChipActions();
-  }
+ setupBasicSummaryToggle();
+ setupBenchmarksToggle();
+  renderCountryChips();
+  wireCountryChipActions();
+}
 
   renderAll();
 })().catch((err) => {
@@ -508,6 +601,261 @@ function renderCountryChips() {
   });
 }
 
+
+function renderBenchmarks(countryIds, version, status){
+  const table = document.getElementById('benchmarksTable');
+  if (!table) return;
+
+  // number of country columns for equal-width layout
+  table.style.setProperty('--country-cols', String(countryIds.length));
+
+  // defs: sort by display_order then benchmark_id
+  const defs = (benchmarkDefs ?? [])
+    .filter(r => (r.benchmark_id ?? '').trim())
+    .slice()
+    .sort((a,b)=>{
+      const ao = (a.display_order ?? '') !== '' ? Number(a.display_order) : 999;
+      const bo = (b.display_order ?? '') !== '' ? Number(b.display_order) : 999;
+      if (ao !== bo) return ao - bo;
+      return String(a.benchmark_id ?? '').localeCompare(String(b.benchmark_id ?? ''));
+    });
+
+  const idsFromData = unique((digitalGovBenchmarks ?? []).map(r => (r.benchmark_id ?? '').trim()).filter(Boolean)).sort();
+  const benchList = defs.length
+    ? defs.map(d => ({ id: (d.benchmark_id ?? '').trim(), label: ((d.label ?? '').trim() || (d.benchmark_id ?? '').trim()) }))
+    : idsFromData.map(id => ({ id, label: id }));
+
+  const filtered = (digitalGovBenchmarks ?? []).filter(r =>
+    r.version === version &&
+    r.review_status === status &&
+    countryIds.includes(normalizeCountryId(r.country_id))
+  );
+
+  // Lookup: `${CID}__${BID}` -> record
+  const lookup = new Map();
+  filtered.forEach(r=>{
+    const cid = normalizeCountryId(r.country_id);
+    const bid = (r.benchmark_id ?? '').trim();
+    if (!cid || !bid) return;
+    lookup.set(`${cid}__${bid}`, r);
+  });
+
+  // ---------------------------------------------------------
+  // ✅ Dynamic 3-tier coloring (same palette as 制度項目)
+  //  - Top tier    -> 'nationwide'
+  //  - Middle tier -> 'partial'
+  //  - Bottom tier -> 'planned'
+  //  - N/A / missing -> 'planned' (gray)
+  //  Ranking is computed ONLY among the countries currently shown in the table.
+  // ---------------------------------------------------------
+  function parseFloatLoose(s){
+    const m = String(s ?? '').replace(/,/g,'').match(/([-+]?\d*\.?\d+)/);
+    return m ? Number(m[1]) : null;
+  }
+  function parseRankLoose(s){
+    const m = String(s ?? '').match(/Rank\s+(\d+)\s*\/\s*(\d+)/i);
+    return m ? Number(m[1]) : null;
+  }
+  function parseBenchmarkMetric(benchmarkId, valueStr){
+    const v = String(valueStr ?? '').trim();
+    if (!v) return { metric: null, lowerBetter: false };
+
+    // N/A
+    if (/^N\/?A/i.test(v) || /not\s+covered/i.test(v)){
+      return { metric: null, lowerBetter: false };
+    }
+
+    const id = String(benchmarkId ?? '').trim();
+
+    if (id === 'DG04'){
+      // IMD rank: smaller is better
+      return { metric: parseRankLoose(v), lowerBetter: true };
+    }
+
+    if (id === 'DG01' || id === 'DG02' || id === 'DG03'){
+      // DG01 EGDI, DG02 Composite, DG03 Score
+      return { metric: parseFloatLoose(v), lowerBetter: false };
+    }
+
+    if (id === 'DG05'){
+      // DG05 GTMI score: take the LAST number in the string (avoid picking the year 2022)
+      const nums = String(v).replace(/,/g,'').match(/([-+]?\d*\.?\d+)/g);
+      const last = nums && nums.length ? Number(nums[nums.length - 1]) : null;
+      return { metric: Number.isFinite(last) ? last : null, lowerBetter: false };
+    }
+
+    // fallback: try float
+    return { metric: parseFloatLoose(v), lowerBetter: false };
+  }
+
+  // Build class map for a benchmark based on current countryIds
+  function buildRankClassMapBenchmark(benchmarkId){
+    const vals = [];
+    let lowerBetter = false;
+    countryIds.forEach(cid => {
+      const rec = lookup.get(`${cid}__${benchmarkId}`);
+      if (!rec) return;
+      const { main } = splitValue(rec.value);
+      const parsed = parseBenchmarkMetric(benchmarkId, main);
+      if (parsed.metric == null || !Number.isFinite(parsed.metric)) return;
+      lowerBetter = parsed.lowerBetter;
+      vals.push({ cid, metric: parsed.metric });
+    });
+
+    // sort ascending
+    vals.sort((a,b)=> (a.metric - b.metric) || a.cid.localeCompare(b.cid));
+
+    const n = vals.length;
+    const map = new Map();
+    if (!n) return map;
+
+    // Small-N handling
+    if (n === 1){
+      map.set(vals[0].cid, 'partial');
+      return map;
+    }
+    if (n === 2){
+      // best -> nationwide, worst -> planned
+      if (lowerBetter){
+        map.set(vals[0].cid, 'nationwide');
+        map.set(vals[1].cid, 'planned');
+      } else {
+        map.set(vals[0].cid, 'planned');
+        map.set(vals[1].cid, 'nationwide');
+      }
+      return map;
+    }
+
+    vals.forEach((x, idx)=>{
+      const bucket = Math.floor(idx * 3 / n); // 0..2
+      let cls;
+      if (lowerBetter){
+        // smaller is better -> earliest (bucket 0) is top
+        cls = bucket === 0 ? 'nationwide' : (bucket === 1 ? 'partial' : 'planned');
+      } else {
+        // bigger is better -> latest (bucket 2) is top
+        cls = bucket === 0 ? 'planned' : (bucket === 1 ? 'partial' : 'nationwide');
+      }
+      map.set(x.cid, cls);
+    });
+    return map;
+  }
+
+  const rankClassMapByBench = new Map();
+  benchList.forEach(b => {
+    const id = b.id;
+    if (!id) return;
+    rankClassMapByBench.set(id, buildRankClassMapBenchmark(id));
+  });
+
+  const byId = getCountriesByIdMap();
+  table.innerHTML = '';
+
+  // header
+  const thead = document.createElement('thead');
+  const trh = document.createElement('tr');
+  const th0 = document.createElement('th');
+  th0.textContent = '国際ベンチマーク';
+  trh.appendChild(th0);
+  countryIds.forEach(id=>{
+    const th = document.createElement('th');
+    const c = byId.get(id) ?? {};
+    appendCountryLabel(th, id, c, { size: '20x15', showCode: false, linkToCountryPage: true });
+    trh.appendChild(th);
+  });
+  thead.appendChild(trh);
+  table.appendChild(thead);
+
+  // body
+  const tbody = document.createElement('tbody');
+  benchList.forEach(b=>{
+    const tr = document.createElement('tr');
+    const th = document.createElement('th');
+    th.textContent = b.label || b.id;
+    tr.appendChild(th);
+
+    const clsMap = rankClassMapByBench.get(b.id) ?? new Map();
+
+    countryIds.forEach(cid=>{
+      const td = document.createElement('td');
+      const rec = lookup.get(`${cid}__${b.id}`);
+
+      if (!rec){
+        td.className = 'planned';
+        const cell = document.createElement('div');
+        cell.className = 'cell';
+        const v = document.createElement('div');
+        v.className = 'value';
+        v.textContent = '—';
+        const d = document.createElement('div');
+        d.className = 'detail';
+        d.textContent = 'データなし';
+        cell.appendChild(v);
+        cell.appendChild(d);
+        td.appendChild(cell);
+        tr.appendChild(td);
+        return;
+      }
+
+      const { main, detail } = splitValue(rec.value);
+
+      // N/A is always gray
+      const isNA = /^N\/?A/i.test(main) || /not\s+covered/i.test(main);
+      td.className = isNA ? 'planned' : (clsMap.size ? (clsMap.get(cid) ?? 'planned') : 'partial');
+
+      const cell = document.createElement('div');
+      cell.className = 'cell';
+
+      const v = document.createElement('div');
+      v.className = 'value';
+      v.textContent = main || '';
+      cell.appendChild(v);
+
+      const detailJa = translateDetailToJa(detail);
+      if (detailJa){
+        const d1 = document.createElement('div');
+        d1.className = 'detail';
+        d1.textContent = detailJa;
+        cell.appendChild(d1);
+      }
+
+      const y = String(rec.year ?? '').trim();
+      if (y){
+        const dy = document.createElement('div');
+        dy.className = 'detail';
+        dy.textContent = `年：${y}`;
+        cell.appendChild(dy);
+      }
+
+      const srcs = parseSourceUrls(rec.source_url);
+      const d2 = document.createElement('div');
+      d2.className = 'detail';
+      if (srcs.length){
+        srcs.forEach((u,i)=>{
+          const a = document.createElement('a');
+          a.href = u;
+          a.target = '_blank';
+          a.rel = 'noopener';
+          a.textContent = `出典${i+1}`;
+          d2.appendChild(a);
+          if (i < srcs.length - 1) d2.appendChild(document.createTextNode(' / '));
+        });
+      } else {
+        d2.textContent = '出典なし';
+      }
+      cell.appendChild(d2);
+
+      td.appendChild(cell);
+      tr.appendChild(td);
+    });
+
+    tbody.appendChild(tr);
+  });
+
+  table.appendChild(tbody);
+}
+
+
 function renderComparison() {
   const table = document.getElementById("comparisonTable");
   const meta = document.getElementById("meta");
@@ -531,6 +879,14 @@ function renderComparison() {
   const others = present.filter((id) => id !== BASELINE_COUNTRY).sort();
   const countryIds = [BASELINE_COUNTRY, ...others];
 
+  // Basic info summary (above comparison table)
+  try { renderBasicSummary(countryIds, version, status); } catch (e) { console.warn('renderBasicSummary failed', e); }
+ try { renderBenchmarks(countryIds, version, status); } catch (e) { console.warn('renderBenchmarks failed', e); }
+
+  // Set number of country columns for responsive equal-width layout
+  table.style.setProperty("--country-cols", String(countryIds.length));
+
+
   const byId = getCountriesByIdMap();
 
   // Lookup: `${CID}__${IID}` -> record
@@ -540,9 +896,8 @@ function renderComparison() {
     const iid = normalizeId(r.indicator_id);
     lookup.set(`${cid}__${iid}`, r);
   });
-
   // indicator order: display_order then indicator_id
-  const indicatorOrder = indicators.slice().sort((a, b) => {
+  const indicatorOrder = indicators.slice().filter((i) => (i.indicator_id ?? '').trim() !== 'I11').sort((a, b) => {
     const ao = a.display_order != null && a.display_order !== "" ? Number(a.display_order) : 999;
     const bo = b.display_order != null && b.display_order !== "" ? Number(b.display_order) : 999;
     if (ao !== bo) return ao - bo;
@@ -623,7 +978,8 @@ function renderComparison() {
 
       if (rec.tags) {
         const tagLine = document.createElement("div");
-        tagLine.textContent = `tags: ${rec.tags}`;
+ tagLine.className = "tagsLine";
+ tagLine.textContent = `tags: ${rec.tags}`;
         d2.appendChild(tagLine);
       }
 
@@ -732,6 +1088,105 @@ function renderWorldMap() {
 /* =========================================================
  * country.html rendering
  * ======================================================= */
+
+
+/* =========================================================
+ * country_basic.csv rendering (country page only)
+ * ======================================================= */
+const BASIC_ORDER = [
+ 'A01','A02','A03','A04','A05','A06',
+ 'B01','B02','B03',
+ 'C01','C02','C03'
+];
+const BASIC_LABELS = {
+ A01: '人口',
+ A02: '都市化率',
+ A03: 'インターネット普及率',
+ A04: 'スマホ普及率（代理指標）',
+ A05: '1人あたりGDP',
+ A06: '主要言語数',
+ B01: '国家体制（単一/連邦）',
+ B02: '基礎自治体数',
+ B03: '地方自治の強さ',
+  C01: '政府への信頼度',
+  C02: 'プライバシー意識',
+  C03: 'デジタル政策の優先度',
+};
+const COLORIZE_COUNTRY_BASICS = false; // country.html: 基本情報カードの色塗りを無効化
+function renderCountryBasics(countryId, version, status){
+ const wrap = document.getElementById('countryBasics');
+ if (!wrap) return;
+ wrap.innerHTML = '';
+ if (!countryBasic || !countryBasic.length){
+  const none = document.createElement('div');
+  none.className = 'detail';
+  none.textContent = '基本情報データ（country_basic.csv）がありません。';
+  wrap.appendChild(none);
+  return;
+ }
+ const rows = countryBasic.filter(r => normalizeCountryId(r.country_id) === countryId && r.version === version && r.review_status === status);
+ const byId = new Map(rows.map(r => [normalizeId(r.basic_id), r]));
+ BASIC_ORDER.forEach(bid => {
+  const rec = byId.get(bid);
+  const item = document.createElement('article');
+  item.className = 'basic-item';
+    // 色塗り（B01/B03などのカテゴリ色）をcountry.htmlでは無効化
+    if (COLORIZE_COUNTRY_BASICS) {
+      const _basicCls = basicCellClass(bid, rec?.value ? splitValue(rec.value).main : '');
+      if (_basicCls) item.classList.add(_basicCls);
+    }
+  const head = document.createElement('div');
+  head.className = 'basic-head';
+
+  const label = document.createElement('div');
+  label.className = 'basic-label';
+  label.textContent = BASIC_LABELS[bid] ?? bid;
+
+  const year = document.createElement('div');
+  year.className = 'basic-year';
+  const y = rec?.year ?? 'N/A';
+  year.textContent = (String(y).trim() && String(y).trim() !== 'N/A') ? `年：${y}` : '年：N/A';
+
+  head.appendChild(label);
+  head.appendChild(year);
+  item.appendChild(head);
+
+  const { main, detail } = splitValue(rec?.value ?? 'N/A');
+  const v = document.createElement('div');
+  v.className = 'basic-value';
+  v.textContent = (bid === 'B02') ? formatThousandsIfInt(main) : (main || 'N/A');
+  item.appendChild(v);
+
+  if (detail){
+    const d = document.createElement('div');
+    d.className = 'basic-detail';
+    d.textContent = detail;
+    item.appendChild(d);
+  }
+
+  const srcs = parseSourceUrls(rec?.source_url ?? '');
+  const srcWrap = document.createElement('div');
+  srcWrap.className = 'basic-sources';
+  if (srcs.length){
+    srcs.forEach((u,i)=>{
+      const a = document.createElement('a');
+      a.href = u;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.textContent = `出典${i+1}`;
+      srcWrap.appendChild(a);
+      if (i < srcs.length-1) srcWrap.appendChild(document.createTextNode(' / '));
+    });
+  } else {
+    srcWrap.textContent = '出典なし';
+  }
+  item.appendChild(srcWrap);
+
+  wrap.appendChild(item);
+ });
+}
+
+
 function renderCountryPage() {
   const q = parseQuery();
   const countryId = normalizeCountryId(q.id || "JPN");
@@ -753,6 +1208,7 @@ function renderCountryPage() {
     appendCountryLabel(title, countryId, c, { size: "20x15", showCode: true, linkToCountryPage: false });
   }
   if (subtitle) subtitle.textContent = `version=${version} / status=${status}`;
+ renderCountryBasics(countryId, version, status);
 
   const rows = countryIndicator.filter((r) => {
     return normalizeCountryId(r.country_id) === countryId && r.version === version && r.review_status === status;
@@ -760,14 +1216,14 @@ function renderCountryPage() {
 
   const lookup = new Map(rows.map((r) => [normalizeId(r.indicator_id), r]));
 
-  const indicatorOrder = indicators.slice().sort((a, b) => {
+  const indicatorOrder = indicators.slice().filter((i) => (i.indicator_id ?? '').trim() !== 'I11').sort((a, b) => {
     const ao = a.display_order != null && a.display_order !== "" ? Number(a.display_order) : 999;
     const bo = b.display_order != null && b.display_order !== "" ? Number(b.display_order) : 999;
     if (ao !== bo) return ao - bo;
     return (a.indicator_id || "").localeCompare(b.indicator_id || "");
   });
 
-  if (meta) meta.textContent = `国: ${countryId} / 行数: ${rows.length}`;
+  if (meta) meta.textContent = ''; // removed country/rows meta
 
   if (container) {
     container.innerHTML = "";
@@ -819,8 +1275,8 @@ function renderCountryPage() {
 
       if (rec.tags) {
         const dTags = document.createElement("div");
-        dTags.className = "detail";
-        dTags.textContent = `tags: ${rec.tags}`;
+ dTags.className = "detail tagsLine";
+ dTags.textContent = `tags: ${rec.tags}`;
         article.appendChild(dTags);
       }
 
@@ -906,4 +1362,206 @@ function renderCountryPage() {
 
     timeline.appendChild(ul);
   }
+}
+
+
+/* =========================================================
+ * Basic info summary (index page)
+ * - Shown above comparison table
+ * - Uses country_basic.csv (SoT), filtered by version/status
+ * ======================================================= */
+const BASIC_SUMMARY_IDS = ['A01','A02','A03','A04','A05','A06','B01','B02','B03','C01','C02','C03'];
+function renderBasicSummary(countryIds, version, status){
+ const mount = document.getElementById('basicSummary');
+ if (!mount) return;
+ mount.innerHTML = '';
+
+ if (!countryBasic || !countryBasic.length){
+  const none = document.createElement('div');
+  none.className = 'detail';
+  none.textContent = '基本情報データ（country_basic.csv）がありません。';
+  mount.appendChild(none);
+  return;
+ }
+
+ // Lookup: `${CID}__${BID}` -> record
+ const lookup = new Map();
+ countryBasic
+  .filter(r => r.version === version && r.review_status === status)
+  .forEach(r => {
+    const cid = normalizeCountryId(r.country_id);
+    const bid = normalizeId(r.basic_id);
+    lookup.set(`${cid}__${bid}`, r);
+  });
+
+ // Parse numeric values for ranking (commas, %, spaces allowed)
+ function parseBasicNumber(val){
+  const { main } = splitValue(val ?? '');
+  const s = String(main ?? '').trim();
+  if (!s || s.toUpperCase() === 'N/A' || s === '—') return null;
+  const num = Number(String(s).replace(/,/g,'').replace(/%/g,'').replace(/\s+/g,''));
+  return Number.isFinite(num) ? num : null;
+ }
+
+ // Assign 3-way classes by rank within selected countries for a given basic_id
+ function buildRankClassMap(basicId){
+  // A06 (主要言語数) is a small discrete category; use value-based coloring to keep ties consistent.
+  // Rule (案1): 1→planned(灰), 2→partial(青), 3+→nationwide(緑).
+  if (basicId === 'A06') {
+    const map = new Map();
+    countryIds.forEach((cid) => {
+      const rec = lookup.get(`${cid}__${basicId}`);
+      const num = parseBasicNumber(rec?.value);
+      if (num == null) return;
+      if (num === 1) map.set(cid, 'planned');
+      else if (num === 2) map.set(cid, 'partial');
+      else if (num >= 3) map.set(cid, 'nationwide');
+    });
+    return map;
+  }
+  const vals = [];
+  countryIds.forEach(cid => {
+    const rec = lookup.get(`${cid}__${basicId}`);
+    const num = parseBasicNumber(rec?.value);
+    if (num == null) return;
+    vals.push({ cid, num });
+  });
+  vals.sort((a,b) => (a.num - b.num) || a.cid.localeCompare(b.cid));
+  const n = vals.length;
+  const map = new Map();
+  if (!n) return map;
+
+  // Small-N handling
+  if (n === 1){
+    map.set(vals[0].cid, 'partial');
+    return map;
+  }
+  if (n === 2){
+    map.set(vals[0].cid, 'planned');
+    map.set(vals[1].cid, 'nationwide');
+    return map;
+  }
+
+  vals.forEach((x, idx) => {
+    const bucket = Math.floor(idx * 3 / n); // 0..2
+    const cls = bucket === 0 ? 'planned' : (bucket === 1 ? 'partial' : 'nationwide');
+    map.set(x.cid, cls);
+  });
+  return map;
+ }
+
+ const byCountry = getCountriesByIdMap();
+ const wrap = document.createElement('div');
+ wrap.className = 'table-wrap';
+
+ const table = document.createElement('table');
+ table.id = 'basicSummaryTable';
+ table.style.setProperty('--country-cols', String(countryIds.length));
+
+ // header
+ const thead = document.createElement('thead');
+ const trh = document.createElement('tr');
+ const th0 = document.createElement('th');
+ th0.textContent = '基本情報';
+ trh.appendChild(th0);
+ countryIds.forEach(id => {
+  const th = document.createElement('th');
+  const c = byCountry.get(id) ?? {};
+  appendCountryLabel(th, id, c, { size: '20x15', showCode: false, linkToCountryPage: true });
+  trh.appendChild(th);
+ });
+ thead.appendChild(trh);
+ table.appendChild(thead);
+
+ // body
+ const tbody = document.createElement('tbody');
+ BASIC_SUMMARY_IDS.forEach(bid => {
+  const rankClassMap = buildRankClassMap(bid);
+  const tr = document.createElement('tr');
+
+  const th = document.createElement('th');
+  th.textContent = BASIC_LABELS[bid] ?? bid;
+  tr.appendChild(th);
+
+  countryIds.forEach(cid => {
+    const rec = lookup.get(`${cid}__${bid}`);
+    const { main, detail } = splitValue(rec?.value ?? 'N/A');
+
+    const td = document.createElement('td');
+    const fixedCls = basicCellClass(bid, main);
+    td.className = fixedCls ?? (rankClassMap.size ? (rankClassMap.get(cid) ?? 'planned') : 'partial');
+
+    const cell = document.createElement('div');
+    cell.className = 'basic-cell';
+
+    const mainDiv = document.createElement('div');
+    mainDiv.className = 'basic-main';
+    mainDiv.textContent = (bid === 'B02') ? formatThousandsIfInt(main) : (main || 'N/A');
+    cell.appendChild(mainDiv);
+
+    if (detail){
+      const detailDiv = document.createElement('div');
+      detailDiv.className = 'basic-sub basic-detail-inline';
+      detailDiv.textContent = detail;
+      cell.appendChild(detailDiv);
+    }
+
+    const yearDiv = document.createElement('div');
+    yearDiv.className = 'basic-sub';
+    const y = rec?.year ?? 'N/A';
+    yearDiv.textContent = (String(y).trim() && String(y).trim() !== 'N/A') ? `年：${y}` : '年：N/A';
+    cell.appendChild(yearDiv);
+
+    const srcDiv = document.createElement('div');
+    srcDiv.className = 'basic-sub basic-src';
+    const srcs = parseSourceUrls(rec?.source_url ?? '');
+    if (srcs.length){
+      srcs.forEach((u,i) => {
+        const a = document.createElement('a');
+        a.href = u;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.textContent = `出典${i+1}`;
+        srcDiv.appendChild(a);
+        if (i < srcs.length - 1) srcDiv.appendChild(document.createTextNode(' / '));
+      });
+    } else {
+      srcDiv.textContent = '出典なし';
+    }
+    cell.appendChild(srcDiv);
+
+    td.appendChild(cell);
+    tr.appendChild(td);
+  });
+
+  tbody.appendChild(tr);
+ });
+ table.appendChild(tbody);
+
+ wrap.appendChild(table);
+ mount.appendChild(wrap);
+}
+
+
+
+function setupBenchmarksToggle(){
+ const btn = document.getElementById('toggleBenchmarks');
+ const wrap = document.getElementById('benchmarksWrap');
+ if (!btn || !wrap) return;
+ // Ensure default state (hidden)
+ wrap.setAttribute('hidden', '');
+ btn.setAttribute('aria-expanded', 'false');
+ btn.textContent = '国際ベンチマークを表示';
+ btn.addEventListener('click', () => {
+  const willShow = wrap.hasAttribute('hidden');
+  if (willShow) {
+   wrap.removeAttribute('hidden');
+   // Scroll to make the benchmarks section visible (below basic summary)
+   // scrollIntoView intentionally removed to prevent auto-scrolling
+  } else {
+   wrap.setAttribute('hidden', '');
+  }
+  btn.setAttribute('aria-expanded', String(willShow));
+  btn.textContent = willShow ? '国際ベンチマークを非表示' : '国際ベンチマークを表示';
+ });
 }

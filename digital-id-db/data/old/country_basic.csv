@@ -1,0 +1,344 @@
+country_id,basic_id,value,year,version,change_note,review_status,source_url
+AUS,A01,"27,196,812
+World Bank (WDI) SP.POP.TOTL",2024,2026/2/4,A01 population updated,published,"[""https://data.worldbank.org/country/Australia""]"
+AUS,A02,"88
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=AU""]"
+AUS,A03,"97.0631
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2023,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=AU""]"
+AUS,A04,"112.513
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=AU""]"
+AUS,A05,"71,410
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=AU""]"
+AUS,A06,"1
+Official languages (incl. de facto where stated): English (de facto)",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+AUS,B01,"連邦国家（Federal）
+根拠：オーストラリアは州の連邦（federation of states）で、憲法の下で権限が連邦と州に分担される。",2026,2026/2/4,Initial baseline (basic info template); B01 finalised (unitary/federal).,published,"[""https://peo.gov.au/understand-our-parliament/how-parliament-works/system-of-government/australian-system-of-government"",""https://www.aph.gov.au/About_Parliament/House_of_Representatives/Powers_practice_and_procedure/00_-_Infosheets/Infosheet_13_-_The_Constitution""]"
+AUS,B02,"567
+根拠：ABSのASGSにおけるLocal Government Areas（LGA）数。未編入地域等も含む統計用区分。",2025,2026/2/4,Initial baseline (basic info template); B02 finalised (municipality count).,published,"[""https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/non-abs-structures/local-government-areas""]"
+AUS,B03,"Medium
+憲法上の保障：連邦制だが地方自治体の制度は主に州の枠組みで形成／立法権の有無：なし／制度上の位置づけ：地方自治体は州制度の下で設置・運用／裁量の制約要因：州法・州の監督、権限は州設計に依存",2026,2026/2/4,"Initial baseline (basic info template); B03 finalised (Strong/Medium/Weak, templated).",published,"[""https://peo.gov.au/understand-our-parliament/how-parliament-works/system-of-government/australian-system-of-government""]"
+AUS,C01,"0.519000
+OECD: Trust in government (share reporting confidence in national government; 2023). Stored as 0-1 (percentage/100).",2023,2026/2/4,"C01 updated (OECD Trust in government: confidence in national government, 2023; scaled to 0-1, 6 decimals)",published,"[""https://www.oecd.org/en/data/indicators/trust-in-government.html"",""https://worldpopulationreview.com/country-rankings/trust-in-government-by-country""]"
+AUS,C02,"0.635429
+OECD Going Digital (Truth Quest Survey): Share of adults who avoid using certain websites, apps, or social media due to privacy concerns (Year: 2024). Stored as 0-1 (percentage/100).",2024,2026/2/4,"C02 updated (OECD Going Digital indicator 84; scaled to 0-1, 6 decimals)",published,"[""https://goingdigital.oecd.org/en/indicator/84"",""https://www.oecd.org/en/publications/the-oecd-truth-quest-survey_92a94c0f-en.html""]"
+AUS,C03,"0.984953
+根拠：World Bank GovTech Dataset（WBG_GovTech_Dataset_Dec2025.xlsx）GTMI overall score（Year: 2025, Group: A）",2025,2026/2/4,"C03 GTMI updated (GTMI overall score, 2025)",published,"[""https://datacatalogfiles.worldbank.org/ddh-published/0037889/DR0095721/WBG_GovTech_Dataset_Dec2025.xlsx"", ""https://www.worldbank.org/en/programs/govtech/knowledge-and-innovation/data""]"
+CAN,A01,"41,288,599
+World Bank (WDI) SP.POP.TOTL",2024,2026/2/4,A01 population updated,published,"[""https://data.worldbank.org/indicator/SP.POP.TOTL?locations=CA""]"
+CAN,A02,"83
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=CA""]"
+CAN,A03,"93.9564
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2023,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=CA""]"
+CAN,A04,"94.1497
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=CA""]"
+CAN,A05,"65,463
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=CA""]"
+CAN,A06,"2
+Official languages (incl. de facto where stated): English (Federal); French (Federal)",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+CAN,B01,"連邦国家（Federal）
+根拠：憲法に基づき、連邦政府と州政府の間で権限が分担される連邦制である。",2026,2026/2/4,Initial baseline (basic info template); B01 finalised (unitary/federal).,published,"[""https://www.canada.ca/en/intergovernmental-affairs/services/federation/federalism-canada.html""]"
+CAN,B02,"5161
+根拠：Statistics CanadaのCensus Subdivisions（CSD）総数。CSDは自治体または自治体相当（保留地・未編入地域等）を含む統計上の基礎単位。",2021,2026/2/4,Initial baseline (basic info template); B02 finalised (municipality count).,published,"[""https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/index-eng.cfm"",""https://www.arcgis.com/home/item.html?id=594124f0380d42b7a4b450574dd9630c""]"
+CAN,B03,"Medium
+憲法上の保障：憲法上の政府単位として明示される形ではなく州制度に依存／立法権の有無：なし／制度上の位置づけ：自治体は州法により権限・制度が定まる／裁量の制約要因：州法・州の監督、財源・権限が州設計に依存",2026,2026/2/4,"Initial baseline (basic info template); B03 finalised (Strong/Medium/Weak, templated).",published,"[""https://www.canada.ca/en/intergovernmental-affairs/services/federation/federalism-canada.html""]"
+CAN,C01,"0.510500
+OECD: Trust in government (share reporting confidence in national government; 2023). Stored as 0-1 (percentage/100).",2023,2026/2/4,"C01 updated (OECD Trust in government: confidence in national government, 2023; scaled to 0-1, 6 decimals)",published,"[""https://www.oecd.org/en/data/indicators/trust-in-government.html"",""https://worldpopulationreview.com/country-rankings/trust-in-government-by-country""]"
+CAN,C02,"0.606587
+OECD Going Digital (Truth Quest Survey): Share of adults who avoid using certain websites, apps, or social media due to privacy concerns (Year: 2024). Stored as 0-1 (percentage/100).",2024,2026/2/4,"C02 updated (OECD Going Digital indicator 84; scaled to 0-1, 6 decimals)",published,"[""https://goingdigital.oecd.org/en/indicator/84"",""https://www.oecd.org/en/publications/the-oecd-truth-quest-survey_92a94c0f-en.html""]"
+CAN,C03,"0.948985
+根拠：World Bank GovTech Dataset（WBG_GovTech_Dataset_Dec2025.xlsx）GTMI overall score（Year: 2025, Group: A）",2025,2026/2/4,"C03 GTMI updated (GTMI overall score, 2025)",published,"[""https://datacatalogfiles.worldbank.org/ddh-published/0037889/DR0095721/WBG_GovTech_Dataset_Dec2025.xlsx"", ""https://www.worldbank.org/en/programs/govtech/knowledge-and-innovation/data""]"
+DEU,A01,"83,516,593
+World Bank (WDI) SP.POP.TOTL",2024,2026/2/4,A01 population updated,published,"[""https://data.worldbank.org/indicator/SP.POP.TOTL?locations=DE""]"
+DEU,A02,"82
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=DE""]"
+DEU,A03,"93.5
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2024,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=DE""]"
+DEU,A04,"124.663
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=DE""]"
+DEU,A05,"72,295
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=DE""]"
+DEU,A06,"1
+Official languages (incl. de facto where stated): German",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+DEU,B01,"連邦国家（Federal）
+根拠：ドイツは16の州（Länder）からなる連邦国家で、基本法が連邦と州の権限分担を定める。",2026,2026/2/4,Initial baseline (basic info template); B01 finalised (unitary/federal).,published,"[""https://www.bmi.bund.de/EN/topics/constitution/state-order/federalism-local-government/federalism-local-government-node.html""]"
+DEU,B02,"11056
+根拠：連邦内務省（BMI）資料に記載の市町村（cities and towns）数。",2024,2026/2/4,Initial baseline (basic info template); B02 finalised (municipality count).,published,"[""https://www.bmi.bund.de/EN/topics/constitution/state-order/federalism-local-government/federalism-local-government-node.html""]"
+DEU,B03,"Strong
+憲法上の保障：基本法で地方自治（自治体の自己自治権）が保障（Art.28(2)等）／立法権の有無：なし（条例制定等は法律の範囲）／制度上の位置づけ：自治体は州（Länder）の一部として位置づけ／裁量の制約要因：州法・連邦法の枠内（監督は州を通じて）",2026,2026/2/4,"Initial baseline (basic info template); B03 finalised (Strong/Medium/Weak, templated).",published,"[""https://www.bmi.bund.de/EN/topics/constitution/state-order/federalism-local-government/federalism-local-government-node.html""]"
+DEU,C01,"0.596000
+OECD: Trust in government (share reporting confidence in national government; 2023). Stored as 0-1 (percentage/100).",2023,2026/2/4,"C01 updated (OECD Trust in government: confidence in national government, 2023; scaled to 0-1, 6 decimals)",published,"[""https://www.oecd.org/en/data/indicators/trust-in-government.html"",""https://worldpopulationreview.com/country-rankings/trust-in-government-by-country""]"
+DEU,C02,"0.526304
+OECD Going Digital (Truth Quest Survey): Share of adults who avoid using certain websites, apps, or social media due to privacy concerns (Year: 2024). Stored as 0-1 (percentage/100).",2024,2026/2/4,"C02 updated (OECD Going Digital indicator 84; scaled to 0-1, 6 decimals)",published,"[""https://goingdigital.oecd.org/en/indicator/84"",""https://www.oecd.org/en/publications/the-oecd-truth-quest-survey_92a94c0f-en.html""]"
+DEU,C03,"0.763231
+根拠：World Bank GovTech Dataset（WBG_GovTech_Dataset_Dec2025.xlsx）GTMI overall score（Year: 2025, Group: A）",2025,2026/2/4,"C03 GTMI updated (GTMI overall score, 2025)",published,"[""https://datacatalogfiles.worldbank.org/ddh-published/0037889/DR0095721/WBG_GovTech_Dataset_Dec2025.xlsx"", ""https://www.worldbank.org/en/programs/govtech/knowledge-and-innovation/data""]"
+DNK,A01,"5,976,992
+World Bank (WDI) SP.POP.TOTL（FRED経由）",2024,2026/2/4,A01 population updated,published,"[""https://fred.stlouisfed.org/series/POPTOTDKA647NWDB""]"
+DNK,A02,"89
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=DK""]"
+DNK,A03,"99.7692
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2024,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=DK""]"
+DNK,A04,"126.919
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=DK""]"
+DNK,A05,"79,514
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=DK""]"
+DNK,A06,"1
+Official languages (incl. de facto where stated): Danish",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+DNK,B01,"単一国家（Unitary）
+根拠：単一国家として整理される（分権的な制度設計はB03で扱う）。",2026,2026/2/4,Initial baseline (basic info template); B01 finalised (unitary/federal).,published,"[""https://portal.cor.europa.eu/divisionpowers/Pages/Denmark-Introduction.aspx""]"
+DNK,B02,"98
+根拠：2007年改革で98自治体が形成（以後この枠組みで運用）。",2025,2026/2/4,Initial baseline (basic info template); B02 finalised (municipality count).,published,"[""https://www.dst.dk/en/Statistik/dokumentation/nomenklaturer/nuts"",""https://www.ism.dk/indenrigs/kommunal-og-regionaloekonomi/kommunale-opgaver-og-struktur/kommunalreformen-i-2007""]"
+DNK,B03,"Strong
+憲法上の保障：憲法に地方自治が位置づけ（Section 82）／立法権の有無：なし／制度上の位置づけ：自治体（kommuner）中心・地域（regioner）／裁量の制約要因：国法の枠内、国家行政による監督",2026,2026/2/4,"Initial baseline (basic info template); B03 finalised (Strong/Medium/Weak, templated).",published,"[""https://www.ism.dk/indenrigs/kommunal-og-regionaloekonomi/kommunale-opgaver-og-struktur/kommunalreformen-i-2007"",""https://portal.cor.europa.eu/divisionpowers/Pages/Denmark-Introduction.aspx""]"
+DNK,C01,"0.599300
+OECD: Trust in government (share reporting confidence in national government; 2023). Stored as 0-1 (percentage/100).",2023,2026/2/4,"C01 updated (OECD Trust in government: confidence in national government, 2023; scaled to 0-1, 6 decimals)",published,"[""https://www.oecd.org/en/data/indicators/trust-in-government.html"",""https://worldpopulationreview.com/country-rankings/trust-in-government-by-country""]"
+DNK,C02,,,2026/2/4,Initial baseline (basic info template),published,[]
+DNK,C03,"0.927636
+根拠：World Bank GovTech Dataset（WBG_GovTech_Dataset_Dec2025.xlsx）GTMI overall score（Year: 2025, Group: A）",2025,2026/2/4,"C03 GTMI updated (GTMI overall score, 2025)",published,"[""https://datacatalogfiles.worldbank.org/ddh-published/0037889/DR0095721/WBG_GovTech_Dataset_Dec2025.xlsx"", ""https://www.worldbank.org/en/programs/govtech/knowledge-and-innovation/data""]"
+EST,A01,"1,371,986
+World Bank (WDI) SP.POP.TOTL",2024,2026/2/4,A01 population updated,published,"[""https://data.worldbank.org/indicator/SP.POP.TOTL?locations=EE""]"
+EST,A02,"71
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=EE""]"
+EST,A03,"92.238
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2024,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=EE""]"
+EST,A04,"150.196
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=EE""]"
+EST,A05,"49,321
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=EE""]"
+EST,A06,"1
+Official languages (incl. de facto where stated): Estonian",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+EST,B01,"単一国家（Unitary）
+根拠：1992年憲法の下で単一国家として説明される。",2026,2026/2/4,Initial baseline (basic info template); B01 finalised (unitary/federal).,published,"[""https://portal.cor.europa.eu/divisionpowers/Pages/Estonia-Introduction.aspx""]"
+EST,B02,"79
+根拠：地方自治体（municipalities）のみが自治レベルで、79（64 rural + 15 urban）と説明。",2020,2026/2/4,Initial baseline (basic info template); B02 finalised (municipality count).,published,"[""https://portal.cor.europa.eu/divisionpowers/Pages/Estonia-Introduction.aspx""]"
+EST,B03,"Medium
+憲法上の保障：憲法上、地方自治は保障され地方の事項は自治体が処理／立法権の有無：なし／制度上の位置づけ：自治体は唯一の地方自治レベル（単層）／裁量の制約要因：法律の枠内での自治",2026,2026/2/4,"Initial baseline (basic info template); B03 finalised (Strong/Medium/Weak, templated).",published,"[""https://portal.cor.europa.eu/divisionpowers/Pages/Estonia-Introduction.aspx""]"
+EST,C01,"0.532500
+OECD: Trust in government (share reporting confidence in national government; 2023). Stored as 0-1 (percentage/100).",2023,2026/2/4,"C01 updated (OECD Trust in government: confidence in national government, 2023; scaled to 0-1, 6 decimals)",published,"[""https://www.oecd.org/en/data/indicators/trust-in-government.html"",""https://worldpopulationreview.com/country-rankings/trust-in-government-by-country""]"
+EST,C02,,,2026/2/4,Initial baseline (basic info template),published,[]
+EST,C03,"0.990102
+根拠：World Bank GovTech Dataset（WBG_GovTech_Dataset_Dec2025.xlsx）GTMI overall score（Year: 2025, Group: A）",2025,2026/2/4,"C03 GTMI updated (GTMI overall score, 2025)",published,"[""https://datacatalogfiles.worldbank.org/ddh-published/0037889/DR0095721/WBG_GovTech_Dataset_Dec2025.xlsx"", ""https://www.worldbank.org/en/programs/govtech/knowledge-and-innovation/data""]"
+FRA,A01,"68,551,653
+World Bank (WDI) SP.POP.TOTL",2024,2026/2/4,A01 population updated,published,"[""https://data.worldbank.org/indicator/SP.POP.TOTL?locations=FR""]"
+FRA,A02,"79
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=FR""]"
+FRA,A03,"88.6538
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2024,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=FR""]"
+FRA,A04,"116.688
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=FR""]"
+FRA,A05,"61,290
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=FR""]"
+FRA,A06,"1
+Official languages (incl. de facto where stated): French",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+FRA,B01,"単一国家（Unitary）
+根拠：単一国家として整理される（分権的な制度設計はB03で扱う）。",2026,2026/2/4,Initial baseline (basic info template); B01 finalised (unitary/federal).,published,"[""https://portal.cor.europa.eu/divisionpowers/Pages/France-Introduction.aspx""]"
+FRA,B02,"34935
+根拠：DGCLの整理として、2024年1月1日時点のコミューン数は34,935。",2024,2026/2/4,Initial baseline (basic info template); B02 finalised (municipality count).,published,"[""https://www.vie-publique.fr/en-bref/293455-collectivites-34-935-communes-au-1er-janvier-2024"",""https://utopies-urbaines.fr/wp-content/uploads/2025/11/Collectivites-locales_en_chiffres_2024-communes-population.pdf""]"
+FRA,B03,"Medium
+憲法上の保障：単一国家だが分権型として整理／立法権の有無：なし（地方政府に立法権なし）／制度上の位置づけ：地域・県・コミューンの3層（条例・予算執行中心）／裁量の制約要因：国法の枠内、国の監督（prefect等）",2026,2026/2/4,"Initial baseline (basic info template); B03 finalised (Strong/Medium/Weak, templated).",published,"[""https://portal.cor.europa.eu/divisionpowers/Pages/France-Introduction.aspx""]"
+FRA,C01,"0.440600
+OECD: Trust in government (share reporting confidence in national government; 2023). Stored as 0-1 (percentage/100).",2023,2026/2/4,"C01 updated (OECD Trust in government: confidence in national government, 2023; scaled to 0-1, 6 decimals)",published,"[""https://www.oecd.org/en/data/indicators/trust-in-government.html"",""https://worldpopulationreview.com/country-rankings/trust-in-government-by-country""]"
+FRA,C02,"0.643519
+OECD Going Digital (Truth Quest Survey): Share of adults who avoid using certain websites, apps, or social media due to privacy concerns (Year: 2024). Stored as 0-1 (percentage/100).",2024,2026/2/4,"C02 updated (OECD Going Digital indicator 84; scaled to 0-1, 6 decimals)",published,"[""https://goingdigital.oecd.org/en/indicator/84"",""https://www.oecd.org/en/publications/the-oecd-truth-quest-survey_92a94c0f-en.html""]"
+FRA,C03,"0.823927
+根拠：World Bank GovTech Dataset（WBG_GovTech_Dataset_Dec2025.xlsx）GTMI overall score（Year: 2025, Group: A）",2025,2026/2/4,"C03 GTMI updated (GTMI overall score, 2025)",published,"[""https://datacatalogfiles.worldbank.org/ddh-published/0037889/DR0095721/WBG_GovTech_Dataset_Dec2025.xlsx"", ""https://www.worldbank.org/en/programs/govtech/knowledge-and-innovation/data""]"
+GBR,A01,"69,226,000
+World Bank (WDI) SP.POP.TOTL",2024,2026/2/4,A01 population updated,published,"[""https://data.worldbank.org/indicator/SP.POP.TOTL?locations=GB""]"
+GBR,A02,"83
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=GB""]"
+GBR,A03,"96.2988
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2023,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=GB""]"
+GBR,A04,"122.796
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=GB""]"
+GBR,A05,"60,620
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=GB""]"
+GBR,A06,"1
+Official languages (incl. de facto where stated): English (de facto)",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+GBR,B01,"単一国家（Unitary）
+補足：スコットランド等へのdevolution（権限移譲）はあるが、連邦制ではなく、議会主権の下で法律により付与される制度として整理される。",2026,2026/2/4,Initial baseline (basic info template); B01 finalised (unitary/federal).,published,"[""https://www.gov.uk/government/collections/devolution-scotland-wales-and-northern-ireland"",""https://commonslibrary.parliament.uk/research-briefings/cbp-8599/""]"
+GBR,B02,"382
+根拠：英国の地方自治体数（England 317 + Scotland 32 + Wales 22 + Northern Ireland 11）。Englandは政府資料、Scotlandはスコットランド政府、WalesはLaw Wales、NIはnidirectの記載に基づく。",2025,2026/2/4,Initial baseline (basic info template); B02 finalised (municipality count).,published,"[""https://www.gov.uk/guidance/local-government-structure-and-elections"",""https://www.gov.scot/policies/local-government/"",""https://law.gov.wales/local-government-bodies"",""https://www.nidirect.gov.uk/articles/local-councils""]"
+GBR,B03,"Medium
+憲法上の保障：devolutionは法定の権限移譲として整理／立法権の有無：なし／制度上の位置づけ：分権制度は議会制定法に基づき設置／裁量の制約要因：議会主権の下で制度変更が可能（理論上可逆）",2026,2026/2/4,"Initial baseline (basic info template); B03 finalised (Strong/Medium/Weak, templated).",published,"[""https://www.gov.uk/government/collections/devolution-scotland-wales-and-northern-ireland"",""https://commonslibrary.parliament.uk/research-briefings/cbp-8599/""]"
+GBR,C01,"0.338600
+OECD: Trust in government (share reporting confidence in national government; 2023). Stored as 0-1 (percentage/100).",2023,2026/2/4,"C01 updated (OECD Trust in government: confidence in national government, 2023; scaled to 0-1, 6 decimals)",published,"[""https://www.oecd.org/en/data/indicators/trust-in-government.html"",""https://worldpopulationreview.com/country-rankings/trust-in-government-by-country""]"
+GBR,C02,"0.585539
+OECD Going Digital (Truth Quest Survey): Share of adults who avoid using certain websites, apps, or social media due to privacy concerns (Year: 2024). Stored as 0-1 (percentage/100).",2024,2026/2/4,"C02 updated (OECD Going Digital indicator 84; scaled to 0-1, 6 decimals)",published,"[""https://goingdigital.oecd.org/en/indicator/84"",""https://www.oecd.org/en/publications/the-oecd-truth-quest-survey_92a94c0f-en.html""]"
+GBR,C03,"0.857946
+根拠：World Bank GovTech Dataset（WBG_GovTech_Dataset_Dec2025.xlsx）GTMI overall score（Year: 2025, Group: A）",2025,2026/2/4,"C03 GTMI updated (GTMI overall score, 2025)",published,"[""https://datacatalogfiles.worldbank.org/ddh-published/0037889/DR0095721/WBG_GovTech_Dataset_Dec2025.xlsx"", ""https://www.worldbank.org/en/programs/govtech/knowledge-and-innovation/data""]"
+IND,A01,"1,450,935,790
+World Bank (WDI) SP.POP.TOTL",2024,2026/2/4,A01 population updated,published,"[""https://data.worldbank.org/indicator/SP.POP.TOTL?locations=IN""]"
+IND,A02,"35
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=IN""]"
+IND,A03,"55.9
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2022,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=IN""]"
+IND,A04,"80.5632
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=IN""]"
+IND,A05,"11,160
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=IN""]"
+IND,A06,"2
+Official languages (incl. de facto where stated): Hindi; English",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+IND,B01,"連邦国家（Federal）
+補足：憲法上は「Union of States」と表現され、学術的に「準連邦（quasi-federal）」として論じられることがある。",2026,2026/2/4,Initial baseline (basic info template); B01 finalised (unitary/federal).,published,"[""https://www.cambridge.org/core/journals/global-constitutionalism/article/quasifederal-constitution-taxonomical-influences-on-interpretation-of-federalism-in-india/FCD6BF65EB66D93C09B916B0E2E036A7""]"
+IND,B02,"256000
+根拠：農村基礎自治体（Gram Panchayats）について、eGramSwaraj-PFMS連携で約2.56 lakh（約25.6万）と報告。都市自治体は別制度で、74次改正により枠組み（Part IXA）が整備される。",2024,2026/2/4,Initial baseline (basic info template); B02 finalised (municipality count).,published,"[""https://pib.gov.in/PressReleasePage.aspx?PRID=2090152"",""https://panchayat.gov.in/en/document/73rd-constitutional-amendment-act-1992/"",""https://secforuts.mha.gov.in/74th-amendment-and-municipalities-in-india/""]"
+IND,B03,"Medium
+憲法上の保障：73・74次憲法改正で地方自治体（Part IX/IXA）が憲法に位置づけ／立法権の有無：なし／制度上の位置づけ：農村（パンチャーヤト）・都市自治体が憲法上の枠組みで規定／裁量の制約要因：具体権限は州法運用・財源等に依存",2026,2026/2/4,"Initial baseline (basic info template); B03 finalised (Strong/Medium/Weak, templated).",published,"[""https://panchayat.gov.in/en/document/73rd-constitutional-amendment-act-1992/"",""https://secforuts.mha.gov.in/74th-amendment-and-municipalities-in-india/""]"
+IND,C01,"N/A
+C01 value not available under current OECD Trust in government (confidence) dataset selection.",,2026/2/4,C01 not available (no value found for this country under current definition),published,"[""https://www.oecd.org/en/data/indicators/trust-in-government.html"",""https://worldpopulationreview.com/country-rankings/trust-in-government-by-country""]"
+IND,C02,,,2026/2/4,Initial baseline (basic info template),published,[]
+IND,C03,"0.969255
+根拠：World Bank GovTech Dataset（WBG_GovTech_Dataset_Dec2025.xlsx）GTMI overall score（Year: 2025, Group: A）",2025,2026/2/4,"C03 GTMI updated (GTMI overall score, 2025)",published,"[""https://datacatalogfiles.worldbank.org/ddh-published/0037889/DR0095721/WBG_GovTech_Dataset_Dec2025.xlsx"", ""https://www.worldbank.org/en/programs/govtech/knowledge-and-innovation/data""]"
+JPN,A01,"123,975,371
+World Bank (WDI) SP.POP.TOTL",2024,2026/2/4,A01 population updated,published,"[""https://data.worldbank.org/indicator/SP.POP.TOTL?locations=JP""]"
+JPN,A02,"92
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=JP""]"
+JPN,A03,"86.9815
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2023,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=JP""]"
+JPN,A04,"178.432
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=JP""]"
+JPN,A05,"51,685
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=JP""]"
+JPN,A06,"1
+Official languages (incl. de facto where stated): Japanese (de facto)",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+JPN,B01,"単一国家（Unitary）
+根拠：日本は連邦制ではなく単一国家（single nation system）として説明される。",2026,2026/2/4,Initial baseline (basic info template); B01 finalised (unitary/federal).,published,"[""https://www.soumu.go.jp/main_content/000295099.pdf""]"
+JPN,B02,"1741
+根拠：総務省（MIC）が公表する基礎自治体（municipalities）数1,718（2024年1月1日）に、e-Statが公表する特別区（東京23区）23を加算（計1,741）。",2024,2026/2/4,Initial baseline (basic info template); B02 finalised (municipality count).; JPN B02 detail note removed (MIC vs e-Stat remark deleted).,published,"[""https://www.soumu.go.jp/english/lab/index.html"",""https://www.e-stat.go.jp/municipalities/number-of-municipalities""]"
+JPN,B03,"Medium
+憲法上の保障：地方自治は憲法上の権利として説明／立法権の有無：なし（条例制定は法律の範囲）／制度上の位置づけ：都道府県・市町村の二層（単一国家）／裁量の制約要因：国法の枠付け（制度設計・委任等）",2026,2026/2/4,"Initial baseline (basic info template); B03 finalised (Strong/Medium/Weak, templated).",published,"[""https://www.soumu.go.jp/main_content/000295099.pdf"",""https://www.clair.or.jp/j/forum/pub/docs/m_fact_en02.pdf""]"
+JPN,C01,"0.422200
+OECD: Trust in government (share reporting confidence in national government; 2023). Stored as 0-1 (percentage/100).",2023,2026/2/4,"C01 updated (OECD Trust in government: confidence in national government, 2023; scaled to 0-1, 6 decimals)",published,"[""https://www.oecd.org/en/data/indicators/trust-in-government.html"",""https://worldpopulationreview.com/country-rankings/trust-in-government-by-country""]"
+JPN,C02,"0.361800
+OECD Going Digital (Truth Quest Survey): Share of adults who avoid using certain websites, apps, or social media due to privacy concerns (Year: 2024). Stored as 0-1 (percentage/100).",2024,2026/2/4,"C02 updated (OECD Going Digital indicator 84; scaled to 0-1, 6 decimals)",published,"[""https://goingdigital.oecd.org/en/indicator/84"",""https://www.oecd.org/en/publications/the-oecd-truth-quest-survey_92a94c0f-en.html""]"
+JPN,C03,"0.905044
+根拠：World Bank GovTech Dataset（WBG_GovTech_Dataset_Dec2025.xlsx）GTMI overall score（Year: 2025, Group: A）",2025,2026/2/4,"C03 GTMI updated (GTMI overall score, 2025)",published,"[""https://datacatalogfiles.worldbank.org/ddh-published/0037889/DR0095721/WBG_GovTech_Dataset_Dec2025.xlsx"", ""https://www.worldbank.org/en/programs/govtech/knowledge-and-innovation/data""]"
+KOR,A01,"51,751,065
+World Bank (WDI) SP.POP.TOTL",2024,2026/2/4,A01 population updated,published,"[""https://data.worldbank.org/indicator/SP.POP.TOTL?locations=KR""]"
+KOR,A02,"81
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=KR""]"
+KOR,A03,"97.8956
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2024,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=KR""]"
+KOR,A04,"162.114
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=KR""]"
+KOR,A05,"58,895
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=KR""]"
+KOR,A06,"2
+Official languages (incl. de facto where stated): Korean; Korean Sign Language",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+KOR,B01,"単一国家（Unitary）
+根拠：憲法制度の概要資料では、韓国は単一国家（unitary）として整理される。",2026,2026/2/4,Initial baseline (basic info template); B01 finalised (unitary/federal).,published,"[""https://en.wikipedia.org/wiki/Constitution_of_South_Korea""]"
+KOR,B02,"226
+根拠：韓国の基礎自治体（low-level local governments）数。Korea.netが226（市・郡・区）と説明。",2024,2026/2/4,Initial baseline (basic info template); B02 finalised (municipality count).,published,"[""https://www.korea.net/Government/Constitution-and-Government/Local-Governments""]"
+KOR,B03,"Medium
+憲法上の保障：地方自治制度が法制度として整備／立法権の有無：なし／制度上の位置づけ：高位・基礎の二層（地方自治法が類型を規定）／裁量の制約要因：中央の枠組みと法律に基づく統制",2026,2026/2/4,"Initial baseline (basic info template); B03 finalised (Strong/Medium/Weak, templated).",published,"[""https://www.korea.net/Government/Constitution-and-Government/Local-Governments"",""https://elaw.klri.re.kr/eng_mobile/ganadaDetail.do?hseq=57596&type=abc&key=LOCAL%20AUTONOMY%20ACT&param=L""]"
+KOR,C01,"N/A
+C01 value not available under current OECD Trust in government (confidence) dataset selection.",,2026/2/4,C01 not available (no value found for this country under current definition),published,"[""https://www.oecd.org/en/data/indicators/trust-in-government.html"",""https://worldpopulationreview.com/country-rankings/trust-in-government-by-country""]"
+KOR,C02,,,2026/2/4,Initial baseline (basic info template),published,[]
+KOR,C03,"0.997452
+根拠：World Bank GovTech Dataset（WBG_GovTech_Dataset_Dec2025.xlsx）GTMI overall score（Year: 2025, Group: A）",2025,2026/2/4,"C03 GTMI updated (GTMI overall score, 2025)",published,"[""https://datacatalogfiles.worldbank.org/ddh-published/0037889/DR0095721/WBG_GovTech_Dataset_Dec2025.xlsx"", ""https://www.worldbank.org/en/programs/govtech/knowledge-and-innovation/data""]"
+NZL,A01,"5,338,500
+World Bank (WDI) SP.POP.TOTL",2024,2026/2/4,A01 population updated,published,"[""https://data.worldbank.org/indicator/SP.POP.TOTL?locations=NZ""]"
+NZL,A02,"84
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=NZ""]"
+NZL,A03,"96.1638
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2023,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=NZ""]"
+NZL,A04,"126.855
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=NZ""]"
+NZL,A05,"55,625
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=NZ""]"
+NZL,A06,"3
+Official languages (incl. de facto where stated): Māori language; New Zealand Sign Language; English (de facto)",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+NZL,B01,"単一国家（Unitary）
+根拠：ニュージーランドは単一国家で、地方政府の権限は議会が付与する範囲に限られると説明される。",2026,2026/2/4,Initial baseline (basic info template); B01 finalised (unitary/federal).,published,"[""https://en.wikipedia.org/wiki/Local_government_in_New_Zealand"",""https://www.govt.nz/browse/engaging-with-government/government-in-new-zealand/""]"
+NZL,B02,"78
+根拠：ニュージーランドの地方自治体（local authorities）は78（地域評議会＋市・郡等の領域評議会）。",2025,2026/2/4,Initial baseline (basic info template); B02 finalised (municipality count).,published,"[""https://www.lgc.govt.nz/about-us/about-local-government-in-new-zealand/""]"
+NZL,B03,"Weak
+憲法上の保障：成文憲法に基づく強い自治保障より法律で制度化される性格が中心／立法権の有無：なし／制度上の位置づけ：地方自治体は法律に基づく地方行政組織（複数の地方当局）／裁量の制約要因：国会による制度設計・法改正の影響を受ける",2026,2026/2/4,"Initial baseline (basic info template); B03 finalised (Strong/Medium/Weak, templated).",published,"[""https://www.lgc.govt.nz/about-us/about-local-government-in-new-zealand/"",""https://www.govt.nz/browse/engaging-with-government/government-in-new-zealand/""]"
+NZL,C01,"0.521100
+OECD: Trust in government (share reporting confidence in national government; 2023). Stored as 0-1 (percentage/100).",2023,2026/2/4,"C01 updated (OECD Trust in government: confidence in national government, 2023; scaled to 0-1, 6 decimals)",published,"[""https://www.oecd.org/en/data/indicators/trust-in-government.html"",""https://worldpopulationreview.com/country-rankings/trust-in-government-by-country""]"
+NZL,C02,,,2026/2/4,Initial baseline (basic info template),published,[]
+NZL,C03,"0.878021
+根拠：World Bank GovTech Dataset（WBG_GovTech_Dataset_Dec2025.xlsx）GTMI overall score（Year: 2025, Group: A）",2025,2026/2/4,"C03 GTMI updated (GTMI overall score, 2025)",published,"[""https://datacatalogfiles.worldbank.org/ddh-published/0037889/DR0095721/WBG_GovTech_Dataset_Dec2025.xlsx"", ""https://www.worldbank.org/en/programs/govtech/knowledge-and-innovation/data""]"
+SGP,A01,"6,036,860
+World Bank (WDI) SP.POP.TOTL",2024,2026/2/4,A01 population updated,published,"[""https://data.worldbank.org/indicator/SP.POP.TOTL?locations=SG""]"
+SGP,A02,"100
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=SG""]"
+SGP,A03,"94.3776
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2024,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=SG""]"
+SGP,A04,"173.2
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=SG""]"
+SGP,A05,"150,689
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=SG""]"
+SGP,A06,"4
+Official languages (incl. de facto where stated): English; Malay; Mandarin Chinese; Tamil",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+SGP,B01,"単一国家（Unitary）
+根拠：シンガポールは連邦制ではなく、憲法に基づく単一の国家統治機構として整理される。",2026,2026/2/4,Initial baseline (basic info template); B01 finalised (unitary/federal).,published,"[""https://sso.agc.gov.sg/Act/CONS1963"",""https://en.wikipedia.org/wiki/Constitution_of_Singapore""]"
+SGP,B02,"0
+根拠：都市国家として地方自治体（municipality）を置かず、国家統治機構は中央政府が担う（住宅団地のTown Councilは地方自治体とは別制度）。",2025,2026/2/4,Initial baseline (basic info template); B02 finalised (municipality count).,published,"[""https://www.pmo.gov.sg/about-us/the-government/"",""https://www.mnd.gov.sg/newsroom/speeches/view/formation-of-town-councils-2025""]"
+SGP,B03,"Weak
+憲法上の保障：憲法で国家統治機構（内閣等）が規定され中央政府が意思決定の中心／立法権の有無：なし／制度上の位置づけ：都市国家として中央政府機構が中心／裁量の制約要因：地方政府レベルの制度が統治の中核ではない",2026,2026/2/4,"Initial baseline (basic info template); B03 finalised (Strong/Medium/Weak, templated).",published,"[""https://www.pmo.gov.sg/about-us/the-government/"",""https://sso.agc.gov.sg/Act/CONS1963""]"
+SGP,C01,"N/A
+C01 value not available under current OECD Trust in government (confidence) dataset selection.",,2026/2/4,C01 not available (no value found for this country under current definition),published,"[""https://www.oecd.org/en/data/indicators/trust-in-government.html"",""https://worldpopulationreview.com/country-rankings/trust-in-government-by-country""]"
+SGP,C02,,,2026/2/4,Initial baseline (basic info template),published,[]
+SGP,C03,"0.926544
+根拠：World Bank GovTech Dataset（WBG_GovTech_Dataset_Dec2025.xlsx）GTMI overall score（Year: 2025, Group: A）",2025,2026/2/4,"C03 GTMI updated (GTMI overall score, 2025)",published,"[""https://datacatalogfiles.worldbank.org/ddh-published/0037889/DR0095721/WBG_GovTech_Dataset_Dec2025.xlsx"", ""https://www.worldbank.org/en/programs/govtech/knowledge-and-innovation/data""]"
+SWE,A01,"10,569,709
+World Bank (WDI) SP.POP.TOTL",2024,2026/2/4,A01 population updated,published,"[""https://data.worldbank.org/country/sweden""]"
+SWE,A02,"89
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=SE""]"
+SWE,A03,"95.5293
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2024,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=SE""]"
+SWE,A04,"140.266
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=SE""]"
+SWE,A05,"71,030
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=SE""]"
+SWE,A06,"1
+Official languages (incl. de facto where stated): Swedish",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+SWE,B01,"単一国家（Unitary）
+根拠：単一国家として整理される（分権的な制度設計はB03で扱う）。",2026,2026/2/4,Initial baseline (basic info template); B01 finalised (unitary/federal).,published,"[""https://portal.cor.europa.eu/divisionpowers/Pages/Sweden-intro.aspx""]"
+SWE,B02,"290
+根拠：Statistics Sweden（SCB）による現行の自治体数は290。",2025,2026/2/4,Initial baseline (basic info template); B02 finalised (municipality count).,published,"[""https://www.scb.se/en/finding-statistics/regional-statistics/regional-divisions/counties-and-municipalities/""]"
+SWE,B03,"Strong
+憲法上の保障：憲法（Instrument of Government）に地方自治が明記／立法権の有無：なし／制度上の位置づけ：自治体（kommuner）と地域（regioner）の二層／裁量の制約要因：国法で義務事務が規定、国の枠組みの下で運営",2026,2026/2/4,"Initial baseline (basic info template); B03 finalised (Strong/Medium/Weak, templated).",published,"[""https://www.scb.se/en/finding-statistics/regional-statistics/regional-divisions/counties-and-municipalities/"",""https://www.government.se/how-sweden-is-governed/the-swedish-model-of-government-administration/""]"
+SWE,C01,"0.584700
+OECD: Trust in government (share reporting confidence in national government; 2023). Stored as 0-1 (percentage/100).",2023,2026/2/4,"C01 updated (OECD Trust in government: confidence in national government, 2023; scaled to 0-1, 6 decimals)",published,"[""https://www.oecd.org/en/data/indicators/trust-in-government.html"",""https://worldpopulationreview.com/country-rankings/trust-in-government-by-country""]"
+SWE,C02,,,2026/2/4,Initial baseline (basic info template),published,[]
+SWE,C03,"0.797469
+根拠：World Bank GovTech Dataset（WBG_GovTech_Dataset_Dec2025.xlsx）GTMI overall score（Year: 2025, Group: A）",2025,2026/2/4,"C03 GTMI updated (GTMI overall score, 2025)",published,"[""https://datacatalogfiles.worldbank.org/ddh-published/0037889/DR0095721/WBG_GovTech_Dataset_Dec2025.xlsx"", ""https://www.worldbank.org/en/programs/govtech/knowledge-and-innovation/data""]"
+USA,A01,"340,110,988
+World Bank (WDI) SP.POP.TOTL",2024,2026/2/4,A01 population updated,published,"[""https://data.worldbank.org/indicator/SP.POP.TOTL?locations=US""]"
+USA,A02,"80
+World Bank (WDI) SP.URB.TOTL.IN.ZS（都市の定義は国別）",2024,2026/2/4,A02 urbanization updated,published,"[""https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=US""]"
+USA,A03,"93.1444
+World Bank (WDI): Individuals using the Internet (% of population) / IT.NET.USER.ZS",2023,2026/2/4,A03 updated (latest available) from World Bank WDI.,published,"[""https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=US""]"
+USA,A04,"112.411
+Proxy: Mobile cellular subscriptions (per 100 people) / IT.CEL.SETS.P2 (スマホ普及率の代理指標)
+World Bank (WDI)",2023,2026/2/4,A04 updated (latest available) from World Bank WDI (proxy).,published,"[""https://data.worldbank.org/indicator/IT.CEL.SETS.P2?locations=US""]"
+USA,A05,"85,810
+World Bank (WDI): GDP per capita, PPP (current international $) / NY.GDP.PCAP.PP.CD",2024,2026/2/4,A05 updated (latest available) from World Bank WDI (PPP).,published,"[""https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD?locations=US""]"
+USA,A06,"1
+Official languages (incl. de facto where stated): English (de facto)",2026,2026/2/4,A06 updated from official languages listing (statewide; de facto only when explicitly stated).,published,"[""https://en.wikipedia.org/wiki/List_of_official_languages_by_country_and_territory""]"
+USA,B01,"連邦国家（Federal）
+根拠：連邦制は、合衆国憲法の下で連邦政府と州政府の間に権限を分割・共有する仕組みとして説明される。",2026,2026/2/4,Initial baseline (basic info template); B01 finalised (unitary/federal).,published,"[""https://constitution.congress.gov/browse/essay/intro.7-3/ALDE_00000032/""]"
+USA,B02,"35705
+根拠：米国の2022 Census of Governmentsの整理に基づく、一般目的の基礎自治体（municipal＋township）の合計。州制度により区分が異なるため、Censusの分類に従う。",2022,2026/2/4,Initial baseline (basic info template); B02 finalised (municipality count).,published,"[""https://www.census.gov/data/tables/2022/econ/gus/2022-governments.html"",""https://www.stlouisfed.org/publications/regional-economist/2024/march/local-governments-us-number-type""]"
+USA,B03,"Medium
+憲法上の保障：連邦制の下で州に広い裁量領域がある（州と連邦で権限分担）／立法権の有無：なし／制度上の位置づけ：地方政府の制度は州制度に依存（州により設計が異なる）／裁量の制約要因：州法の枠組み・州の監督に依存",2026,2026/2/4,"Initial baseline (basic info template); B03 finalised (Strong/Medium/Weak, templated).",published,"[""https://constitution.congress.gov/browse/essay/intro.7-3/ALDE_00000032/""]"
+USA,C01,"0.309300
+OECD: Trust in government (share reporting confidence in national government; 2023). Stored as 0-1 (percentage/100).",2023,2026/2/4,"C01 updated (OECD Trust in government: confidence in national government, 2023; scaled to 0-1, 6 decimals)",published,"[""https://www.oecd.org/en/data/indicators/trust-in-government.html"",""https://worldpopulationreview.com/country-rankings/trust-in-government-by-country""]"
+USA,C02,"0.611831
+OECD Going Digital (Truth Quest Survey): Share of adults who avoid using certain websites, apps, or social media due to privacy concerns (Year: 2024). Stored as 0-1 (percentage/100).",2024,2026/2/4,"C02 updated (OECD Going Digital indicator 84; scaled to 0-1, 6 decimals)",published,"[""https://goingdigital.oecd.org/en/indicator/84"",""https://www.oecd.org/en/publications/the-oecd-truth-quest-survey_92a94c0f-en.html""]"
+USA,C03,"0.770755
+根拠：World Bank GovTech Dataset（WBG_GovTech_Dataset_Dec2025.xlsx）GTMI overall score（Year: 2025, Group: A）",2025,2026/2/4,"C03 GTMI updated (GTMI overall score, 2025)",published,"[""https://datacatalogfiles.worldbank.org/ddh-published/0037889/DR0095721/WBG_GovTech_Dataset_Dec2025.xlsx"", ""https://www.worldbank.org/en/programs/govtech/knowledge-and-innovation/data""]"
