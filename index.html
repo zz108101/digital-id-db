@@ -77,25 +77,30 @@
 
   <main>
     <section class="card">
- <h2 class="card-title">横断比較</h2>
- <div id="meta" class="meta"></div>
- <div class="toggle-row">
-  <button id="toggleBasicSummary" type="button" class="btn-toggle" aria-controls="basicSummaryWrap" aria-expanded="false">基本情報を表示</button>
-  <button id="toggleBenchmarks" type="button" class="btn-toggle" aria-controls="benchmarksWrap" aria-expanded="false">国際ベンチマークを表示</button>
- </div>
- <div id="basicSummaryWrap" hidden>
-  <div id="basicSummary" class="basic-summary"></div>
- </div>
- <div id="benchmarksWrap" hidden>
-  <div class="table-wrap">
-   <table id="benchmarksTable" class="comparison"></table>
-  </div>
- </div>
- <div class="table-wrap">
-  <table id="comparisonTable" class="comparison"></table>
- </div>
-</section>
-<section class="card">
+      <h2 class="card-title">横断比較</h2>
+      <div id="meta" class="meta"></div>
+
+      <div class="toggle-row">
+        <button id="toggleBasicSummary" type="button" class="btn-toggle" aria-controls="basicSummaryWrap" aria-expanded="false">基本情報を表示</button>
+        <button id="toggleBenchmarks" type="button" class="btn-toggle" aria-controls="benchmarksWrap" aria-expanded="false">国際ベンチマークを表示</button>
+      </div>
+
+      <div id="basicSummaryWrap" hidden>
+        <div id="basicSummary" class="basic-summary"></div>
+      </div>
+
+      <div id="benchmarksWrap" hidden>
+        <div class="table-wrap">
+          <table id="benchmarksTable" class="comparison"></table>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table id="comparisonTable" class="comparison"></table>
+      </div>
+    </section>
+
+    <section class="card">
       <h2 class="card-title">凡例</h2>
       <div class="legend">
         <span class="pill nationwide">Nationwide / National / Yes / Adequacy / Common</span>
@@ -103,7 +108,13 @@
         <span class="pill planned">Planned / None / No / Developing / Pilot</span>
       </div>
     </section>
-</main>
+
+    <!-- ✅ 凡例の直後（＝ページ下部側）に固定表示 -->
+    <section class="card" id="indicatorDefCard" aria-label="指標定義（固定表示）">
+      <h2 class="card-title">指標定義</h2>
+      <div id="indicatorDefinitions"></div>
+    </section>
+  </main>
 
   <script src="./app.js?v=20260205"></script>
 </body>

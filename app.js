@@ -507,13 +507,14 @@ function setMetaNote(text) {
  * Render dispatcher
  * ======================================================= */
 function renderAll() {
-  if (hasComparison) {
-    renderComparison();
-    if (hasWorldMap) renderWorldMap();
-  }
-  if (hasCountry) renderCountryPage();
+ if (hasComparison) {
+ renderComparison();
+ // Indicator definitions (fixed display below Legend on index page)
+ try { renderIndicatorDefinitions(); } catch (e) { console.warn('renderIndicatorDefinitions failed', e); }
+ if (hasWorldMap) renderWorldMap();
+ }
+ if (hasCountry) renderCountryPage();
 }
-
 /* =========================================================
  * index.html rendering
  * ======================================================= */
@@ -601,6 +602,125 @@ function renderCountryChips() {
   });
 }
 
+
+
+// =========================================================
+// Indicator definitions (index page: fixed display below Legend)
+// - Source of Truth: indicators.csv (definition_ja / classification_ja)
+// - Display: Japanese only
+// =========================================================
+function renderIndicatorDefinitions(){
+ const mount = document.getElementById('indicatorDefinitions');
+ if(!mount) return; // index.html only
+ mount.innerHTML = '';
+
+ // indicators.csv のうち、definition_ja / classification_ja が入っている指標だけ表示
+ const recs = (indicators ?? [])
+   .filter(r => String(r.definition_ja ?? '').trim() || String(r.classification_ja ?? '').trim())
+   .slice()
+   .sort((a,b)=>{
+     const ao = (a.display_order ?? '') !== '' ? Number(a.display_order) : 999;
+     const bo = (b.display_order ?? '') !== '' ? Number(b.display_order) : 999;
+     if(ao !== bo) return ao - bo;
+     return String(a.indicator_id ?? '').localeCompare(String(b.indicator_id ?? ''));
+   });
+
+ if(!recs.length){
+   const none = document.createElement('div');
+   none.className = 'detail';
+   none.textContent = '指標定義データ（indicators.csv）がありません。';
+   mount.appendChild(none);
+   return;
+ }
+
+ function addIndicatorTitle(name){
+   const h = document.createElement('h3');
+   h.className = 'indicator-def-title';
+   h.textContent = name;
+   mount.appendChild(h);
+ }
+ function addSectionTitle(text){
+   const h = document.createElement('h4');
+   h.className = 'indicator-def-subtitle';
+   h.textContent = text;
+   mount.appendChild(h);
+ }
+ function wrapTable(tableEl){
+   const wrap = document.createElement('div');
+   wrap.className = 'table-wrap indicator-def-wrap';
+   wrap.appendChild(tableEl);
+   mount.appendChild(wrap);
+ }
+
+ recs.forEach(rec => {
+   const name = String(rec.name_ja ?? rec.name_en ?? rec.indicator_id ?? '').trim();
+   addIndicatorTitle(name || '（名称未設定）');
+
+   // --- セクションA：項目の定義 ---
+   addSectionTitle('項目の定義');
+   const defJa = String(rec.definition_ja ?? '').trim();
+   const t1 = document.createElement('table');
+   t1.className = 'indicator-def-table';
+   const tbody1 = document.createElement('tbody');
+   const tr1 = document.createElement('tr');
+   const th1 = document.createElement('th');
+   th1.textContent = name || '—';
+   const td1 = document.createElement('td');
+   td1.textContent = defJa || '（定義未設定）';
+   tr1.appendChild(th1);
+   tr1.appendChild(td1);
+   tbody1.appendChild(tr1);
+   t1.appendChild(tbody1);
+   wrapTable(t1);
+
+   // --- セクションB：分類の定義 ---
+   addSectionTitle('分類の定義');
+   const classJa = String(rec.classification_ja ?? '').trim();
+   const t2 = document.createElement('table');
+   t2.className = 'indicator-def-table';
+   const tbody2 = document.createElement('tbody');
+
+   const lines = classJa
+     ? classJa.replace(/\r\n/g,'\n').replace(/\r/g,'\n').split('\n').map(s=>s.trim()).filter(Boolean)
+     : [];
+
+   if(!lines.length){
+     const tr = document.createElement('tr');
+     const th = document.createElement('th');
+     th.textContent = '—';
+     const td = document.createElement('td');
+     td.textContent = '（分類定義未設定）';
+     tr.appendChild(th);
+     tr.appendChild(td);
+     tbody2.appendChild(tr);
+   } else {
+     lines.forEach(line => {
+       let label = line;
+       let desc = '';
+       if(line.includes('：')){
+         const idx = line.indexOf('：');
+         label = line.slice(0, idx).trim();
+         desc = line.slice(idx+1).trim();
+       } else if(line.includes(':')){
+         const idx = line.indexOf(':');
+         label = line.slice(0, idx).trim();
+         desc = line.slice(idx+1).trim();
+       }
+       const tr = document.createElement('tr');
+       const th = document.createElement('th');
+       th.textContent = label || '—';
+       const td = document.createElement('td');
+       td.textContent = desc || '—';
+       tr.appendChild(th);
+       tr.appendChild(td);
+       tbody2.appendChild(tr);
+     });
+   }
+
+   t2.appendChild(tbody2);
+   wrapTable(t2);
+ });
+}
 
 function renderBenchmarks(countryIds, version, status){
   const table = document.getElementById('benchmarksTable');

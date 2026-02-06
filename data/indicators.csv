@@ -1,12 +1,19 @@
-﻿indicator_id,name_ja,name_en,short_label,display_order
-I01,基礎住民登録,Foundational population registration,住民登録,1
-I02,住民情報ネットワーク,Resident information network,住民ネット,2
-I03,個人識別子（用途・民間利用可否）,Personal identifier (use & private sector),個人ID,3
-I04,データ連携基盤,Data exchange / interoperability layer,連携基盤,4
-I05,デジタルIDカード（物理カード）,Digital ID card (physical),IDカード,5
-I06,スマホID（モバイルID）,Mobile ID (smartphone),スマホID,6
-I07,運転免許証のモバイル化（mDL）,Mobile driver’s license (mDL),mDL,7
-I08,認証基盤（PKIに限定しない）,Authentication infrastructure,認証,8
-I09,ガバメントクラウド,Government cloud,政府クラウド,9
-I10,個人情報保護法制＋GDPR十分性認定,Privacy law + GDPR adequacy,個情/GDPR,10
-I11,特徴的な歴史的出来事,Key historical milestones,年表,11
+indicator_id,name_ja,name_en,short_label,display_order,definition_ja,classification_ja
+I01,基礎住民登録,Foundational population registration,住民登録,1,個人を住所（通常の居住地）とともに登録し、行政の原簿（system of record）として継続的に管理される住民登録制度を指す。国勢調査のみによる人口把握や、住所登録を伴わない番号付与制度は含まない。,"National：国家が単一の住民登録簿（人口登録簿）を法的に保有し、原簿として管理している。
+Local：住民登録簿の原簿は自治体が法的に管理している（全国照会や相互参照のIT基盤が存在しても、原簿主体が自治体であればLocalとする）。
+None：行政的な住民登録簿（人口登録簿）が存在せず、人口は国勢調査や調査、統計的推計により把握される。
+Developing：住所を含む住民登録の法的枠組みは存在するが、更新が不定期で、恒常的な行政運用としては確立していない。"
+I02,住民情報ネットワーク,Resident information network,住民ネット,2,住民登録に由来する個人の基礎属性情報（氏名・住所・生年月日等）について、全国の行政機関（必要に応じて自治体間）で、制度として照会・検証を可能にする仕組み（共通データベース、全国照会ネットワーク、または標準化された参照手続）の有無を示す指標。,"Yes：住民登録に基づく基礎属性情報を、全国レベルで照会・検証できる制度的な共通基盤が確立している。
+Partial：全国照会・検証の仕組みは存在するが、対象範囲・更新の一貫性・制度的完成度が限定的で、全面的な全国基盤には至っていない。
+No：住民登録に基づく基礎属性情報を、全国で照会・検証する制度的な仕組みが存在しない。"
+I03,個人識別子（用途・民間利用可否）,Personal identifier (use & private sector),個人ID,3,国家または公的制度により付与・管理される、個人を一意に識別する番号（または同等の識別子）が制度として存在するか、その識別子が行政の複数分野で共通に用いられているか、また民間における収集・利用が原則として認められているかを評価する指標。ここでいう個人識別子は、制度レベルの『番号そのもの』を指し、デジタルIDアプリ、eID、認証方式、または同意型データ連携の仕組みを含まない（それらは原則同意型データ連携や認証基盤の論点）。,"Common：共通個人識別子が存在し、行政の複数分野で横断的に使用され、民間でも本人確認・取引・契約等で広く利用される（官民横断の共通キーに近い）。
+Restricted：共通個人識別子は存在するが、用途が分野限定（例：法令で列挙された行政目的に限定）である、または民間利用が原則として抑制・禁止されており、万能IDとしては設計されていない。
+None：国家として単一の共通個人識別子（官民横断の共通番号）を制度上採用しておらず、識別子は税・給付・免許等の分野別に分離されている。"
+I04,データ連携基盤,Data exchange / interoperability layer,連携基盤,4,,
+I05,デジタルIDカード（物理カード）,Digital ID card (physical),IDカード,5,,
+I06,スマホID（モバイルID）,Mobile ID (smartphone),スマホID,6,,
+I07,運転免許証のモバイル化（mDL）,Mobile driver’s license (mDL),mDL,7,,
+I08,認証基盤（PKIに限定しない）,Authentication infrastructure,認証,8,,
+I09,ガバメントクラウド,Government cloud,政府クラウド,9,,
+I10,個人情報保護法制＋GDPR十分性認定,Privacy law + GDPR adequacy,個情/GDPR,10,,
+I11,特徴的な歴史的出来事,Key historical milestones,年表,11,,

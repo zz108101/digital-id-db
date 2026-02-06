@@ -658,3 +658,56 @@ tbody th{
   overflow-wrap: anywhere;
   word-break: break-word;
 }
+
+/* =========================================================
+ Indicator definitions table (index page; fixed below Legend)
+========================================================= */
+#indicatorDefCard .indicator-def-title{
+ margin: 6px 0 6px;
+ font-weight: 900;
+ font-size: 16px;
+ color: var(--text);
+}
+#indicatorDefCard .indicator-def-title + .indicator-def-subtitle{
+ margin-top: 8px;
+}
+#indicatorDefCard .indicator-def-subtitle{
+ margin: 10px 0 8px;
+ font-weight: 900;
+ font-size: 14px;
+ color: var(--text);
+}
+#indicatorDefCard .indicator-def-wrap{
+ margin-bottom: 10px;
+}
+.indicator-def-table{
+ width: 100%;
+ border-collapse: collapse;
+ table-layout: fixed;
+}
+.indicator-def-table th,
+.indicator-def-table td{
+ border-bottom: 1px solid var(--line);
+ padding: 10px;
+ text-align: left;
+ vertical-align: top;
+}
+.indicator-def-table th{
+ width: 220px;
+ min-width: 180px;
+ font-weight: 900;
+ color: var(--text);
+ background: rgba(255,255,255,0.98);
+}
+.indicator-def-table td{
+ color: var(--text);
+ overflow-wrap: anywhere;
+ word-break: break-word;
+}
+@media (max-width: 768px){
+ .indicator-def-table th{
+ width: 170px;
+ min-width: 150px;
+ }
+}
+
