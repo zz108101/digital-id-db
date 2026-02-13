@@ -1,6 +1,6 @@
-benchmark_id,label,display_order
-DG01,UN EGDI,1
-DG02,OECD DGI,2
-DG03,Waseda Digital Government Ranking,3
-DG04,IMD World Digital Competitiveness Ranking,4
-DG05,World Bank GTMI,5
+benchmark_id,label,display_order,definition_ja,score_range,unit,higher_better,metric_notes_ja,source_url
+DG01,UN EGDI,1,"国連のE-Government Development Index。オンラインサービス（OSI）・通信インフラ（TII）・人的資本（HCI）の3次元を同重みで合成した0〜1の複合指標で、各国相対の成熟度を示す。年版ごとに設問・重みの更新があり、厳密な時系列比較には留意が必要。",0-1,index_0_1,true,"0〜1の正規化スコア（大きいほど成熟）。UN E‑Government Surveyの年版に従う。","["https://publicadministration.un.org/egovkb/en-us/About/Overview/-E-Government-Development-Index","https://publicadministration.un.org/egovkb/en-us/Reports/UN-E-Government-Survey-2024"]"
+DG02,OECD DGI,2,"OECD Digital Government Index。デジタル・バイ・デザイン等6次元の政策基盤を0〜1で評価する複合指標。2023版は2020–2022の取組を対象。",0-1,index_0_1,true,"0〜1のスコア（大きいほど成熟）。6ディメンションの合成。","["https://goingdigital.oecd.org/en/indicator/58","https://www.oecd.org/en/publications/2023-oecd-digital-government-index_1a89ed5e-en.html"]"
+DG03,Waseda Digital Government Ranking,3,"早稲田大学・IACによる世界デジタル政府ランキング。10の主要指標で評価し、0〜100点の総合スコアと順位を公表。",0-100,points_0_100,true,"表示は総合スコア（0–100）。順位は参考情報。","["https://idg-waseda.jp/pdf/2024_Digital_Government_Ranking_Report.pdf","https://www.waseda.jp/inst/research/news/79179?lng=en"]"
+DG04,IMD World Digital Competitiveness Ranking,4,"IMD 世界デジタル競争力ランキング。Knowledge/Technology/Future Readiness（9サブ要素、ハード+サーベイ）で評価し、主指標は“順位”。",rank,rank,false,"数値は“順位”（小さいほど良い）。年版・対象国数はIMD年報に従う。","["https://www.imd.org/centers/wcc/world-competitiveness-center/rankings/world-digital-competitiveness-ranking/methodology/","https://www.investchile.gob.cl/wp-content/uploads/2024/08/Digital_2023.pdf"]"
+DG05,World Bank GTMI,5,"World BankのGovTech Maturity Index。コア政府システム、公共サービス提供、市民参画、エネーブラーの4指数の単純平均（0〜1）。ランキングを意図せず、成熟度の把握と改善領域の同定が目的。",0-1,index_0_1,true,"0〜1の成熟度スコア（大きいほど成熟）。2020/2022/2025の更新あり。","["https://www.worldbank.org/en/programs/govtech/gtmi","https://datacatalog.worldbank.org/search/dataset/0037889/govtech-dataset"]"

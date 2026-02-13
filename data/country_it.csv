@@ -1,0 +1,29 @@
+country_id,indicator_id,value,version,review_status,change_note,source_url,tags
+JPN,IT01,"GovNet‑Common
+中央府省：GSS/GovNet 主軸。自治体：LGWAN（LGCS 経由で主要クラウドへ閉域）。分野 ASP 併存。",2026/02/13,draft,Initial IT01 mapping (draft),https://digital.go.jp; https://www.soumu.go.jp,local;sectoral
+USA,IT01,"Internet‑ZT
+全国単一の政府閉域ではなく、TIC 3.0／EINSTEIN によるインターネット前提の ZT 統制が主。CJIS WAN 等の分野閉域が併存。",2026/02/13,draft,Initial IT01 mapping (draft),https://www.cisa.gov; https://le.fbi.gov; https://en.wikipedia.org,zt;sectoral
+CAN,IT01,"GovNet‑Common
+SSC による政府共通ネットワーク／セキュリティ統合（約4,000拠点・約40万人規模）。機関・分野オーバーレイが併存。",2026/02/13,draft,Initial IT01 mapping (draft),https://www.canada.ca; https://www.canada.ca,sectoral
+GBR,IT01,"Internet‑ZT
+PSN はレガシー。FN4G に沿う Internet-first + ZT へ移行中。HSCN（医療）／LECN（警察）等の分野閉域が継続。",2026/02/13,draft,Initial IT01 mapping (draft),https://www.digital.nhs.uk; https://www.ukauthority.com; https://www.nine23.co.uk,zt;sectoral
+FRA,IT01,"GovNet‑Common
+RIE が省庁横断の共通閉域。EU TESTA 連携あり。RIE 2.0/3.0 で容量・強靭性を強化。",2026/02/13,draft,Initial IT01 mapping (draft),https://fr.wikipedia.org; https://programmevitam.fr,sectoral
+DEU,IT01,"GovNet‑Common
+NdB（連邦共通閉域）＋ Bund‑Länder Verbindungsnetz（連邦‑州‑自治体相互接続）で広域連携。",2026/02/13,draft,Initial IT01 mapping (draft),https://www.bdbos.bund.de; https://de.wikipedia.org,local
+EST,IT01,"Internet‑ZT
+X‑Road による暗号化・監査付きデータ連携を主とし、必要箇所を閉域で補完。",2026/02/13,draft,Initial IT01 mapping (draft),https://e-estonia.com; https://www.ria.ee,zt;sectoral
+SWE,IT01,"GovNet‑Common
+SGSI（政府共通閉域）を主軸とし、医療分野の Sjunet（専用閉域）を併用。",2026/02/13,draft,Initial IT01 mapping (draft),https://sv.wikipedia.org; https://www.inera.se,sectoral
+DNK,IT01,"GovNet‑Sectoral
+医療の SDN、公共安全の SINE（TETRA）等の分野閉域が中核。Statens It が横断的なセキュリティ／運用標準を担う。",2026/02/13,draft,Initial IT01 mapping (draft),https://www.medcom.dk; https://www.statens-it.dk; https://www.motorolasolutions.com,sectoral
+IND,IT01,"GovNet‑Common
+NICNET を中核に、州の SWAN が県・郡までの CUG を形成。研究教育は NKN。",2026/02/13,draft,Initial IT01 mapping (draft),https://www.nic.gov.in; https://www.nkn.gov.in; https://en.wikipedia.org,local;sectoral
+KOR,IT01,"GovNet‑Common
+NIRS が統合 DC と基幹政府網を運用。GPKI／G‑VPN／On‑nara 等が補完し、強化対応が継続。",2026/02/13,draft,Initial IT01 mapping (draft),https://www.nirs.go.kr; https://www.joins.com,sectoral
+AUS,IT01,"Internet‑ZT
+クラウド／SaaS 周辺で Internet + ZT 構成が主流。ACT 域の ICON（専用ダークファイバ）等の限定閉域が補完。",2026/02/13,draft,Initial IT01 mapping (draft),https://www.finance.gov.au; https://blueprint.asd.gov.au,zt;sectoral
+NZL,IT01,"GovNet‑Sectoral
+Public Safety Network（PSN）が分野閉域の中核（災害時の最後に残るネット）。政府全体ではクラウド／ZT 採用を推進。",2026/02/13,draft,Initial IT01 mapping (draft),https://www.police.govt.nz; https://www.beehive.govt.nz; https://www.ngcc.govt.nz,sectoral;zt
+SGP,IT01,"Internet‑ZT
+GCC 2.0/+ により商用クラウド移行と ZT 整合を政府横断で標準化。必要箇所で閉域連携。",2026/02/13,draft,Initial IT01 mapping (draft),https://www.tech.gov.sg; https://www.developer.tech.gov.sg,zt;sectoral

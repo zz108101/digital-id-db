@@ -98,7 +98,7 @@ AIは、このサイトを
 
 
 ## 3.2 基本情報（country_basic.csv）（追加：本チャットで実装）
-制度項目（I01〜I11）とは別枠で、国ごとの「基本情報（A〜C）」を表示する仕組みを追加した。  
+デジタルID制度（I01〜I11）とは別枠で、国ごとの「基本情報（A〜C）」を表示する仕組みを追加した。  
 **重要：指標（I01〜I11）の数・順序・意味は変更しない。** 基本情報は「別CSV」で管理し、UIはCSVをそのまま表示する。  
 
 ### 3.2.1 データのSoT
@@ -189,8 +189,17 @@ AIは、このサイトを
 
 
 
+### 3.2.14 基本情報の定義辞書（basic_defs.csv）【新設】
+- **SoT（唯一の正）**: `data/basic_defs.csv`
+- **役割**: A01〜C03 の**定義文（日本語）**を保持し、トップページの「基本情報（抜粋）」の各行で**行内トグル**により展開される定義を表示するための辞書。
+- **CSVスキーマ（必須列）**:
+  - `basic_id` : A01〜C03 のID（例：`A01`、`B03`、`C02`）
+  - `definition_ja` : 定義本文（日本語）。空の場合は UI で『（定義未登録）』と表示。
+- **表示の原則**: JS は `country_basic.csv` の値を**解釈しない**。定義文は本辞書を**そのまま**表示し、推測・要約は行わない（CSV=SoT）。
+- **依存関係（app.js）**: 初期化時に `basic_defs.csv` を読み込み、`basicDefsById`（Map）へ展開。`renderBasicSummary()` の行内トグルで `buildBasicDefinitionHtml(basicId)` が本辞書を参照して定義HTMLを生成する。
+
 ## 3.3 国際ベンチマーク（digital_gov_benchmarks.csv）（追加）
-制度項目（I01〜I11）や基本情報（A01〜C03）とは別枠で、各国のデジタル政府に関する国際ベンチマーク（DG01〜DG05）を表示する仕組みを追加した。
+デジタルID制度（I01〜I11）や基本情報（A01〜C03）とは別枠で、各国のデジタル政府に関する国際ベンチマーク（DG01〜DG05）を表示する仕組みを追加した。
 
 ### 3.3.1 データのSoT
 - SoT（唯一の正）は `data/digital_gov_benchmarks.csv`
@@ -404,15 +413,18 @@ Sentence B.,文B。
 digital-id-db/
 ├─ assets/
 ├─ data/
-│  ├─ countries.csv
-│  ├─ indicators.csv
-│  ├─ country_indicator.csv
-│  ├─ country_basic.csv
-│  ├─ digital_gov_benchmark_defs.csv
-│  ├─ digital_gov_benchmarks.csv
-│  ├─ translations_ja.csv
-│  └─ events.csv
-│
+│ ├─ countries.csv
+│ ├─ indicators.csv
+│ ├─ country_indicator.csv
+│ ├─ country_basic.csv
+│ ├─ basic_defs.csv
+│ ├─ digital_gov_benchmark_defs.csv
+│ ├─ digital_gov_benchmarks.csv
+│ ├─ translations_ja.csv
+│ ├─ events.csv
+│ ├─ it_defs.csv          # IT01〜IT03 の定義文・分類定義（SoT）
+│ └─ country_it.csv       # 14か国×IT（IT01〜IT03）の当てはめデータ
+│ 
 ├─ index.html
 ├─ country.html
 ├─ app.js
@@ -420,7 +432,6 @@ digital-id-db/
 ├─ theme.css
 └─ README.md
 ```
-
 
 ---
 
@@ -477,7 +488,7 @@ AIは、このREADMEを「このプロジェクトに参加する前に必ず読
 
 ### （追加）比較表の表示崩れ（日本列の色が消える／被る等）
 - 日本列（baseline）を sticky で固定している場合、`td` に白背景を直指定するとセル色が消える。
-- 1列目（制度項目）ヘッダーと `--col-indicator` の幅がズレると、固定列の left 計算と一致せず被りが発生する。
+- 1列目（デジタルID制度）ヘッダーと `--col-indicator` の幅がズレると、固定列の left 計算と一致せず被りが発生する。
 - 国数が少ないと右に余白が出る場合は、「均等割り（列数をCSS変数へ渡す）」仕様になっているか確認する（5章参照）。
 
 
@@ -768,8 +779,8 @@ I03の整理過程で、以下の重要な実装上の注意点が明らかに�
 - **I06（モバイルID）**：**政府公式のモバイルID/eID**ドキュメント（例：**MitID（DK）**、**myID（AU）**、**Singpass（SG）**）。
 - **I07（mDL）**：**運輸当局**・**治安機関**・**EU/国交当局**等の公式案内（例：**TSA（US）**のmDL取扱、**EC**のLSP）を優先。citeturn9search67turn10search106
 - **I08（認証基盤）**：**政府アカウント/認証**の制度・技術文書（例：Login.gov、BundID、Singpass などの公式開発者向けページ）。
-- **I09（政府クラウド）**：**政府の方針・調達・認可**（例：**FedRAMP（US）**、**Canada Cloud Guardrails**、**digital.gov.au**の方針）。citeturn9search71turn10search94
-- **I10（個人情報保護/GDPR十分性）**：**自国の個人情報保護当局・法令本文**、および**EUの十分性決定一覧**（必要時）。citeturn9search10
+- **I10（政府クラウド）**：**政府の方針・調達・認可**（例：**FedRAMP（US）**、**Canada Cloud Guardrails**、**digital.gov.au**の方針）。citeturn9search71turn10search94
+- **I09（個人情報保護/GDPR十分性）**：**自国の個人情報保護当局・法令本文**、および**EUの十分性決定一覧**（必要時）。citeturn9search10
 - **I11（年表）**：**政府の公式プレスリリース・公的アナウンス**を原則とし、eventごとに一次情報を付す。
 
 ### 14.3 NG／注意すべき出典（Do / Don’t）
@@ -858,6 +869,252 @@ I03の整理過程で、以下の重要な実装上の注意点が明らかに�
 4. **version の整合**：`country_indicator.csv` と関連 CSV（`country_basic.csv` / `digital_gov_benchmarks.csv`）の `version` が一致していること。
 
 ### 16.7 変更履歴（2026-02-10 追加分）
+
+### 16.8 I08（認証基盤／SSO）の定義（仕様固定）
+- **定義**：政府主導（または政府が公式に認定した）**住民・国民向けのオンライン認証／サインイン基盤**。公的eサービスで**再利用可能な認証**（SSO/フェデレーションを含む）を提供し、必要に応じて**属性（氏名・生年月日等）の検証済み提供**を伴う（例：Login.gov, BundID, FranceConnect, Singpass, MitID 等）。**モバイル資格（I06）や物理カード（I05）そのもの**ではなく、**オンライン認証の“共通ルート”**を対象とする。
+- **境界**：
+  - I04（相互運用・データ連携）は**認証後のデータ共有**の基盤であり、本人確認・認証の“入口”である I08 とは役割が異なる。
+  - I05（物理カードeID）は**カード媒体**、I06（モバイルID）は**スマホ媒体**の経路を評価。I08は**媒体横断のオンライン認証基盤**を評価する。
+- **分類基準（固定）**：
+  - **Yes**：政府主導の**共通オンライン認証基盤**が制度化され、**複数の公的サービスで再利用**されている。
+  - **Multiple**：**政府主導の認証手段が複数並立**（例：政府アカウント＋銀行連携のブローカー等）し、**どれも公的サービスで正式に再利用**される。
+  - **No**：上記に該当する**政府主導の共通認証基盤が存在しない**。
+- **country_indicator.csv の記述ルール（I08）**：
+  - **value**：
+    - 1行目＝分類ラベル（`Yes` / `Multiple` / `No`）
+    - 2〜3行目＝**英語 2〜3文の段落**（制度の位置づけ／提供主体／再利用範囲／他指標との関係を簡潔に）
+  - **source_url**：**政府一次情報**（開発者向け／制度説明／利用案内）を**JSON配列**で列挙（優先：政府＞国際公的機関）。
+  - **translations_ja.csv**：上記段落全文を**完全一致キー**で登録。
+- **代表的な判定上の注意**：
+  - **DEU**：BundID＋IDカードeID（AusweisApp経由）等が**並立** → `Multiple`。
+  - **CAN**：GCKey＋Sign‑In Partner（銀行連携）等 → `Multiple`。
+  - **USA/SGP/EST/NZL/GBR** など、**国家SSO/ID基盤が単一系で再利用** → `Yes`（Login.gov / Singpass / X‑Road連携下のeIDポータル / RealMe verified / GOV.UK One Login など）。
+- **QAチェックリスト（I08）**：
+  1) トップ／国別で**分類ラベル＋2〜3文説明**が表示される。
+  2) **翻訳置換**（完全一致）が適用される。
+  3) **出典リンク**（JSON配列）が「出典1/2…」として遷移できる。
+
+### 16.9 I09（個人情報保護・GDPR十分性）の定義（仕様固定）
+- **定義**：中央政府（またはそれに準ずる公的主体）による「個人情報保護の包括的法制」と、その執行を担う監督当局（独立性・権限・救済枠組）の制度化の有無を評価する指標。あわせて、**GDPRの十分性認定の有無・範囲（国全体／商業組織限定 等）**を記録し、**越境移転の法的根拠（同意・SCC 等）**の制度上の位置づけを注記する（SoT= `indicators.csv: definition_ja`）。
+- **分類基準（SoT=`indicators.csv: classification_ja`）**：
+  - **GDPR（EU域内）**：EU加盟国としてGDPRが国内に直接適用（十分性認定の対象外）。
+  - **Adequacy（十分性あり）**：GDPR第45条に基づく **欧州委員会の十分性決定**（**国全体**または**限定**を含む。**限定の内容は detail に記載**）。
+  - **Law-only（包括法あり・十分性なし）**：包括法＋監督当局は制度化、十分性は未取得（越境は **SCC** 等で対応）。
+  - **None / Sectoral**：国レベル包括法が未整備、または分野別・組織レベルの枠のみ。
+- **USA の取扱い（DPF 限定の十分性）**：**EU–US Data Privacy Framework（DPF）** に自己認証し、**FTC/DoT 執行管轄下**にある米国企業**のみ**に対して、**欧州委員会が十分性決定**を採択（2023‑07‑10）。**国全体の十分性ではない**が、**参加組織限定の十分性**として `Adequacy` に分類する（詳細は各国 `detail` と `source_url` を参照）。
+  - 参照：欧州委員会の **十分性決定一覧** と **EU‑US データ移転ページ**、**大統領令14086（連邦官報）**、**DOJ（DPRC）**、**FTC（DPF 実務）**。
+- **CSV 記述ルール（I09）**：
+  - **value**：1行目＝分類ラベル、2行目＝**2–4文の日本語または英語の段落**（制度の型／十分性の有無と範囲／越境移転の扱い）。
+  - **source_url**：**政府一次情報**を先頭に **JSON 配列**で列挙（並び順＝表示順）。
+  - **translations_ja.csv**：段落全文を**完全一致キー**で登録（置換の再現性を担保）。
+
+
+---
+### 16.10 I10（政府クラウド運用モデル）の定義（仕様固定）
+- **定義**：中央政府（またはそれに準ずる公的主体）が主導し、複数省庁・機関で本番再利用されることを前提に**制度として**整備・運用される**政府横断のクラウド運用モデル**を評価する。ここでいう「政府クラウド」は単一プロダクト名の有無ではなく、**共有プラットフォーム（共通基盤）／複線運用（政府内＋“信頼”商用）／調達・認証（アシュアランス）枠組**といった**制度の型**を対象とする。SoT は `data/indicators.csv` の `definition_ja` に置く（UIは機械的に表示）。
+- **分類基準（固定／SoT=`indicators.csv:classification_ja`）**：
+  - **Nationwide**：政府主導の**単一の共有政府クラウド基盤**が**制度化**され、**複数機関で本番再利用**されている（例：JPN の Government Cloud、EST の Riigipilv 等）。
+  - **Multiple**：**政府内共有基盤**と**商用の“信頼クラウド”枠組**（例：認証・セキュリティ要件の指定）等を**併用**する**複線スキーム**（例：DEU の Bundescloud／DVC、FRA の内部クラウド＋信頼商用）。
+  - **Procurement**：**FedRAMP／G‑Cloud／Guardrails** 等の**調達・認証／保証プログラム**を中核とし、**単一の政府共通プラットフォームを持たない**（例：USA, CAN, DNK, SWE, GBR, AUS, NZL）。
+  - **None / Planned**：**制度化された共有基盤が未整備**、または**計画段階**。
+- **互換マッピング（既存データとの整合）**：歴史的互換のため、既存CSVに含まれる `Yes`／`Shared-Platform` は **Nationwide** と同義、`No` は **Procurement** と同系統として UI で同色にマップする（CSVの main 値は互換維持可。定義のSoTは `indicators.csv`）。
+- **`country_indicator.csv` の記述ルール（I10）**：
+  - **value**：1行目＝分類ラベル（上記いずれか）／2〜3行目＝**英語 2〜3文**の説明段落（共有基盤の有無、複線運用の有無、調達・認証枠組の別を簡潔に）。
+  - **source_url**：**政府一次情報**（方針・認証・調達の公式文書）を**JSON配列**で列挙（並び順＝表示順。政府＞国際公的機関＞研究・報道）。
+  - **translations_ja.csv**：上記英語段落全文を**完全一致キー**で登録（句読点・空白まで一致）。
+- **QAチェックリスト（I10）**：
+  1) トップ／国別で**分類ラベル＋2〜3文説明**が表示される。
+  2) **翻訳置換**（完全一致）が適用される。
+  3) **出典リンク**（JSON配列）が「出典1/2…」として遷移できる。
+  4) **色分け**：**Nationwide**／**Multiple**／**Procurement（≒None）** の**3系統**が仕様どおりに表示される。
+- **代表的な判定上の注意（再確認）**：
+  - **Nationwide**：JPN（Government Cloud）、EST（Riigipilv） 等。
+  - **Multiple**：DEU（Bundescloud／DVC）、FRA（内部＋信頼商用）。
+  - **Procurement**：USA（FedRAMP／JWCCは**調達・保証**。共有単一基盤ではない）、CAN（Cloud Guardrails）、DNK、SWE、GBR、AUS、NZL。
+  - **None / Planned**：共有基盤が未整備または計画段階（該当国は将来の制度化に応じて更新）。
+- **変更履歴（2026-02-12 追記）**：I10 の**定義・分類**を `indicators.csv` に一本化（SoT）；`Yes≒Shared‑Platform≒Nationwide`／`No≒Procurement` の**互換マップ**を明記；各国 `source_url` を**government‑first**に正規化し JSON 配列へ統一。
+
 - **I06**：定義を仕様化。14か国の I06 を **再分類** し、各国 **2〜4文** 説明・**政府一次情報**の `source_url`（JSON配列）に統一。翻訳辞書を **完全一致キー** で整備。
 - **I07**：定義を仕様化。14か国の I07 を **再分類**（Nationwide / Partial / Pilot / Planned / None）し、各国 **2〜4文** 説明・出典正規化を実施。翻訳辞書を **完全一致キー** で整備。
 
+
+
+## 17. 変更履歴 — 2026-02-12 A01〜C03 / DG01〜DG05 の行内「定義を表示」トグルを追加
+本変更では、**トップページ（index.html）の横断比較エリア**において、以下の2系統に**行内トグル（直下1行展開）**を実装しました。既存の仕様（CSV=SoT、JSはCSV→UI変換のみ）は**不変**です。
+
+### 17.1 基本情報（A01〜C03）行内トグル
+- **対象**: A01〜A06 / B01〜B03 / C01〜C03（表示は「基本情報（抜粋）」の範囲に依存）
+- **使い方**: 行見出しの右側にある **「定義を表示」** をクリックすると、**直下に1行**の定義行が展開/格納されます。
+- **依存データ（SoT）**: `data/basic_defs.csv`（`basic_id, definition_ja` ほか）。辞書に無い場合は「（定義未登録）」と表示。
+- **実装（app.js）**:
+  - `renderBasicSummary()` 内で **行内トグル**を生成（ボタン: `.btn-toggle.def-toggle`）。
+  - 定義HTMLは `buildBasicDefinitionHtml(basicId)` で生成。
+  - 開閉状態は **`expandedBasicDefRows: Set<string>`** に保持（再描画時も復元）。
+- **UIルール**: CSSのみで見た目を制御。JSは **CSV→UIの機械的変換** のみ（SoT原則の維持）。
+
+### 17.2 国際ベンチマーク（DG01〜DG05）行内トグル
+- **対象**: DG01（UN EGDI）、DG02（OECD DGI）、DG03（Waseda）、DG04（IMD Rank）、DG05（World Bank GTMI）。
+- **使い方**: 「国際ベンチマークを表示」をONにしたのち、各行左端の **「定義を表示」** をクリックで **直下1行** に定義を展開/格納。
+- **依存データ（SoT）**: `data/digital_gov_benchmark_defs.csv`（`benchmark_id, label, definition_ja, score_range, higher_better, metric_notes_ja, source_url`）。辞書に無い場合はフォールバック表示。
+- **実装（app.js）**:
+  - `renderBenchmarks()` を **行内トグル対応**に拡張。定義HTMLは `buildBenchmarkDefinitionHtml(benchId)` が生成。
+  - 定義辞書は **`benchDefsById: Map<string,Record>`** にロード、開閉状態は **`expandedBenchDefRows: Set<string>`** に保持。
+  - 既存の値表示・色分け（順位/スコア）・出典リンク表示は**非変更**。
+- **UIルール**: A/B/C と同様、**CSV=SoT** を徹底（JSはCSV→UI変換のみ）。
+
+### 17.3 互換性・運用
+- **ディレクトリ**: `basic_defs.csv` を **data/** 配下（`data/basic_defs.csv`）に配置しました。既存の別パスに置いていた場合は **移行** してください。
+
+- 既存CSVは**変更不要**。定義辞書CSV（`basic_defs.csv`/`digital_gov_benchmark_defs.csv`）が存在すれば定義文が表示され、無ければフォールバック表示。
+- トグルの開閉状態は **ページ内状態** として保持（再描画時も維持、ページ再読込で初期化）。
+- `parseSourceUrls()` は **JSON配列／セミコロン区切り／改行区切り**を解釈（既存互換）。
+
+### 17.4 変更ファイル
+- `app.js` のみ（**UIトグルの追加と軽微な堅牢化**）。HTML/CSS/CSV の仕様は既存のまま。
+
+### 17.5 確認手順（QA）
+1) トップで「**基本情報を表示**」をON → A01〜C03 の各行に **「定義を表示」** ボタンが出現し、クリックで直下に定義が展開/格納される。
+2) 「**国際ベンチマークを表示**」をON → DG01〜DG05 各行に **「定義を表示」** ボタンが出現し、クリックで直下に定義が展開/格納される。
+3) いずれも **出典リンク** が機能（`source_url` の配列またはセミコロン/改行区切りが「出典1/2…」で表示）。
+4) DevTools Console にエラーが無いこと。エラーがある場合は比較表・地図ピン描画に影響するため最優先で修正。
+
+## 18. ITインフラストラクチャー（IT01〜IT03）—追補（2026‑02‑13）
+
+> 本節は 2026‑02‑13 時点の IT インフラ拡張の実装をREADMEに統合する追補です。既存の「CSV = SoT」「JS は CSV→UI 変換のみ」の原則は不変です。
+
+### 18.1 概要（今回の追加点）
+- **IT インフラ表（IT01〜IT03）を新設**し、トップページの横断比較カードに **「ITインフラを表示」** トグルを追加。**国際ベンチマークの直後／デジタルID制度の直前**に IT 表を表示（デフォルト非表示）。
+- **列幅は完全一致**：基本情報／国際ベンチマーク／IT インフラ／デジタルID制度の各表で、表示国数に関わらず CSS 変数 `--country-cols` を**同値**にし、各国列の幅を揃えます（均等割・sticky列の挙動は既存仕様に準拠）。
+- **色分けは既存 3 色に統一**（CSS クラスのみで実現）  
+  - **GovNet‑Common →** `nationwide`（既存の緑）  
+  - **GovNet‑Sectoral →** `partial`（既存の青）  
+  - **Internet‑ZT / Internet + ZT →** `planned`（既存の灰）
+
+### 18.2 新規 CSV と SoT（唯一の正）
+- **`data/it_defs.csv`**：IT 指標 **IT01〜IT03** の *定義文／分類定義* を保持（SoT）。  
+  - **IT01（政府共通ネットワーク）** の定義・分類文は今回の文面で反映済み。  
+  - **IT02 / IT03** は雛形（今後追記）。
+- **`data/country_it.csv`**：**14 か国 × IT01〜IT03** の当てはめデータ。  
+  - `value` は **改行区切り**で **1 行目 = main（分類ラベル）／2 行目以降 = detail**。  
+  - `tags` に `sectoral;zt;local` などの補足を付与可。  
+  - `source_url` は **JSON 配列** / **セミコロン区切り**の両方式を解釈（既存 CSV と同一運用）。
+- **用語対訳**：`data/translations_ja.csv` に **GovNet 系**（GovNet‑Common / GovNet‑Sectoral / Internet‑ZT / Internet + ZT）の対訳を追記済み。  
+  - 置換は **完全一致キー**で適用（既存の翻訳運用に従う）。
+
+### 18.3 指標仕様（IT01〜IT03）
+**SoT は `data/it_defs.csv`。** 分類ラベル → UI クラスへのマッピングは下記のとおりです（JS で機械付与／インライン色指定なし）。
+- **IT01：政府共通ネットワーク**  
+  - *分類系*：**GovNet‑Common**／**GovNet‑Sectoral**／**Internet‑ZT**  
+  - *色*：`nationwide`／`partial`／`planned`
+- **IT02：自治体セキュリティモデル**（雛形・今後追加）
+- **IT03：ガバメントクラウド**（雛形・今後追加、I10 からの役割移設は別途整理）
+
+**`data/country_it.csv` の運用（`country_indicator.csv` と同一方針）**  
+- `value`：改行区切り（1 行目 main／2 行目以降 detail）  
+- `version` / `review_status`：可能な限り UI セレクタと整合  
+- **フォールバック**：選択 `version` / `status` に IT 側レコードが無い場合、**IT 内の最新 version** または **任意 status** に安全フォールバック（空表示を回避）
+
+### 18.4 UI 実装（app.js 概要）
+1. **CSV 読み込み**：`it_defs.csv` / `country_it.csv` を追加ロード（既存ロード列に依存しない構成）。  
+2. **IT 表トグルと配置**：横断比較カードの `toggle-row` に **「ITインフラを表示」** を追加し、**ベンチ直後 → IT → デジタルID** の順で描画。初期は `hidden`、クリックで ARIA を含めて開閉。  
+3. **列幅の完全一致**：他表と同様に `--country-cols` を **同値**に設定し、**均等割**を共通 CSS で適用（指標列は固定幅、JPN 列 sticky とセル色の両立は既存オーバーレイ方式）。  
+4. **色分けロジック**：`value.main` のラベル（`GovNet‑Common / ‑Sectoral / Internet‑ZT` 等）を `nationwide/partial/planned` の 3 クラスへ機械マップ（**CSS のみ**で着色／インライン色なし）。  
+5. **堅牢化**：`tags` の表示先統一、IT 側の **version/status フォールバック** などで空表示・エラーを抑止。
+
+### 18.5 運用ルール（IT 追加に伴う最小限の追加）
+- **CSV = SoT** は不変。定義文・分類定義は `it_defs.csv`、各国値は `country_it.csv` を唯一の正とする。  
+- **翻訳**：`translations_ja.csv` は **完全一致キー**で置換（英文化する場合は *detail 結合後文字列* を `en` に、対応和訳を `ja` に 1:1 登録）。  
+- **version 整合**：原則は他 CSV と同一 `version` を採用。研究段階では IT 側のみ `draft` でも **フォールバック**で安全表示（将来は `published` へ移行）。
+
+### 18.6 変更履歴（2026‑02‑13）
+- **新規**：`data/it_defs.csv`（IT01 定義／分類を反映、IT02/IT03 雛形を追加）  
+- **新規**：`data/country_it.csv`（14 か国 × IT01〜IT03 の初期当てはめ）  
+- **更新**：`data/translations_ja.csv`（GovNet 系用語の対訳を追記）  
+- **更新**：`app.js`（IT CSV 読み込み、IT 表トグル、列幅同期、3 クラス色分け、version/status フォールバック、軽微な堅牢化）
+
+
+### 18.7 列幅統一と世界地図の安定表示（2026‑02‑13 追記）
+
+### 目的
+- **ITインフラストラクチャー表（`#itTable`）** と **デジタルID制度表（`#comparisonTable`）** で、選択国数に関わらず **各国列の横幅を完全に一致** させる。
+- **世界地図（Japan-centered map）** が **常に表示** されるように、依存関係の落下時でも高さ・背景が確保されるようにする。
+
+### 変更ファイルと要点
+1) **styles.css**  
+   - `#itTable` に **均等幅**・**JPN列 sticky**・**オーバーフロー対策** を追加し、`#comparisonTable` / `#benchmarksTable` と**同一ロジック**に統一。  
+   - 世界地図の必須スタイル（`.worldmap*`）を **フォールバック用に同梱**（`theme.css` が未読込でも地図がつぶれない）。  
+   - 完成版は本チャット配布の **styles.css** を参照。  
+
+2) **app.js**  
+   - `renderIT(countryIds, version, status)` の先頭で **`--country-cols = countryIds.length` を必ず設定**（他表と同値）。  
+   - `renderAll()` を **防御実行**（`renderComparison()` が失敗しても `renderWorldMap()` を実行）。  
+   - `parseSourceUrls()` を **`/[;\n\r]+/`** で正規化（JSON配列／セミコロン／改行の全てを解釈）。
+
+3) **theme.css**  
+   - 読み込み順は **`theme.css` → `styles.css`**。  
+   - 既定の配色・テーブル基礎・sticky 規則は `theme.css`、上書き（等幅・地図フォールバック等）は `styles.css` 側に配置。
+
+### 実装スニペット
+**CSS（`styles.css` の `#itTable` 等幅・sticky）**
+```css
+#itTable { --country-cols: 1; }
+#itTable thead th:not(:first-child),
+#itTable tbody td{ width: calc((100% - var(--col-indicator)) / var(--country-cols, 1)); }
+#itTable thead th:nth-child(2){ position: sticky; left: var(--col-indicator); z-index: 4; }
+#itTable tbody td:nth-child(2){ position: sticky; left: var(--col-indicator); z-index: 3; background-clip: padding-box; }
+#itTable .cell{ min-width: 0; }
+#itTable .value{ white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#itTable .detail{ overflow-wrap: anywhere; word-break: break-word; }
+```
+
+**JS（`app.js` の列数と防御実行）**
+```js
+function renderIT(countryIds, uiVersion, uiStatus){
+  const table = document.getElementById('itTable'); if(!table) return;
+  // 列幅を他表と同期
+  table.style.setProperty('--country-cols', String(countryIds.length));
+  // ...（以降は既存のレンダリング処理）...
+}
+
+function renderAll(){
+  if(hasComparison){
+    try { renderComparison(); } catch(e){ console.error('renderComparison failed:', e); }
+    try { renderIndicatorDefinitions(); } catch(e){ console.warn('renderIndicatorDefinitions failed', e); }
+    if(hasWorldMap){ try { renderWorldMap(); } catch(e){ console.error('renderWorldMap failed:', e); } }
+  }
+  if(hasCountry){ try { renderCountryPage(); } catch(e){ console.error('renderCountryPage failed:', e); }
+  }
+}
+
+function parseSourceUrls(src){
+  const raw=(src??'').trim(); if(!raw) return [];
+  if(raw.startsWith('[')){
+    try{ const arr=JSON.parse(raw); if(Array.isArray(arr)) return arr.map(x=>String(x).trim()).filter(Boolean); }catch{}
+  }
+  return raw.split(/[;\n\r]+/).map(s=>s.trim()).filter(Boolean);
+}
+```
+
+**世界地図（フォールバック）**
+```css
+.worldmap{ position: relative; width:100%; aspect-ratio: 940 / 477; border-radius:14px; overflow:hidden; background:#EEF2FF; }
+.worldmap-bg{
+  position:absolute; inset:0;
+  background-image:url('./assets/BlankMap-World-Equirectangular.png');
+  background-repeat:no-repeat; background-size:contain; background-position:50% 50%;
+}
+```
+
+### QA チェックリスト
+- 国選択を増減しても、**IT表／デジタルID表／ベンチ表**の **各国列幅が一致** する。  
+- **JPN 列（2列目）が sticky**。セルの色（`nationwide/partial/planned`）は **消えない**。  
+- 上部の **世界地図が常に表示**（`assets/BlankMap-World-Equirectangular.png` が存在、`theme.css`→`styles.css` の順で読み込み）。
+
+### 運用上の注意
+- 新しい表を追加して等幅に揃える場合は、**JSから `--country-cols` を設定**し、**CSSの同一式**（`calc((100% - var(--col-indicator)) / var(--country-cols))`）を適用する。  
+- `td:nth-child(2)` の sticky には **背景オーバーレイ方式** を用い、セル色を潰さない。
+
+### 変更履歴（追記分）
+- **styles.css**：`#itTable` 等幅・sticky 実装、`.worldmap*` フォールバック追加。  
+- **app.js**：`renderIT()` の `--country-cols` 明示、`renderAll()` 防御実行、`parseSourceUrls()` 正規表現修正。  
+- **theme.css**：読み込み順の明記（`theme.css`→`styles.css`）。

@@ -1,0 +1,13 @@
+basic_id,label_ja,definition_ja,display_order
+A01,人口（Population）,"各国・地域の総人口。World Bank WDI（SP.POP.TOTL）の値をそのまま用いる。単位は「人」。",1
+A02,都市化率（Urbanization）,"都市居住者の人口割合（%）。World Bank WDI（SP.URB.TOTL.IN.ZS）に準拠。都市の定義は国別。",2
+A03,インターネット利用率（Individuals using the Internet）,"インターネット利用者が人口に占める割合（%）。World Bank WDI（IT.NET.USER.ZS）の最新値を採用。",3
+A04,モバイル加入（契約／100人）〔代理指標〕,"100人当たりの携帯電話契約数。スマートフォン普及の直接値が得られない国に対する代理指標として、World Bank WDI（IT.CEL.SETS.P2）を使用。単位は「件／100人」。",4
+A05,一人当たりGDP（PPP）,"購買力平価ベースの一人当たりGDP（国際ドル、現価）。World Bank WDI（NY.GDP.PCAP.PP.CD）を用いる。",5
+A06,公式言語数（Official languages）,"該当国の公式言語数。明示されている場合に限り de facto も含める。値は整数。",6
+B01,国家体制（Unitary / Federal）,"Unitary＝単一国家。Federal＝連邦国家（憲法の下で連邦と州・準州等が権限を分担）。公的説明・法制度に基づき判定。",7
+B02,基礎自治体数（Municipalities / equivalents）,"基礎自治体またはそれに相当する単位の総数。各国の統計定義に準拠（CSD・LGA・特別区・未編入地域等の扱いは国別ルールに従う）。",8
+B03,地方分権度（Strong / Medium / Weak）,"Strong：憲法等で地方自治が明確に保障され、制度上の裁量が強固。Medium：法律で位置付けられ、上位法や中央／州の監督の下で運営。Weak：中央主導の行政単位としての性格が強く、制度上の裁量が限定的。",9
+C01,政府への信頼（Trust in government）,"「自国の中央政府を信頼している」と答えた人の割合。OECD “Trust in government（confidence in national government）” を用い、データは国別の最新年。表示は 0〜1（=％/100）。",10
+C02,プライバシー懸念による利用回避,"OECD Going Digital（Indicator 84）「プライバシー懸念のために特定のWebサイト・アプリ・SNSの利用を避ける成人の割合」。0〜1（=％/100）で小数6桁に正規化。国のカバレッジは限定され、欠損は推測で補完しない。",11
+C03, GovTech成熟度（GTMI）,"World Bank GovTech Maturity Index（GTMI：overall score）の 0〜1 スコア。連続値は小数6桁で統一。出典は World Bank の GovTech Dataset。",12
