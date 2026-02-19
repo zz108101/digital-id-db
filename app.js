@@ -433,7 +433,25 @@ function renderBenchmarks(countryIds, version, status){
         const cell=document.createElement('div'); cell.className='cell';
         const v=document.createElement('div'); v.className='value'; v.textContent='—';
         const d=document.createElement('div'); d.className='detail'; d.textContent='データなし';
-        cell.appendChild(v); cell.appendChild(d); td.appendChild(cell); tr.appendChild(td);
+        cell.appendChild(v); cell.appendChild(d);
+        if(rec){
+          const srcs = parseSourceUrls(rec.source_url);
+          const ds = document.createElement('div');
+          ds.className = 'detail';
+          if (srcs.length){
+            srcs.forEach((u,i)=>{
+              const a=document.createElement('a');
+              a.href=u; a.target='_blank'; a.rel='noopener';
+              a.textContent = `出典${i+1}`;
+              ds.appendChild(a);
+              if(i < srcs.length-1) ds.appendChild(document.createTextNode(' / '));
+            });
+          } else {
+            ds.textContent = '出典なし';
+          }
+          cell.appendChild(ds);
+        }
+        td.appendChild(cell); tr.appendChild(td);
         return;
       }
       const {main,detail}=splitValue(rec.value);
@@ -491,10 +509,30 @@ function filterITRows(countryIds, version, status){
   });
 }
 function classForITMain(main){
-  const m = String(main??'').trim().toLowerCase();
-  if(m==='govnet\u2011common' || m==='govnet-common') return 'nationwide';
-  if(m==='govnet\u2011sectoral' || m==='govnet-sectoral') return 'partial';
-  if(m==='internet\u2011zt' || m==='internet-zt' || m==='internet + zt') return 'planned';
+  const m = String(main ?? '').trim().toLowerCase();
+
+  // --- 政府ネットワーク（IT01） ---
+  if (m === 'govnet-common' || m === 'govnet‑common') return 'nationwide';
+  if (m === 'govnet-sectoral' || m === 'govnet‑sectoral') return 'partial';
+  if (m === 'internet-zt' || m === 'internet‑zt' || m === 'internet + zt') return 'planned';
+
+  // --- 自治体ネットワーク（IT02） ---
+  if (m === 'lgwan-type') return 'nationwide';
+  if (m === 'local-sectoral') return 'partial';
+
+  // --- セキュリティモデル（IT03/IT04） ---
+  if (m === 'tri-layer-jp') return 'nationwide';
+  if (m === 'sec-zt-policy') return 'nationwide';
+  if (m === 'risk-zoning-zt') return 'partial';
+  if (m === 'sec-hybrid' || m === 'sec-legacy-seg' || m === 'hybrid-legacy-to-zt') return 'partial';
+
+  // --- クラウド（IT05/IT06） ---
+  if (m === 'nationwide') return 'nationwide';
+  if (m === 'multiple' || m === 'procurement') return 'partial';
+
+  // --- 無し/未整備系 ---
+  if (m === 'none' || m === 'no' || m === 'n/a') return 'planned';
+
   return 'partial';
 }
 
@@ -596,7 +634,25 @@ function renderIT(countryIds, uiVersion, uiStatus){
         d.textContent = detail || '';
         td.className = classForITMain(main);
       }
-      cell.appendChild(v); cell.appendChild(d); td.appendChild(cell); tr.appendChild(td);
+      cell.appendChild(v); cell.appendChild(d);
+        if(rec){
+          const srcs = parseSourceUrls(rec.source_url);
+          const ds = document.createElement('div');
+          ds.className = 'detail';
+          if (srcs.length){
+            srcs.forEach((u,i)=>{
+              const a=document.createElement('a');
+              a.href=u; a.target='_blank'; a.rel='noopener';
+              a.textContent = `出典${i+1}`;
+              ds.appendChild(a);
+              if(i < srcs.length-1) ds.appendChild(document.createTextNode(' / '));
+            });
+          } else {
+            ds.textContent = '出典なし';
+          }
+          cell.appendChild(ds);
+        }
+        td.appendChild(cell); tr.appendChild(td);
     });
 
     tbody.appendChild(tr);

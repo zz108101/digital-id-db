@@ -262,3 +262,32 @@ GovNet‑Common,共通閉域網
 GovNet‑Sectoral,分野別閉域網
 Internet‑ZT,インターネット＋ゼロトラスト
 Internet + ZT,インターネット＋ゼロトラスト
+GSS/GovNet,GSS/GovNet（政府共通ネットワーク）
+LGWAN,LGWAN（自治体向け広域行政ネットワーク）
+Zero trust,ゼロトラスト
+ZT (zero trust),ZT（ゼロトラスト）
+TIC 3.0,TIC 3.0（Trusted Internet Connections 3.0）
+EINSTEIN,EINSTEIN（連邦政府侵入検知/防御）
+CJIS WAN,CJIS WAN（刑事司法情報ネットワーク）
+Shared Services Canada (SSC),Shared Services Canada（SSC）
+Réseau Interministériel de l’État (RIE),RIE（省庁横断政府ネットワーク）
+EU TESTA,EU TESTA（欧州行政間網）
+NdB (Bundesnetz),NdB（連邦共通ネット）
+Bund‑Länder Verbindungsnetz,連邦‑州接続網（Bund‑Länder Verbindungsnetz）
+X‑Road,X‑Road（政府データ交換基盤）
+SGSI,SGSI（スウェーデン政府共通閉域）
+Sjunet,Sjunet（医療専用ネット）
+SDN (health sector Denmark),医療分野SDN（デンマーク）
+SINE (TETRA),SINE（TETRA公共安全無線）
+NICNET,NICNET（インド政府ネット）
+SWAN,SWAN（州広域行政ネット）
+NKN,NKN（学術研究ネット）
+NIRS,NIRS（国家情報資源管理院）
+GPKI,GPKI（政府公開鍵基盤）
+G‑VPN,G‑VPN（政府VPN）
+On‑nara,On‑nara（行政業務プラットフォーム）
+Public Safety Network (PSN),PSN（公共安全ネットワーク）
+GCC 2.0/+,GCC 2.0/+（Government on Commercial Cloud）
+FN4G,FN4G（英国のネットワーク近代化イニシアチブ）
+HSCN,HSCN（英・医療セクターネット）
+LECN,LECN（英・警察ネット）

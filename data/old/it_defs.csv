@@ -1,0 +1,31 @@
+indicator_id,label_ja,definition_ja,classification_ja,display_order
+IT01,政府共通ネットワーク,"中央政府（府省庁横断）が運用する政府共通の閉域／基幹ネットワーク、またはそれに準ずる相互接続モデルの制度化・適用度を記録する。自治体ネットワーク（IT02）とは範囲を分ける。","Main（分類）と色付け：
+- GovNet-Common → nationwide：全国レベルの共通閉域が制度化・広域運用
+- GovNet-Sectoral → partial：分野別閉域（医療・治安等）が中核、他は個別／インターネット前提
+- Internet-ZT → planned：政府横断閉域は持たず、インターネット経由＋ZT前提のアーキテクチャ
+- None → planned：該当する全国モデルなし",1
+IT02,自治体共通ネットワーク,"地方公共団体（自治体）における共通の閉域／基幹ネットワーク、または自治体間の広域行政ネットワークの制度化・適用度を記録する。政府共通ネットワーク（IT01）とは範囲を分ける。","Main（分類）と色付け：
+- LGWAN-type → nationwide：自治体専用の広域行政閉域が全国で制度化
+- Local-Sectoral → partial：分野別または州・県域の閉域が中核（ばらつきあり）
+- Internet-ZT → planned：自治体はインターネット前提＋ZTで統制（全国閉域なし）
+- None → planned：該当モデルなし",2
+IT03,政府セキュリティモデル,"中央政府におけるゾーニング（用途・機密度）・境界設計・ID/監視・運用統制など“政府横断のセキュリティアーキテクチャ”の制度化・適用度を記録する（ネットワーク自体はIT01）。","Main（分類）と色付け：
+- Sec-ZT-Policy → nationwide：ZT方針・基準を全国で制度化・適用
+- Sec-Hybrid → partial：物理分離＋論理分離の混在（移行途上）
+- Sec-Legacy-Seg → partial：従来型セグメンテーション中心
+- None → planned：該当モデルなし",3
+IT04,自治体セキュリティモデル,"自治体におけるゾーニング・境界設計・運用統制のモデルを記録する（ネットワークはIT02）。日本の『三層の構え』など自治体固有モデルの有無・適用度を評価。","Main（分類）と色付け：
+- Tri-Layer-JP → nationwide：三層の構え等、全国制度としての標準モデル
+- Risk-Zoning-ZT → nationwide（制度化済）/partial（指針のみ）：リスクベースゾーニング＋ZT方針
+- Hybrid-Legacy-to-ZT → partial：従来型からZTへ段階移行
+- No-Municipal-Model / None → planned：自治体レベルのモデルなし",4
+IT05,政府共通クラウド,"政府横断の共通クラウド（IaaS/PaaS/SaaS）または同等の共通環境の制度化・適用度を評価。","Main（分類）と色付け：
+- Nationwide → nationwide：単一の全国共通基盤
+- Multiple → partial：連邦・省庁等の複数基盤（制度連携）
+- Procurement → partial：方針・アシュアランス・調達枠のみ
+- None → planned：未整備",5
+IT06,自治体共通クラウド,"自治体向けの共通クラウド／共同基盤、または自治体による政府共通クラウドの共用状況を評価。","Main（分類）と色付け：
+- Nationwide → nationwide：全国で自治体共通基盤（または政府共通を共用）
+- Multiple → partial：州・県域／共同体ごとの複数基盤
+- Procurement → partial：方針・調達・認証枠のみ
+- None → planned：未整備",6
